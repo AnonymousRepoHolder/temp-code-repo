@@ -1,0 +1,926 @@
+[
+  {
+    "idx": 58,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 39,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 68,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.28
+      },
+      {
+        "type": "SOFTMAX",
+        "p": 0.24
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.2
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.15
+      },
+      {
+        "type": "ADD",
+        "p": 0.13
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.15
+  },
+  {
+    "idx": 140,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 9,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 131,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 272,
+    "real_type": "CONCATENATION",
+    "pred_topk": [
+      {
+        "type": "ADD",
+        "p": 0.27
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.24
+      },
+      {
+        "type": "RELU",
+        "p": 0.2
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.16
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.13
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 178,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 120,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 189,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 167,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 256,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 310,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 251,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 304,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 127,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 67,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 168,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 129,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 84,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 38,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 51,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 258,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 213,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 303,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 289,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 19,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 121,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 270,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 283,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 79,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.25
+  },
+  {
+    "idx": 316,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  },
+  {
+    "idx": 282,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      },
+      {
+        "type": "RELU",
+        "p": 0.21
+      },
+      {
+        "type": "ADD",
+        "p": 0.19
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.18
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.17
+      }
+    ],
+    "rank_of_real": 4,
+    "p_real": 0.18
+  }
+]

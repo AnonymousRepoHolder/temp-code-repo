@@ -1,0 +1,1710 @@
+[
+  {
+    "idx": 583,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RESHAPE",
+        "p": 0.28
+      },
+      {
+        "type": "TRANSPOSE",
+        "p": 0.24
+      },
+      {
+        "type": "CAST",
+        "p": 0.2
+      },
+      {
+        "type": "SQUEEZE",
+        "p": 0.18
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.1
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 440,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.32
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.26
+      },
+      {
+        "type": "ADD",
+        "p": 0.18
+      },
+      {
+        "type": "MUL",
+        "p": 0.14
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.1
+      }
+    ],
+    "rank_of_real": 3,
+    "p_real": 0.18
+  },
+  {
+    "idx": 201,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.32
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.26
+      },
+      {
+        "type": "ADD",
+        "p": 0.18
+      },
+      {
+        "type": "MUL",
+        "p": 0.14
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.1
+      }
+    ],
+    "rank_of_real": 3,
+    "p_real": 0.18
+  },
+  {
+    "idx": 605,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 99,
+    "real_type": "RESHAPE",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 424,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 255,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 496,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 328,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 571,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 558,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 61,
+    "real_type": "SOFTMAX",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 617,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "SPLIT",
+        "p": 0.42
+      },
+      {
+        "type": "CONCATENATION",
+        "p": 0.28
+      },
+      {
+        "type": "PACK",
+        "p": 0.18
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 162,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 67,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 417,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 398,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 414,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 361,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "SPLIT",
+        "p": 0.42
+      },
+      {
+        "type": "CONCATENATION",
+        "p": 0.28
+      },
+      {
+        "type": "PACK",
+        "p": 0.18
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 317,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "SPLIT",
+        "p": 0.42
+      },
+      {
+        "type": "CONCATENATION",
+        "p": 0.28
+      },
+      {
+        "type": "PACK",
+        "p": 0.18
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 158,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 239,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 211,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 543,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 190,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 313,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 594,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 465,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 301,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 221,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 529,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 390,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 495,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 133,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 39,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "SPLIT",
+        "p": 0.42
+      },
+      {
+        "type": "CONCATENATION",
+        "p": 0.28
+      },
+      {
+        "type": "PACK",
+        "p": 0.18
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 473,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 339,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "SPLIT",
+        "p": 0.42
+      },
+      {
+        "type": "CONCATENATION",
+        "p": 0.28
+      },
+      {
+        "type": "PACK",
+        "p": 0.18
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 359,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "SPLIT",
+        "p": 0.42
+      },
+      {
+        "type": "CONCATENATION",
+        "p": 0.28
+      },
+      {
+        "type": "PACK",
+        "p": 0.18
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 368,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 372,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "SPLIT",
+        "p": 0.42
+      },
+      {
+        "type": "CONCATENATION",
+        "p": 0.28
+      },
+      {
+        "type": "PACK",
+        "p": 0.18
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 516,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 427,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 288,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 483,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 512,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 2,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 109,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 243,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 501,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 83,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 275,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 169,
+    "real_type": "AVERAGE_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 521,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 525,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 475,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 69,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 77,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 388,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 572,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 563,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 171,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 114,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.3
+      },
+      {
+        "type": "RELU6",
+        "p": 0.25
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.18
+      },
+      {
+        "type": "TANH",
+        "p": 0.15
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.12
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  }
+]

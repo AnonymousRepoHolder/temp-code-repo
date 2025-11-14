@@ -1,0 +1,166 @@
+[
+  {
+    "idx": 49,
+    "real_type": "LOGISTIC",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.35
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.28
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.22
+      },
+      {
+        "type": "RELU6",
+        "p": 0.15
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 59,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.35
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.28
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.22
+      },
+      {
+        "type": "RELU6",
+        "p": 0.15
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 13,
+    "real_type": "MAX_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.35
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.28
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.22
+      },
+      {
+        "type": "RELU6",
+        "p": 0.15
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 14,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.35
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.28
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.22
+      },
+      {
+        "type": "RELU6",
+        "p": 0.15
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 68,
+    "real_type": "MAX_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.35
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.28
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.22
+      },
+      {
+        "type": "RELU6",
+        "p": 0.15
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 32,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.35
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.28
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.22
+      },
+      {
+        "type": "RELU6",
+        "p": 0.15
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 39,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RESHAPE",
+        "p": 0.38
+      },
+      {
+        "type": "CAST",
+        "p": 0.32
+      },
+      {
+        "type": "SOFTMAX",
+        "p": 0.3
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  }
+]

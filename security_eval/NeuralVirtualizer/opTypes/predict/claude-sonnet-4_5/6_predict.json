@@ -1,0 +1,250 @@
+[
+  {
+    "idx": 12,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 16,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 20,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 22,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 30,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 39,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 45,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 54,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 81,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 85,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 91,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 112,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 113,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 121,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 130,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 133,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 140,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 153,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 156,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 167,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 170,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 181,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 190,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 198,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 223,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 232,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 248,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 261,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 277,
+    "topk": [
+      {"type": "RESHAPE", "p": 0.42},
+      {"type": "SOFTMAX", "p": 0.33},
+      {"type": "UNKNOWN", "p": 0.25}
+    ]
+  },
+  {
+    "idx": 281,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 295,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.38},
+      {"type": "ADD", "p": 0.32},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  }
+]

@@ -1,0 +1,1640 @@
+{
+  "version": 3,
+  "operator_codes": [
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Nydozv",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Zdmyom",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ctnxni",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Cweara",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Qxmdab",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ghtffq",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Vfovgs",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Arfsrx",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ioqpru",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Rbqnhr",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Cpcvgv",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Mrcxls",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Qjxuzy",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Wwkxau",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Koxddo",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Avzkll",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Gfomic",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Xnbmdw",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Potfrg",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Iiinmm",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ddqqqo",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Slbzzf",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Mlfjuf",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Kkmipz",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Bjjsip",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Mwauhz",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ygsgdu",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Tzazmq",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Auebuk",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ayhefh",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Pmbvrn",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Jacmes",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Vwtsvc",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Kwuiao",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Txckga",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Jpyqfq",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ruhxav",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ltrrtn",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Vvtutm",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Pzaixv",
+      "builtin_code": "CUSTOM"
+    }
+  ],
+  "subgraphs": [
+    {
+      "tensors": [
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 1,
+          "name": "serving_default_x:0",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 2,
+          "name": "Nydozv",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 3,
+          "name": "Zdmyom",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 4,
+          "name": "Ctnxni",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 5,
+          "name": "Cweara",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 6,
+          "name": "Qxmdab",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 7,
+          "name": "Ghtffq",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 8,
+          "name": "Vfovgs",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 9,
+          "name": "Arfsrx",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 10,
+          "name": "Ioqpru",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 11,
+          "name": "Rbqnhr",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 12,
+          "name": "Cpcvgv",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 13,
+          "name": "Mrcxls",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 14,
+          "name": "Qjxuzy",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 15,
+          "name": "Wwkxau",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 16,
+          "name": "Koxddo",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 17,
+          "name": "Avzkll",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 18,
+          "name": "Gfomic",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 19,
+          "name": "Xnbmdw",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 20,
+          "name": "Potfrg",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 21,
+          "name": "Iiinmm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 22,
+          "name": "Ddqqqo",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 23,
+          "name": "Slbzzf",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 24,
+          "name": "Mlfjuf",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 25,
+          "name": "Kkmipz",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 26,
+          "name": "Bjjsip",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 27,
+          "name": "Mwauhz",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 28,
+          "name": "Ygsgdu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 29,
+          "name": "Tzazmq",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 30,
+          "name": "Auebuk",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 31,
+          "name": "Ayhefh",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 32,
+          "name": "Pmbvrn",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 33,
+          "name": "Jacmes",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 34,
+          "name": "Vwtsvc",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 35,
+          "name": "Kwuiao",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 36,
+          "name": "Txckga",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 37,
+          "name": "Jpyqfq",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 38,
+          "name": "Ruhxav",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 39,
+          "name": "Ltrrtn",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 40,
+          "name": "Vvtutm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 41,
+          "name": "PartitionedCall:0",
+          "quantization": {
+          }
+        }
+      ],
+      "inputs": [
+        0
+      ],
+      "outputs": [
+        40
+      ],
+      "operators": [
+        {
+          "inputs": [
+            0
+          ],
+          "outputs": [
+            1
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            1
+          ],
+          "outputs": [
+            2
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            2
+          ],
+          "outputs": [
+            3
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 3,
+          "inputs": [
+            3
+          ],
+          "outputs": [
+            4
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 4,
+          "inputs": [
+            3
+          ],
+          "outputs": [
+            5
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 5,
+          "inputs": [
+            4,
+            5
+          ],
+          "outputs": [
+            6
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 6,
+          "inputs": [
+            6
+          ],
+          "outputs": [
+            7
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 7,
+          "inputs": [
+            7
+          ],
+          "outputs": [
+            8
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 8,
+          "inputs": [
+            7
+          ],
+          "outputs": [
+            9
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 9,
+          "inputs": [
+            9,
+            8
+          ],
+          "outputs": [
+            10
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 10,
+          "inputs": [
+            10
+          ],
+          "outputs": [
+            11
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 11,
+          "inputs": [
+            11
+          ],
+          "outputs": [
+            12
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 12,
+          "inputs": [
+            11
+          ],
+          "outputs": [
+            13
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 13,
+          "inputs": [
+            12,
+            13
+          ],
+          "outputs": [
+            14
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 14,
+          "inputs": [
+            14
+          ],
+          "outputs": [
+            15
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 15,
+          "inputs": [
+            15
+          ],
+          "outputs": [
+            16
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 16,
+          "inputs": [
+            16
+          ],
+          "outputs": [
+            17
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 17,
+          "inputs": [
+            16
+          ],
+          "outputs": [
+            18
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 18,
+          "inputs": [
+            17,
+            18
+          ],
+          "outputs": [
+            19
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 19,
+          "inputs": [
+            19
+          ],
+          "outputs": [
+            20
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 20,
+          "inputs": [
+            20
+          ],
+          "outputs": [
+            21
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 21,
+          "inputs": [
+            20
+          ],
+          "outputs": [
+            22
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 22,
+          "inputs": [
+            21,
+            22
+          ],
+          "outputs": [
+            23
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 23,
+          "inputs": [
+            23
+          ],
+          "outputs": [
+            24
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 24,
+          "inputs": [
+            24
+          ],
+          "outputs": [
+            25
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 25,
+          "inputs": [
+            24
+          ],
+          "outputs": [
+            26
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 26,
+          "inputs": [
+            26,
+            25
+          ],
+          "outputs": [
+            27
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 27,
+          "inputs": [
+            27
+          ],
+          "outputs": [
+            28
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 28,
+          "inputs": [
+            28
+          ],
+          "outputs": [
+            29
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 29,
+          "inputs": [
+            28
+          ],
+          "outputs": [
+            30
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 30,
+          "inputs": [
+            29,
+            30
+          ],
+          "outputs": [
+            31
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 31,
+          "inputs": [
+            31
+          ],
+          "outputs": [
+            32
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 32,
+          "inputs": [
+            32
+          ],
+          "outputs": [
+            33
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 33,
+          "inputs": [
+            33
+          ],
+          "outputs": [
+            34
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 34,
+          "inputs": [
+            33
+          ],
+          "outputs": [
+            35
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 35,
+          "inputs": [
+            35,
+            34
+          ],
+          "outputs": [
+            36
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 36,
+          "inputs": [
+            36
+          ],
+          "outputs": [
+            37
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 37,
+          "inputs": [
+            37
+          ],
+          "outputs": [
+            38
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 38,
+          "inputs": [
+            38
+          ],
+          "outputs": [
+            39
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 39,
+          "inputs": [
+            39
+          ],
+          "outputs": [
+            40
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        }
+      ],
+      "name": "main"
+    }
+  ],
+  "description": "MLIR Converted."
+}

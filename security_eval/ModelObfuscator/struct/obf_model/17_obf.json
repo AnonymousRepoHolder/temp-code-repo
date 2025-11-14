@@ -1,0 +1,2854 @@
+{
+  "version": 3,
+  "operator_codes": [
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Nazqtc",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Aiwgxx",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Rkfnjm",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Mwpmxg",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ycsolx",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Yuszan",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Pfuyjx",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Grpupo",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ftvfjr",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Jnraqk",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Uirdfv",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Kogelb",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Lqzzir",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Nbjpkz",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Pttzfb",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Fivhlw",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Qjtlzp",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Bewsdo",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Uwzutl",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Sarcin",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Akbgfx",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Wcsxxw",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Zdovwk",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Yaftwh",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ckwdot",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Pwtpin",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ckhipv",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Dbobnn",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Wyzgaj",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Jtfagm",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Dhmwed",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Emboov",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Sezmwy",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ozigwe",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Zndmkh",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Lrspsa",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Zexvoj",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ozidka",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Xfzwhg",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Bbmzyx",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Sxapjo",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Rflezr",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Mtdtuv",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Cxycmg",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Pzsadf",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Mhyngt",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Pfjdok",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Otsloa",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Jbzrxs",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Kjlfsi",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Ofcvsd",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Kczrsv",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Qoosop",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Rpgahb",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Hpsgcv",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Yymjer",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Axkrzb",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Rdgrdg",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Nnlawh",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Gsbaxz",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Kghwxf",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Vlywcf",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Fypdmq",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Otkehg",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Bymnsy",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Yihbtx",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Qhjsqc",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Arknat",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Yyizde",
+      "builtin_code": "CUSTOM"
+    },
+    {
+      "deprecated_builtin_code": 32,
+      "custom_code": "Vscibv",
+      "builtin_code": "CUSTOM"
+    }
+  ],
+  "subgraphs": [
+    {
+      "tensors": [
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 1,
+          "name": "serving_default_x:0",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 2,
+          "name": "Nazqtc",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 3,
+          "name": "Aiwgxx",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 4,
+          "name": "Rkfnjm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 5,
+          "name": "Mwpmxg",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 6,
+          "name": "Ycsolx",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 7,
+          "name": "Yuszan",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 8,
+          "name": "Pfuyjx",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 9,
+          "name": "Grpupo",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 10,
+          "name": "Ftvfjr",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 11,
+          "name": "Jnraqk",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 12,
+          "name": "Uirdfv",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 13,
+          "name": "Kogelb",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 14,
+          "name": "Lqzzir",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 15,
+          "name": "Nbjpkz",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 16,
+          "name": "Pttzfb",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 17,
+          "name": "Fivhlw",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 18,
+          "name": "Qjtlzp",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 19,
+          "name": "Bewsdo",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 20,
+          "name": "Uwzutl",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 21,
+          "name": "Sarcin",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 22,
+          "name": "Akbgfx",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 23,
+          "name": "Wcsxxw",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 24,
+          "name": "Zdovwk",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 25,
+          "name": "Yaftwh",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 26,
+          "name": "Ckwdot",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 27,
+          "name": "Pwtpin",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 28,
+          "name": "Ckhipv",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 29,
+          "name": "Dbobnn",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 30,
+          "name": "Wyzgaj",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 31,
+          "name": "Jtfagm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 32,
+          "name": "Dhmwed",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 33,
+          "name": "Emboov",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 34,
+          "name": "Sezmwy",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 35,
+          "name": "Ozigwe",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 36,
+          "name": "Zndmkh",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 37,
+          "name": "Lrspsa",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 38,
+          "name": "Zexvoj",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 39,
+          "name": "Ozidka",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 40,
+          "name": "Xfzwhg",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 41,
+          "name": "Bbmzyx",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 42,
+          "name": "Sxapjo",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 43,
+          "name": "Rflezr",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 44,
+          "name": "Mtdtuv",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 45,
+          "name": "Cxycmg",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 46,
+          "name": "Pzsadf",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 47,
+          "name": "Mhyngt",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 48,
+          "name": "Pfjdok",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 49,
+          "name": "Otsloa",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 50,
+          "name": "Jbzrxs",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 51,
+          "name": "Kjlfsi",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 52,
+          "name": "Ofcvsd",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 53,
+          "name": "Kczrsv",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 54,
+          "name": "Qoosop",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 55,
+          "name": "Rpgahb",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 56,
+          "name": "Hpsgcv",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 57,
+          "name": "Yymjer",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 58,
+          "name": "Axkrzb",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 59,
+          "name": "Rdgrdg",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 60,
+          "name": "Nnlawh",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 61,
+          "name": "Gsbaxz",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 62,
+          "name": "Kghwxf",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 63,
+          "name": "Vlywcf",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 64,
+          "name": "Fypdmq",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 65,
+          "name": "Otkehg",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 66,
+          "name": "Bymnsy",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 67,
+          "name": "Yihbtx",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 68,
+          "name": "Qhjsqc",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 69,
+          "name": "Arknat",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 70,
+          "name": "Yyizde",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 71,
+          "name": "PartitionedCall:0",
+          "quantization": {
+          }
+        }
+      ],
+      "inputs": [
+        0
+      ],
+      "outputs": [
+        70
+      ],
+      "operators": [
+        {
+          "inputs": [
+            0
+          ],
+          "outputs": [
+            1
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            1
+          ],
+          "outputs": [
+            2
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            2
+          ],
+          "outputs": [
+            3
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 3,
+          "inputs": [
+            3
+          ],
+          "outputs": [
+            4
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 4,
+          "inputs": [
+            4
+          ],
+          "outputs": [
+            5
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 5,
+          "inputs": [
+            5
+          ],
+          "outputs": [
+            6
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 6,
+          "inputs": [
+            6
+          ],
+          "outputs": [
+            7
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 7,
+          "inputs": [
+            7
+          ],
+          "outputs": [
+            8
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 8,
+          "inputs": [
+            8
+          ],
+          "outputs": [
+            9
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 9,
+          "inputs": [
+            9,
+            6
+          ],
+          "outputs": [
+            10
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 10,
+          "inputs": [
+            10
+          ],
+          "outputs": [
+            11
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 11,
+          "inputs": [
+            11
+          ],
+          "outputs": [
+            12
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 12,
+          "inputs": [
+            12
+          ],
+          "outputs": [
+            13
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 13,
+          "inputs": [
+            13,
+            10
+          ],
+          "outputs": [
+            14
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 14,
+          "inputs": [
+            14
+          ],
+          "outputs": [
+            15
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 15,
+          "inputs": [
+            15
+          ],
+          "outputs": [
+            16
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 16,
+          "inputs": [
+            16
+          ],
+          "outputs": [
+            17
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 17,
+          "inputs": [
+            17
+          ],
+          "outputs": [
+            18
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 18,
+          "inputs": [
+            17
+          ],
+          "outputs": [
+            19
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 19,
+          "inputs": [
+            19
+          ],
+          "outputs": [
+            20
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 20,
+          "inputs": [
+            20
+          ],
+          "outputs": [
+            21
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 21,
+          "inputs": [
+            21,
+            17
+          ],
+          "outputs": [
+            22
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 22,
+          "inputs": [
+            22
+          ],
+          "outputs": [
+            23
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 23,
+          "inputs": [
+            23
+          ],
+          "outputs": [
+            24
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 24,
+          "inputs": [
+            24,
+            23
+          ],
+          "outputs": [
+            25
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 25,
+          "inputs": [
+            25,
+            22
+          ],
+          "outputs": [
+            26
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 26,
+          "inputs": [
+            26
+          ],
+          "outputs": [
+            27
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 27,
+          "inputs": [
+            26
+          ],
+          "outputs": [
+            28
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 28,
+          "inputs": [
+            28
+          ],
+          "outputs": [
+            29
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 29,
+          "inputs": [
+            29
+          ],
+          "outputs": [
+            30
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 30,
+          "inputs": [
+            30
+          ],
+          "outputs": [
+            31
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 31,
+          "inputs": [
+            31
+          ],
+          "outputs": [
+            32
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 32,
+          "inputs": [
+            32
+          ],
+          "outputs": [
+            33
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 33,
+          "inputs": [
+            33,
+            30
+          ],
+          "outputs": [
+            34
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 34,
+          "inputs": [
+            34
+          ],
+          "outputs": [
+            35
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 35,
+          "inputs": [
+            24
+          ],
+          "outputs": [
+            36
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 36,
+          "inputs": [
+            35,
+            36
+          ],
+          "outputs": [
+            37
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 37,
+          "inputs": [
+            37
+          ],
+          "outputs": [
+            38
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 38,
+          "inputs": [
+            38,
+            34
+          ],
+          "outputs": [
+            39
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 39,
+          "inputs": [
+            39
+          ],
+          "outputs": [
+            40
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 40,
+          "inputs": [
+            14
+          ],
+          "outputs": [
+            41
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 41,
+          "inputs": [
+            7
+          ],
+          "outputs": [
+            42
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 42,
+          "inputs": [
+            40,
+            2,
+            42,
+            41
+          ],
+          "outputs": [
+            43
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 43,
+          "inputs": [
+            43
+          ],
+          "outputs": [
+            44
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 44,
+          "inputs": [
+            44
+          ],
+          "outputs": [
+            45
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 45,
+          "inputs": [
+            45
+          ],
+          "outputs": [
+            46
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 46,
+          "inputs": [
+            46
+          ],
+          "outputs": [
+            47
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 47,
+          "inputs": [
+            47,
+            44
+          ],
+          "outputs": [
+            48
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 48,
+          "inputs": [
+            48
+          ],
+          "outputs": [
+            49
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 49,
+          "inputs": [
+            49
+          ],
+          "outputs": [
+            50
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 50,
+          "inputs": [
+            50,
+            18
+          ],
+          "outputs": [
+            51
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 51,
+          "inputs": [
+            51
+          ],
+          "outputs": [
+            52
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 52,
+          "inputs": [
+            52
+          ],
+          "outputs": [
+            53
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 53,
+          "inputs": [
+            53
+          ],
+          "outputs": [
+            54
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 54,
+          "inputs": [
+            54,
+            51
+          ],
+          "outputs": [
+            55
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 55,
+          "inputs": [
+            55,
+            27
+          ],
+          "outputs": [
+            56
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 56,
+          "inputs": [
+            56
+          ],
+          "outputs": [
+            57
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 57,
+          "inputs": [
+            57
+          ],
+          "outputs": [
+            58
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 58,
+          "inputs": [
+            58,
+            55
+          ],
+          "outputs": [
+            59
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 59,
+          "inputs": [
+            59
+          ],
+          "outputs": [
+            60
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 60,
+          "inputs": [
+            60
+          ],
+          "outputs": [
+            61
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 61,
+          "inputs": [
+            61,
+            2
+          ],
+          "outputs": [
+            62
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 62,
+          "inputs": [
+            62,
+            59
+          ],
+          "outputs": [
+            63
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 63,
+          "inputs": [
+            63
+          ],
+          "outputs": [
+            64
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 64,
+          "inputs": [
+            64
+          ],
+          "outputs": [
+            65
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 65,
+          "inputs": [
+            65,
+            57,
+            47
+          ],
+          "outputs": [
+            66
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 66,
+          "inputs": [
+            66
+          ],
+          "outputs": [
+            67
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 67,
+          "inputs": [
+            66,
+            32,
+            67
+          ],
+          "outputs": [
+            68
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 68,
+          "inputs": [
+            68
+          ],
+          "outputs": [
+            69
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        },
+        {
+          "opcode_index": 69,
+          "inputs": [
+            69
+          ],
+          "outputs": [
+            70
+          ],
+          "custom_options": [
+            84,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0,
+            4,
+            2,
+            36,
+            1
+          ]
+        }
+      ],
+      "name": "main"
+    }
+  ],
+  "description": "MLIR Converted."
+}

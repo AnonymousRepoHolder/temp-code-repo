@@ -1,0 +1,142 @@
+[
+  {
+    "idx": 49,
+    "real_type": "LOGISTIC",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.44
+      },
+      {
+        "type": "RELU6",
+        "p": 0.3
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 59,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.44
+      },
+      {
+        "type": "RELU6",
+        "p": 0.3
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 13,
+    "real_type": "MAX_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.44
+      },
+      {
+        "type": "RELU6",
+        "p": 0.3
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 14,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.44
+      },
+      {
+        "type": "RELU6",
+        "p": 0.3
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 68,
+    "real_type": "MAX_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.44
+      },
+      {
+        "type": "RELU6",
+        "p": 0.3
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 32,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.44
+      },
+      {
+        "type": "RELU6",
+        "p": 0.3
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 39,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "TRANSPOSE",
+        "p": 0.55
+      },
+      {
+        "type": "STRIDED_SLICE",
+        "p": 0.25
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.2
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  }
+]

@@ -1,0 +1,5 @@
+tensorflow==2.18.1
+cryptography>=41
+networkx==3.5
+matplotlib==3.10.7
+ortools==9.10.4067

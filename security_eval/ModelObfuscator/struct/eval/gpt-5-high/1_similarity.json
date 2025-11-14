@@ -1,0 +1,134 @@
+{
+  "query_model_id": 1,
+  "llm": "gpt-5-high",
+  "ranking": [
+    {
+      "model_id": 1,
+      "model_name": "squeezenet",
+      "similarity": 1.0,
+      "f1": 1.0,
+      "tp": 47,
+      "fp": 0,
+      "fn": 0,
+      "matched_nodes": 40,
+      "elapsed_time": 9.31,
+      "rank": 1
+    },
+    {
+      "model_id": 3,
+      "model_name": "fruit",
+      "similarity": 0.9325,
+      "f1": 1.0,
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "matched_nodes": 31,
+      "elapsed_time": 11.42,
+      "rank": 2
+    },
+    {
+      "model_id": 5,
+      "model_name": "mobilenet",
+      "similarity": 0.9325,
+      "f1": 1.0,
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "matched_nodes": 31,
+      "elapsed_time": 11.33,
+      "rank": 3
+    },
+    {
+      "model_id": 6,
+      "model_name": "skin",
+      "similarity": 0.9325,
+      "f1": 1.0,
+      "tp": 30,
+      "fp": 0,
+      "fn": 0,
+      "matched_nodes": 31,
+      "elapsed_time": 10.19,
+      "rank": 4
+    },
+    {
+      "model_id": 2,
+      "model_name": "posenet",
+      "similarity": 0.839809,
+      "f1": 0.9355,
+      "tp": 29,
+      "fp": 0,
+      "fn": 4,
+      "matched_nodes": 30,
+      "elapsed_time": 11.34,
+      "rank": 5
+    },
+    {
+      "model_id": 4,
+      "model_name": "lenet",
+      "similarity": 0.7525,
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "matched_nodes": 7,
+      "elapsed_time": 1.36,
+      "rank": 6
+    },
+    {
+      "model_id": 8,
+      "model_name": "efficientnet",
+      "similarity": 0.567039,
+      "f1": 0.6435,
+      "tp": 37,
+      "fp": 8,
+      "fn": 33,
+      "matched_nodes": 39,
+      "elapsed_time": 15.14,
+      "rank": 7
+    },
+    {
+      "model_id": 7,
+      "model_name": "mnasnet",
+      "similarity": 0.547292,
+      "f1": 0.6167,
+      "tp": 37,
+      "fp": 10,
+      "fn": 36,
+      "matched_nodes": 40,
+      "elapsed_time": 17.1,
+      "rank": 8
+    },
+    {
+      "model_id": 9,
+      "model_name": "ssd",
+      "similarity": 0.447271,
+      "f1": 0.5271,
+      "tp": 34,
+      "fp": 11,
+      "fn": 50,
+      "matched_nodes": 39,
+      "elapsed_time": 15.14,
+      "rank": 9
+    },
+    {
+      "model_id": 10,
+      "model_name": "depth_estimation",
+      "similarity": 0.294174,
+      "f1": 0.3732,
+      "tp": 39,
+      "fp": 8,
+      "fn": 123,
+      "matched_nodes": 40,
+      "elapsed_time": 18.84,
+      "rank": 10
+    }
+  ],
+  "top1_tied": false,
+  "top1_models": [
+    "squeezenet"
+  ],
+  "top1_correct": true,
+  "top3_correct": true,
+  "ground_truth_rank": 1,
+  "total_time": 19.89
+}

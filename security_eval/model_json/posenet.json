@@ -1,0 +1,1782 @@
+{
+  "version": 3,
+  "operator_codes": [
+    {
+      "deprecated_builtin_code": 2
+    },
+    {
+      "deprecated_builtin_code": 3
+    },
+    {
+      "deprecated_builtin_code": 4
+    }
+  ],
+  "subgraphs": [
+    {
+      "tensors": [
+        {
+          "shape": [
+            24,
+            3,
+            3,
+            3
+          ],
+          "buffer": 55,
+          "name": "MobilenetV1/Conv2d_0/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            384
+          ],
+          "buffer": 96,
+          "name": "MobilenetV1/Conv2d_10_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384,
+            1,
+            1,
+            384
+          ],
+          "buffer": 23,
+          "name": "MobilenetV1/Conv2d_10_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            384
+          ],
+          "buffer": 21,
+          "name": "MobilenetV1/Conv2d_11_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384,
+            1,
+            1,
+            384
+          ],
+          "buffer": 19,
+          "name": "MobilenetV1/Conv2d_11_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            384
+          ],
+          "buffer": 17,
+          "name": "MobilenetV1/Conv2d_12_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384,
+            1,
+            1,
+            384
+          ],
+          "buffer": 74,
+          "name": "MobilenetV1/Conv2d_12_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            384
+          ],
+          "buffer": 14,
+          "name": "MobilenetV1/Conv2d_13_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384,
+            1,
+            1,
+            384
+          ],
+          "buffer": 12,
+          "name": "MobilenetV1/Conv2d_13_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            24
+          ],
+          "buffer": 71,
+          "name": "MobilenetV1/Conv2d_1_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            48,
+            1,
+            1,
+            24
+          ],
+          "buffer": 53,
+          "name": "MobilenetV1/Conv2d_1_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            48
+          ],
+          "buffer": 51,
+          "name": "MobilenetV1/Conv2d_2_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96,
+            1,
+            1,
+            48
+          ],
+          "buffer": 49,
+          "name": "MobilenetV1/Conv2d_2_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            96
+          ],
+          "buffer": 86,
+          "name": "MobilenetV1/Conv2d_3_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96,
+            1,
+            1,
+            96
+          ],
+          "buffer": 47,
+          "name": "MobilenetV1/Conv2d_3_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            96
+          ],
+          "buffer": 75,
+          "name": "MobilenetV1/Conv2d_4_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            96
+          ],
+          "buffer": 44,
+          "name": "MobilenetV1/Conv2d_4_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            192
+          ],
+          "buffer": 42,
+          "name": "MobilenetV1/Conv2d_5_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            192
+          ],
+          "buffer": 94,
+          "name": "MobilenetV1/Conv2d_5_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            192
+          ],
+          "buffer": 40,
+          "name": "MobilenetV1/Conv2d_6_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384,
+            1,
+            1,
+            192
+          ],
+          "buffer": 38,
+          "name": "MobilenetV1/Conv2d_6_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            384
+          ],
+          "buffer": 36,
+          "name": "MobilenetV1/Conv2d_7_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384,
+            1,
+            1,
+            384
+          ],
+          "buffer": 34,
+          "name": "MobilenetV1/Conv2d_7_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            384
+          ],
+          "buffer": 32,
+          "name": "MobilenetV1/Conv2d_8_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384,
+            1,
+            1,
+            384
+          ],
+          "buffer": 30,
+          "name": "MobilenetV1/Conv2d_8_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            384
+          ],
+          "buffer": 28,
+          "name": "MobilenetV1/Conv2d_9_depthwise/depthwise_weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384,
+            1,
+            1,
+            384
+          ],
+          "buffer": 26,
+          "name": "MobilenetV1/Conv2d_9_pointwise/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 62,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            177,
+            129,
+            24
+          ],
+          "buffer": 77,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_0/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 57,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 24,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_10_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 22,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 60,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 65,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 20,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_11_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 18,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 69,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 92,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 16,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_12_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 15,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 63,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 95,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 13,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_13_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 11,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 97,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            177,
+            129,
+            24
+          ],
+          "buffer": 76,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 54,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_1_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            48
+          ],
+          "buffer": 52,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            177,
+            129,
+            48
+          ],
+          "buffer": 70,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            89,
+            65,
+            48
+          ],
+          "buffer": 61,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            48
+          ],
+          "buffer": 50,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96
+          ],
+          "buffer": 48,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            89,
+            65,
+            96
+          ],
+          "buffer": 78,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            89,
+            65,
+            96
+          ],
+          "buffer": 79,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96
+          ],
+          "buffer": 84,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_3_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96
+          ],
+          "buffer": 46,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            89,
+            65,
+            96
+          ],
+          "buffer": 72,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            45,
+            33,
+            96
+          ],
+          "buffer": 80,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96
+          ],
+          "buffer": 45,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_4_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 43,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            45,
+            33,
+            192
+          ],
+          "buffer": 82,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            45,
+            33,
+            192
+          ],
+          "buffer": 83,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 89,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_5_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 41,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            45,
+            33,
+            192
+          ],
+          "buffer": 64,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            192
+          ],
+          "buffer": 56,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 39,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_6_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 37,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 66,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 85,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 35,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_7_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 33,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 81,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 87,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 31,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_8_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 29,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 88,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 90,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 27,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_9_depthwise/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            384
+          ],
+          "buffer": 25,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            384
+          ],
+          "buffer": 91,
+          "name": "MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            32
+          ],
+          "buffer": 93,
+          "name": "MobilenetV1/displacement_bwd_2/BiasAdd",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32
+          ],
+          "buffer": 5,
+          "name": "MobilenetV1/displacement_bwd_2/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32,
+            1,
+            1,
+            384
+          ],
+          "buffer": 6,
+          "name": "MobilenetV1/displacement_bwd_2/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            32
+          ],
+          "buffer": 68,
+          "name": "MobilenetV1/displacement_fwd_2/BiasAdd",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32
+          ],
+          "buffer": 3,
+          "name": "MobilenetV1/displacement_fwd_2/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32,
+            1,
+            1,
+            384
+          ],
+          "buffer": 4,
+          "name": "MobilenetV1/displacement_fwd_2/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            17
+          ],
+          "buffer": 9,
+          "name": "MobilenetV1/heatmap_2/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            17,
+            1,
+            1,
+            384
+          ],
+          "buffer": 10,
+          "name": "MobilenetV1/heatmap_2/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            34
+          ],
+          "buffer": 7,
+          "name": "MobilenetV1/offset_2/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            34,
+            1,
+            1,
+            384
+          ],
+          "buffer": 8,
+          "name": "MobilenetV1/offset_2/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1
+          ],
+          "buffer": 1,
+          "name": "MobilenetV1/segment_2/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1,
+            1,
+            384
+          ],
+          "buffer": 2,
+          "name": "MobilenetV1/segment_2/weights",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            17
+          ],
+          "buffer": 58,
+          "name": "float_heatmaps",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            64
+          ],
+          "buffer": 98,
+          "name": "float_mid_offsets",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            1
+          ],
+          "buffer": 59,
+          "name": "float_segments",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            23,
+            17,
+            34
+          ],
+          "buffer": 67,
+          "name": "float_short_offsets",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            353,
+            257,
+            3
+          ],
+          "buffer": 73,
+          "name": "sub_2",
+          "quantization": {
+            "min": [
+              0.0
+            ],
+            "max": [
+              255.0
+            ]
+          }
+        }
+      ],
+      "inputs": [
+        97
+      ],
+      "outputs": [
+        93,
+        96,
+        94,
+        95
+      ],
+      "operators": [
+        {
+          "opcode_index": 1,
+          "inputs": [
+            97,
+            0,
+            27
+          ],
+          "outputs": [
+            28
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            28,
+            9,
+            46
+          ],
+          "outputs": [
+            45
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            45,
+            10,
+            47
+          ],
+          "outputs": [
+            48
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            48,
+            11,
+            50
+          ],
+          "outputs": [
+            49
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            49,
+            12,
+            51
+          ],
+          "outputs": [
+            52
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            52,
+            13,
+            54
+          ],
+          "outputs": [
+            53
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            53,
+            14,
+            55
+          ],
+          "outputs": [
+            56
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            56,
+            15,
+            58
+          ],
+          "outputs": [
+            57
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            57,
+            16,
+            59
+          ],
+          "outputs": [
+            60
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            60,
+            17,
+            62
+          ],
+          "outputs": [
+            61
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            61,
+            18,
+            63
+          ],
+          "outputs": [
+            64
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            64,
+            19,
+            66
+          ],
+          "outputs": [
+            65
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            65,
+            20,
+            67
+          ],
+          "outputs": [
+            68
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            68,
+            21,
+            70
+          ],
+          "outputs": [
+            69
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            69,
+            22,
+            71
+          ],
+          "outputs": [
+            72
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            72,
+            23,
+            74
+          ],
+          "outputs": [
+            73
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            73,
+            24,
+            75
+          ],
+          "outputs": [
+            76
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            76,
+            25,
+            78
+          ],
+          "outputs": [
+            77
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            77,
+            26,
+            79
+          ],
+          "outputs": [
+            80
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            80,
+            1,
+            30
+          ],
+          "outputs": [
+            29
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            29,
+            2,
+            31
+          ],
+          "outputs": [
+            32
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            32,
+            3,
+            34
+          ],
+          "outputs": [
+            33
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            33,
+            4,
+            35
+          ],
+          "outputs": [
+            36
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            36,
+            5,
+            38
+          ],
+          "outputs": [
+            37
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            37,
+            6,
+            39
+          ],
+          "outputs": [
+            40
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            40,
+            7,
+            42
+          ],
+          "outputs": [
+            41
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            41,
+            8,
+            43
+          ],
+          "outputs": [
+            44
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            44,
+            88,
+            87
+          ],
+          "outputs": [
+            93
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            44,
+            90,
+            89
+          ],
+          "outputs": [
+            96
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            44,
+            83,
+            82
+          ],
+          "outputs": [
+            81
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            44,
+            86,
+            85
+          ],
+          "outputs": [
+            84
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            44,
+            92,
+            91
+          ],
+          "outputs": [
+            95
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        },
+        {
+          "inputs": [
+            84,
+            81
+          ],
+          "outputs": [
+            94
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 3
+          },
+          "mutating_variable_inputs": [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "description": "TOCO Converted."
+}

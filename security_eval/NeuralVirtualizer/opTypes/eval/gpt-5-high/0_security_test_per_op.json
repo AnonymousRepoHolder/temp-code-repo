@@ -1,0 +1,662 @@
+[
+  {
+    "idx": 31,
+    "real_type": "PACK",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 174,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 78,
+    "real_type": "AVERAGE_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 81,
+    "real_type": "STRIDED_SLICE",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 277,
+    "real_type": "GATHER",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 243,
+    "real_type": "MUL",
+    "pred_topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.45
+      },
+      {
+        "type": "ADD",
+        "p": 0.3
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 289,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.45
+      },
+      {
+        "type": "ADD",
+        "p": 0.3
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.3
+  },
+  {
+    "idx": 122,
+    "real_type": "CONCATENATION",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 230,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.48
+  },
+  {
+    "idx": 301,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 10,
+    "real_type": "SLICE",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 296,
+    "real_type": "RESHAPE",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 293,
+    "real_type": "TRANSPOSE",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 180,
+    "real_type": "CAST",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 34,
+    "real_type": "SUM",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 184,
+    "real_type": "MAX_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.27
+  },
+  {
+    "idx": 123,
+    "real_type": "RESHAPE",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 5,
+    "real_type": "RESHAPE",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 142,
+    "real_type": "SPLIT",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 48,
+    "real_type": "GELU",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 181,
+    "real_type": "STRIDED_SLICE",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 264,
+    "real_type": "SLICE",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 196,
+    "real_type": "CAST",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 61,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 47,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 109,
+    "real_type": "MEAN",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 130,
+    "real_type": "RESHAPE",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 321,
+    "real_type": "SOFTMAX",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 124,
+    "real_type": "MUL",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 268,
+    "real_type": "SUB",
+    "pred_topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.45
+      },
+      {
+        "type": "ADD",
+        "p": 0.3
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 39,
+    "real_type": "RESHAPE",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 203,
+    "real_type": "BATCH_MATMUL",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 260,
+    "real_type": "RESIZE_BILINEAR",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.48
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.27
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  }
+]

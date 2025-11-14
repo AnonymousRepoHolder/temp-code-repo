@@ -1,0 +1,134 @@
+{
+  "query_model_id": 10,
+  "llm": "gpt-5-high",
+  "ranking": [
+    {
+      "model_id": 7,
+      "model_name": "mnasnet",
+      "similarity": 0.788235,
+      "f1": 0.9371,
+      "tp": 67,
+      "fp": 3,
+      "fn": 6,
+      "matched_nodes": 64,
+      "elapsed_time": 126.94,
+      "rank": 1
+    },
+    {
+      "model_id": 8,
+      "model_name": "efficientnet",
+      "similarity": 0.739749,
+      "f1": 0.8841,
+      "tp": 61,
+      "fp": 7,
+      "fn": 9,
+      "matched_nodes": 62,
+      "elapsed_time": 123.99,
+      "rank": 2
+    },
+    {
+      "model_id": 10,
+      "model_name": "depth_estimation",
+      "similarity": 0.734568,
+      "f1": 0.7346,
+      "tp": 119,
+      "fp": 43,
+      "fn": 43,
+      "matched_nodes": 136,
+      "elapsed_time": 122.76,
+      "rank": 3
+    },
+    {
+      "model_id": 4,
+      "model_name": "lenet",
+      "similarity": 0.715441,
+      "f1": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "matched_nodes": 7,
+      "elapsed_time": 9.57,
+      "rank": 4
+    },
+    {
+      "model_id": 3,
+      "model_name": "fruit",
+      "similarity": 0.709276,
+      "f1": 0.9231,
+      "tp": 30,
+      "fp": 5,
+      "fn": 0,
+      "matched_nodes": 31,
+      "elapsed_time": 34.39,
+      "rank": 5
+    },
+    {
+      "model_id": 5,
+      "model_name": "mobilenet",
+      "similarity": 0.709276,
+      "f1": 0.9231,
+      "tp": 30,
+      "fp": 5,
+      "fn": 0,
+      "matched_nodes": 31,
+      "elapsed_time": 34.54,
+      "rank": 6
+    },
+    {
+      "model_id": 6,
+      "model_name": "skin",
+      "similarity": 0.709276,
+      "f1": 0.9231,
+      "tp": 30,
+      "fp": 5,
+      "fn": 0,
+      "matched_nodes": 31,
+      "elapsed_time": 34.62,
+      "rank": 7
+    },
+    {
+      "model_id": 9,
+      "model_name": "ssd",
+      "similarity": 0.709036,
+      "f1": 0.8193,
+      "tp": 68,
+      "fp": 14,
+      "fn": 16,
+      "matched_nodes": 75,
+      "elapsed_time": 122.62,
+      "rank": 8
+    },
+    {
+      "model_id": 2,
+      "model_name": "posenet",
+      "similarity": 0.681938,
+      "f1": 0.8955,
+      "tp": 30,
+      "fp": 4,
+      "fn": 3,
+      "matched_nodes": 32,
+      "elapsed_time": 25.2,
+      "rank": 9
+    },
+    {
+      "model_id": 1,
+      "model_name": "squeezenet",
+      "similarity": 0.659918,
+      "f1": 0.8372,
+      "tp": 36,
+      "fp": 3,
+      "fn": 11,
+      "matched_nodes": 40,
+      "elapsed_time": 121.3,
+      "rank": 10
+    }
+  ],
+  "top1_tied": false,
+  "top1_models": [
+    "mnasnet"
+  ],
+  "top1_correct": false,
+  "top3_correct": true,
+  "ground_truth_rank": 3,
+  "total_time": 128.02
+}

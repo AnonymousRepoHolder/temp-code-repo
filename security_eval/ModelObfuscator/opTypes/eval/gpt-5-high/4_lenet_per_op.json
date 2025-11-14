@@ -1,0 +1,149 @@
+[
+  {
+    "array_pos": 0,
+    "pred_idx": 0,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.34
+      },
+      {
+        "type": "RELU",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.34
+  },
+  {
+    "array_pos": 1,
+    "pred_idx": 1,
+    "real_type": "MAX_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.34
+      },
+      {
+        "type": "RELU",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 2,
+    "pred_idx": 2,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.34
+      },
+      {
+        "type": "RELU",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.34
+  },
+  {
+    "array_pos": 3,
+    "pred_idx": 3,
+    "real_type": "MAX_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.34
+      },
+      {
+        "type": "RELU",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 4,
+    "pred_idx": 4,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.34
+      },
+      {
+        "type": "RELU",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 5,
+    "pred_idx": 5,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.34
+      },
+      {
+        "type": "RELU",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 6,
+    "pred_idx": 6,
+    "real_type": "LOGISTIC",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.34
+      },
+      {
+        "type": "RELU",
+        "p": 0.26
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "idx": 49,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RESHAPE", "p": 0.28},
+      {"type": "AVERAGE_POOL_2D", "p": 0.22},
+      {"type": "RELU6", "p": 0.15}
+    ]
+  },
+  {
+    "idx": 59,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RESHAPE", "p": 0.28},
+      {"type": "AVERAGE_POOL_2D", "p": 0.22},
+      {"type": "RELU6", "p": 0.15}
+    ]
+  },
+  {
+    "idx": 13,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RESHAPE", "p": 0.28},
+      {"type": "AVERAGE_POOL_2D", "p": 0.22},
+      {"type": "RELU6", "p": 0.15}
+    ]
+  },
+  {
+    "idx": 14,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RESHAPE", "p": 0.28},
+      {"type": "AVERAGE_POOL_2D", "p": 0.22},
+      {"type": "RELU6", "p": 0.15}
+    ]
+  },
+  {
+    "idx": 68,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RESHAPE", "p": 0.28},
+      {"type": "AVERAGE_POOL_2D", "p": 0.22},
+      {"type": "RELU6", "p": 0.15}
+    ]
+  },
+  {
+    "idx": 32,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RESHAPE", "p": 0.28},
+      {"type": "AVERAGE_POOL_2D", "p": 0.22},
+      {"type": "RELU6", "p": 0.15}
+    ]
+  },
+  {
+    "idx": 39,
+    "topk": [
+      {"type": "RESHAPE", "p": 0.38},
+      {"type": "CAST", "p": 0.32},
+      {"type": "SOFTMAX", "p": 0.30}
+    ]
+  }
+]

@@ -1,0 +1,622 @@
+[
+  {
+    "idx": 94,
+    "real_type": "SOFTMAX",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 254,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 69,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 90,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 30,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 100,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 34,
+    "real_type": "SQUEEZE",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 299,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 127,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 96,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 180,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 167,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 195,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.4
+      },
+      {
+        "type": "SOFTMAX",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 201,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 56,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 237,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 55,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 14,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 25,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 149,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 148,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 150,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 295,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 140,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 31,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 16,
+    "real_type": "AVERAGE_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 223,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 81,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 212,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 2,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 71,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  }
+]

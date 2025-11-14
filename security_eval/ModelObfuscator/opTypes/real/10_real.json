@@ -1,0 +1,546 @@
+[
+    {
+        "idx": 0,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 1,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 2,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 3,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 4,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 5,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 6,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 7,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 8,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 9,
+        "type": "ADD"
+    },
+    {
+        "idx": 10,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 11,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 12,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 13,
+        "type": "ADD"
+    },
+    {
+        "idx": 14,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 15,
+        "type": "RELU"
+    },
+    {
+        "idx": 16,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 17,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 18,
+        "type": "ADD"
+    },
+    {
+        "idx": 19,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 20,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 21,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 22,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 23,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 24,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 25,
+        "type": "ADD"
+    },
+    {
+        "idx": 26,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 27,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 28,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 29,
+        "type": "ADD"
+    },
+    {
+        "idx": 30,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 31,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 32,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 33,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 34,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 35,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 36,
+        "type": "ADD"
+    },
+    {
+        "idx": 37,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 38,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 39,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 40,
+        "type": "ADD"
+    },
+    {
+        "idx": 41,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 42,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 43,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 44,
+        "type": "ADD"
+    },
+    {
+        "idx": 45,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 46,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 47,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 48,
+        "type": "ADD"
+    },
+    {
+        "idx": 49,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 50,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 51,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 52,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 53,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 54,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 55,
+        "type": "ADD"
+    },
+    {
+        "idx": 56,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 57,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 58,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 59,
+        "type": "ADD"
+    },
+    {
+        "idx": 60,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 61,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 62,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 63,
+        "type": "ADD"
+    },
+    {
+        "idx": 64,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 65,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 66,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 67,
+        "type": "ADD"
+    },
+    {
+        "idx": 68,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 69,
+        "type": "RELU"
+    },
+    {
+        "idx": 70,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 71,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 72,
+        "type": "ADD"
+    },
+    {
+        "idx": 73,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 74,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 75,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 76,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 77,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 78,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 79,
+        "type": "ADD"
+    },
+    {
+        "idx": 80,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 81,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 82,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 83,
+        "type": "ADD"
+    },
+    {
+        "idx": 84,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 85,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 86,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 87,
+        "type": "ADD"
+    },
+    {
+        "idx": 88,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 89,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 90,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 91,
+        "type": "ADD"
+    },
+    {
+        "idx": 92,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 93,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 94,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 95,
+        "type": "ADD"
+    },
+    {
+        "idx": 96,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 97,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 98,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 99,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 100,
+        "type": "RELU"
+    },
+    {
+        "idx": 101,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 102,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 103,
+        "type": "ADD"
+    },
+    {
+        "idx": 104,
+        "type": "RESIZE_BILINEAR"
+    },
+    {
+        "idx": 105,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 106,
+        "type": "ADD"
+    },
+    {
+        "idx": 107,
+        "type": "RELU"
+    },
+    {
+        "idx": 108,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 109,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 110,
+        "type": "ADD"
+    },
+    {
+        "idx": 111,
+        "type": "RESIZE_BILINEAR"
+    },
+    {
+        "idx": 112,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 113,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 114,
+        "type": "RELU"
+    },
+    {
+        "idx": 115,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 116,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 117,
+        "type": "ADD"
+    },
+    {
+        "idx": 118,
+        "type": "ADD"
+    },
+    {
+        "idx": 119,
+        "type": "RELU"
+    },
+    {
+        "idx": 120,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 121,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 122,
+        "type": "ADD"
+    },
+    {
+        "idx": 123,
+        "type": "RESIZE_BILINEAR"
+    },
+    {
+        "idx": 124,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 125,
+        "type": "ADD"
+    },
+    {
+        "idx": 126,
+        "type": "RELU"
+    },
+    {
+        "idx": 127,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 128,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 129,
+        "type": "ADD"
+    },
+    {
+        "idx": 130,
+        "type": "RESIZE_BILINEAR"
+    },
+    {
+        "idx": 131,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 132,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 133,
+        "type": "RESIZE_BILINEAR"
+    },
+    {
+        "idx": 134,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 135,
+        "type": "CONV_2D"
+    }
+]

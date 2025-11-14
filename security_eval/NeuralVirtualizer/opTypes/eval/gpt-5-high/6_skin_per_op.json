@@ -1,0 +1,622 @@
+[
+  {
+    "idx": 39,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 3,
+    "p_real": 0.25
+  },
+  {
+    "idx": 198,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.45
+  },
+  {
+    "idx": 45,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 190,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.3
+  },
+  {
+    "idx": 30,
+    "real_type": "SOFTMAX",
+    "pred_topk": [
+      {
+        "type": "RESHAPE",
+        "p": 0.4
+      },
+      {
+        "type": "TRANSPOSE",
+        "p": 0.35
+      },
+      {
+        "type": "SQUEEZE",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 295,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RESHAPE",
+        "p": 0.4
+      },
+      {
+        "type": "TRANSPOSE",
+        "p": 0.35
+      },
+      {
+        "type": "SQUEEZE",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 277,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "SOFTMAX",
+        "p": 0.4
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.35
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 22,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.4
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 281,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.45
+  },
+  {
+    "idx": 91,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.4
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 3,
+    "p_real": 0.25
+  },
+  {
+    "idx": 223,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.4
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 140,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.4
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 112,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "ADD",
+        "p": 0.36
+      },
+      {
+        "type": "MUL",
+        "p": 0.34
+      },
+      {
+        "type": "SUB",
+        "p": 0.3
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 16,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.45
+  },
+  {
+    "idx": 20,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "ADD",
+        "p": 0.36
+      },
+      {
+        "type": "MUL",
+        "p": 0.34
+      },
+      {
+        "type": "SUB",
+        "p": 0.3
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 232,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.4
+      },
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.35
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 3,
+    "p_real": 0.25
+  },
+  {
+    "idx": 113,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.45
+  },
+  {
+    "idx": 12,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.45
+  },
+  {
+    "idx": 167,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.45
+  },
+  {
+    "idx": 54,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "ADD",
+        "p": 0.36
+      },
+      {
+        "type": "MUL",
+        "p": 0.34
+      },
+      {
+        "type": "SUB",
+        "p": 0.3
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 170,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.3
+  },
+  {
+    "idx": 130,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.3
+  },
+  {
+    "idx": 81,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 3,
+    "p_real": 0.25
+  },
+  {
+    "idx": 181,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "ADD",
+        "p": 0.36
+      },
+      {
+        "type": "MUL",
+        "p": 0.34
+      },
+      {
+        "type": "SUB",
+        "p": 0.3
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 153,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 248,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.45
+  },
+  {
+    "idx": 261,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RESHAPE",
+        "p": 0.4
+      },
+      {
+        "type": "TRANSPOSE",
+        "p": 0.35
+      },
+      {
+        "type": "SQUEEZE",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 133,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RESHAPE",
+        "p": 0.4
+      },
+      {
+        "type": "TRANSPOSE",
+        "p": 0.35
+      },
+      {
+        "type": "SQUEEZE",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 156,
+    "real_type": "AVERAGE_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 3,
+    "p_real": 0.25
+  },
+  {
+    "idx": 85,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "ADD",
+        "p": 0.36
+      },
+      {
+        "type": "MUL",
+        "p": 0.34
+      },
+      {
+        "type": "SUB",
+        "p": 0.3
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 121,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.45
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.3
+      },
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.45
+  }
+]

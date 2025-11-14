@@ -1,0 +1,30 @@
+[
+    {
+        "idx": 0,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 1,
+        "type": "MAX_POOL_2D"
+    },
+    {
+        "idx": 2,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 3,
+        "type": "MAX_POOL_2D"
+    },
+    {
+        "idx": 4,
+        "type": "FULLY_CONNECTED"
+    },
+    {
+        "idx": 5,
+        "type": "FULLY_CONNECTED"
+    },
+    {
+        "idx": 6,
+        "type": "LOGISTIC"
+    }
+]

@@ -1,0 +1,281 @@
+[
+  {
+    "idx": 0,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 1,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 2,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 3,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 4,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 5,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 6,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 7,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 8,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 9,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 10,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 11,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 12,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 13,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 14,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 15,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 16,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 17,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 18,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 19,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 20,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 21,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 22,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 23,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 24,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 25,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 26,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 27,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 28,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 29,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  },
+  {
+    "idx": 30,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.32},
+      {"type": "DEPTHWISE_CONV_2D", "p": 0.28},
+      {"type": "RELU", "p": 0.22},
+      {"type": "RELU6", "p": 0.18}
+    ]
+  }
+]

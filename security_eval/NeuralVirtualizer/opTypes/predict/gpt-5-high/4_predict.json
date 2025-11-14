@@ -1,0 +1,9 @@
+[
+  {"idx":49,"topk":[{"type":"RELU","p":0.44},{"type":"RELU6","p":0.30},{"type":"UNKNOWN","p":0.26}]},
+  {"idx":59,"topk":[{"type":"RELU","p":0.44},{"type":"RELU6","p":0.30},{"type":"UNKNOWN","p":0.26}]},
+  {"idx":13,"topk":[{"type":"RELU","p":0.44},{"type":"RELU6","p":0.30},{"type":"UNKNOWN","p":0.26}]},
+  {"idx":14,"topk":[{"type":"RELU","p":0.44},{"type":"RELU6","p":0.30},{"type":"UNKNOWN","p":0.26}]},
+  {"idx":68,"topk":[{"type":"RELU","p":0.44},{"type":"RELU6","p":0.30},{"type":"UNKNOWN","p":0.26}]},
+  {"idx":32,"topk":[{"type":"RELU","p":0.44},{"type":"RELU6","p":0.30},{"type":"UNKNOWN","p":0.26}]},
+  {"idx":39,"topk":[{"type":"TRANSPOSE","p":0.55},{"type":"STRIDED_SLICE","p":0.25},{"type":"UNKNOWN","p":0.20}]}
+]

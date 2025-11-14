@@ -1,0 +1,1740 @@
+{
+  "version": 3,
+  "operator_codes": [
+    {
+      "deprecated_builtin_code": 1
+    },
+    {
+      "deprecated_builtin_code": 3
+    },
+    {
+      "deprecated_builtin_code": 2
+    },
+    {
+      "deprecated_builtin_code": 17
+    },
+    {
+      "deprecated_builtin_code": 25
+    },
+    {
+      "deprecated_builtin_code": 22
+    }
+  ],
+  "subgraphs": [
+    {
+      "tensors": [
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 59,
+          "name": "Placeholder",
+          "quantization": {
+            "min": [
+              0.0
+            ],
+            "max": [
+              255.0
+            ]
+          }
+        },
+        {
+          "shape": [
+            1,
+            1,
+            1,
+            1001
+          ],
+          "buffer": 29,
+          "name": "average_pooling2d/AvgPool",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96
+          ],
+          "buffer": 19,
+          "name": "conv1/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            112,
+            112,
+            96
+          ],
+          "buffer": 36,
+          "name": "conv1/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96,
+            7,
+            7,
+            3
+          ],
+          "buffer": 53,
+          "name": "conv1/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1001
+          ],
+          "buffer": 22,
+          "name": "conv10/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            13,
+            13,
+            1001
+          ],
+          "buffer": 23,
+          "name": "conv10/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1001,
+            1,
+            1,
+            512
+          ],
+          "buffer": 66,
+          "name": "conv10/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            128
+          ],
+          "buffer": 57,
+          "name": "fire2/concat",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64
+          ],
+          "buffer": 38,
+          "name": "fire2/e1x1/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            64
+          ],
+          "buffer": 39,
+          "name": "fire2/e1x1/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64,
+            1,
+            1,
+            16
+          ],
+          "buffer": 46,
+          "name": "fire2/e1x1/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64
+          ],
+          "buffer": 18,
+          "name": "fire2/e3x3/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            64
+          ],
+          "buffer": 31,
+          "name": "fire2/e3x3/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64,
+            3,
+            3,
+            16
+          ],
+          "buffer": 62,
+          "name": "fire2/e3x3/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            16
+          ],
+          "buffer": 74,
+          "name": "fire2/squeeze/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            16
+          ],
+          "buffer": 33,
+          "name": "fire2/squeeze/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            16,
+            1,
+            1,
+            96
+          ],
+          "buffer": 52,
+          "name": "fire2/squeeze/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            128
+          ],
+          "buffer": 93,
+          "name": "fire3/concat",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64
+          ],
+          "buffer": 16,
+          "name": "fire3/e1x1/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            64
+          ],
+          "buffer": 69,
+          "name": "fire3/e1x1/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64,
+            1,
+            1,
+            16
+          ],
+          "buffer": 70,
+          "name": "fire3/e1x1/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64
+          ],
+          "buffer": 15,
+          "name": "fire3/e3x3/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            64
+          ],
+          "buffer": 77,
+          "name": "fire3/e3x3/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64,
+            3,
+            3,
+            16
+          ],
+          "buffer": 50,
+          "name": "fire3/e3x3/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            16
+          ],
+          "buffer": 17,
+          "name": "fire3/squeeze/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            16
+          ],
+          "buffer": 86,
+          "name": "fire3/squeeze/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            16,
+            1,
+            1,
+            128
+          ],
+          "buffer": 64,
+          "name": "fire3/squeeze/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            256
+          ],
+          "buffer": 81,
+          "name": "fire4/concat",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 13,
+          "name": "fire4/e1x1/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            128
+          ],
+          "buffer": 80,
+          "name": "fire4/e1x1/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128,
+            1,
+            1,
+            32
+          ],
+          "buffer": 47,
+          "name": "fire4/e1x1/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 12,
+          "name": "fire4/e3x3/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            128
+          ],
+          "buffer": 54,
+          "name": "fire4/e3x3/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128,
+            3,
+            3,
+            32
+          ],
+          "buffer": 48,
+          "name": "fire4/e3x3/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32
+          ],
+          "buffer": 14,
+          "name": "fire4/squeeze/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            32
+          ],
+          "buffer": 78,
+          "name": "fire4/squeeze/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32,
+            1,
+            1,
+            128
+          ],
+          "buffer": 40,
+          "name": "fire4/squeeze/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            256
+          ],
+          "buffer": 85,
+          "name": "fire5/concat",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 10,
+          "name": "fire5/e1x1/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            128
+          ],
+          "buffer": 83,
+          "name": "fire5/e1x1/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128,
+            1,
+            1,
+            32
+          ],
+          "buffer": 49,
+          "name": "fire5/e1x1/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 9,
+          "name": "fire5/e3x3/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            128
+          ],
+          "buffer": 82,
+          "name": "fire5/e3x3/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128,
+            3,
+            3,
+            32
+          ],
+          "buffer": 71,
+          "name": "fire5/e3x3/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32
+          ],
+          "buffer": 11,
+          "name": "fire5/squeeze/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            32
+          ],
+          "buffer": 42,
+          "name": "fire5/squeeze/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32,
+            1,
+            1,
+            256
+          ],
+          "buffer": 65,
+          "name": "fire5/squeeze/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            384
+          ],
+          "buffer": 34,
+          "name": "fire6/concat",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 79,
+          "name": "fire6/e1x1/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            192
+          ],
+          "buffer": 89,
+          "name": "fire6/e1x1/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            48
+          ],
+          "buffer": 51,
+          "name": "fire6/e1x1/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 25,
+          "name": "fire6/e3x3/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            192
+          ],
+          "buffer": 90,
+          "name": "fire6/e3x3/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            3,
+            3,
+            48
+          ],
+          "buffer": 72,
+          "name": "fire6/e3x3/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            48
+          ],
+          "buffer": 8,
+          "name": "fire6/squeeze/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            48
+          ],
+          "buffer": 87,
+          "name": "fire6/squeeze/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            48,
+            1,
+            1,
+            256
+          ],
+          "buffer": 84,
+          "name": "fire6/squeeze/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            384
+          ],
+          "buffer": 37,
+          "name": "fire7/concat",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 41,
+          "name": "fire7/e1x1/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            192
+          ],
+          "buffer": 91,
+          "name": "fire7/e1x1/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            48
+          ],
+          "buffer": 61,
+          "name": "fire7/e1x1/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 7,
+          "name": "fire7/e3x3/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            192
+          ],
+          "buffer": 55,
+          "name": "fire7/e3x3/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            3,
+            3,
+            48
+          ],
+          "buffer": 73,
+          "name": "fire7/e3x3/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            48
+          ],
+          "buffer": 68,
+          "name": "fire7/squeeze/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            48
+          ],
+          "buffer": 43,
+          "name": "fire7/squeeze/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            48,
+            1,
+            1,
+            384
+          ],
+          "buffer": 56,
+          "name": "fire7/squeeze/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            512
+          ],
+          "buffer": 28,
+          "name": "fire8/concat",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 5,
+          "name": "fire8/e1x1/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            256
+          ],
+          "buffer": 30,
+          "name": "fire8/e1x1/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256,
+            1,
+            1,
+            64
+          ],
+          "buffer": 92,
+          "name": "fire8/e1x1/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 4,
+          "name": "fire8/e3x3/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            256
+          ],
+          "buffer": 75,
+          "name": "fire8/e3x3/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256,
+            3,
+            3,
+            64
+          ],
+          "buffer": 63,
+          "name": "fire8/e3x3/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64
+          ],
+          "buffer": 6,
+          "name": "fire8/squeeze/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            64
+          ],
+          "buffer": 94,
+          "name": "fire8/squeeze/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64,
+            1,
+            1,
+            384
+          ],
+          "buffer": 67,
+          "name": "fire8/squeeze/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            13,
+            13,
+            512
+          ],
+          "buffer": 76,
+          "name": "fire9/concat",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 2,
+          "name": "fire9/e1x1/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            13,
+            13,
+            256
+          ],
+          "buffer": 88,
+          "name": "fire9/e1x1/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256,
+            1,
+            1,
+            64
+          ],
+          "buffer": 45,
+          "name": "fire9/e1x1/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 1,
+          "name": "fire9/e3x3/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            13,
+            13,
+            256
+          ],
+          "buffer": 24,
+          "name": "fire9/e3x3/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256,
+            3,
+            3,
+            64
+          ],
+          "buffer": 44,
+          "name": "fire9/e3x3/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64
+          ],
+          "buffer": 3,
+          "name": "fire9/squeeze/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            13,
+            13,
+            64
+          ],
+          "buffer": 26,
+          "name": "fire9/squeeze/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64,
+            1,
+            1,
+            512
+          ],
+          "buffer": 60,
+          "name": "fire9/squeeze/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1001
+          ],
+          "buffer": 32,
+          "name": "flatten/Reshape",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            2,
+            1
+          ],
+          "type": "INT32",
+          "buffer": 21,
+          "name": "flatten/Reshape/shape",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            55,
+            55,
+            96
+          ],
+          "buffer": 35,
+          "name": "maxpool1/MaxPool",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            27,
+            27,
+            256
+          ],
+          "buffer": 58,
+          "name": "maxpool4/MaxPool",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            13,
+            13,
+            512
+          ],
+          "buffer": 27,
+          "name": "maxpool8/MaxPool",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1001
+          ],
+          "buffer": 20,
+          "name": "softmax_tensor",
+          "quantization": {
+          }
+        }
+      ],
+      "inputs": [
+        0
+      ],
+      "outputs": [
+        93
+      ],
+      "operators": [
+        {
+          "opcode_index": 1,
+          "inputs": [
+            0,
+            4,
+            2
+          ],
+          "outputs": [
+            3
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 3,
+          "inputs": [
+            3
+          ],
+          "outputs": [
+            90
+          ],
+          "builtin_options_type": "Pool2DOptions",
+          "builtin_options": {
+            "padding": "VALID",
+            "stride_w": 2,
+            "stride_h": 2,
+            "filter_width": 3,
+            "filter_height": 3
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            90,
+            17,
+            15
+          ],
+          "outputs": [
+            16
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            16,
+            11,
+            9
+          ],
+          "outputs": [
+            10
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            16,
+            14,
+            12
+          ],
+          "outputs": [
+            13
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            10,
+            13
+          ],
+          "outputs": [
+            8
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 3
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            8,
+            27,
+            25
+          ],
+          "outputs": [
+            26
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            26,
+            21,
+            19
+          ],
+          "outputs": [
+            20
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            26,
+            24,
+            22
+          ],
+          "outputs": [
+            23
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            20,
+            23
+          ],
+          "outputs": [
+            18
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 3
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            18,
+            37,
+            35
+          ],
+          "outputs": [
+            36
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            36,
+            31,
+            29
+          ],
+          "outputs": [
+            30
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            36,
+            34,
+            32
+          ],
+          "outputs": [
+            33
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            30,
+            33
+          ],
+          "outputs": [
+            28
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 3
+          }
+        },
+        {
+          "opcode_index": 3,
+          "inputs": [
+            28
+          ],
+          "outputs": [
+            91
+          ],
+          "builtin_options_type": "Pool2DOptions",
+          "builtin_options": {
+            "padding": "VALID",
+            "stride_w": 2,
+            "stride_h": 2,
+            "filter_width": 3,
+            "filter_height": 3
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            91,
+            47,
+            45
+          ],
+          "outputs": [
+            46
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            46,
+            41,
+            39
+          ],
+          "outputs": [
+            40
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            46,
+            44,
+            42
+          ],
+          "outputs": [
+            43
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            40,
+            43
+          ],
+          "outputs": [
+            38
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 3
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            38,
+            57,
+            55
+          ],
+          "outputs": [
+            56
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            56,
+            51,
+            49
+          ],
+          "outputs": [
+            50
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            56,
+            54,
+            52
+          ],
+          "outputs": [
+            53
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            50,
+            53
+          ],
+          "outputs": [
+            48
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 3
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            48,
+            67,
+            65
+          ],
+          "outputs": [
+            66
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            66,
+            61,
+            59
+          ],
+          "outputs": [
+            60
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            66,
+            64,
+            62
+          ],
+          "outputs": [
+            63
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            60,
+            63
+          ],
+          "outputs": [
+            58
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 3
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            58,
+            77,
+            75
+          ],
+          "outputs": [
+            76
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            76,
+            71,
+            69
+          ],
+          "outputs": [
+            70
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            76,
+            74,
+            72
+          ],
+          "outputs": [
+            73
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            70,
+            73
+          ],
+          "outputs": [
+            68
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 3
+          }
+        },
+        {
+          "opcode_index": 3,
+          "inputs": [
+            68
+          ],
+          "outputs": [
+            92
+          ],
+          "builtin_options_type": "Pool2DOptions",
+          "builtin_options": {
+            "padding": "VALID",
+            "stride_w": 2,
+            "stride_h": 2,
+            "filter_width": 3,
+            "filter_height": 3
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            92,
+            87,
+            85
+          ],
+          "outputs": [
+            86
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            86,
+            81,
+            79
+          ],
+          "outputs": [
+            80
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            86,
+            84,
+            82
+          ],
+          "outputs": [
+            83
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            80,
+            83
+          ],
+          "outputs": [
+            78
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 3
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            78,
+            7,
+            5
+          ],
+          "outputs": [
+            6
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "outputs": [
+            1
+          ],
+          "builtin_options_type": "Pool2DOptions",
+          "builtin_options": {
+            "padding": "VALID",
+            "stride_w": 1,
+            "stride_h": 1,
+            "filter_width": 13,
+            "filter_height": 13
+          }
+        },
+        {
+          "opcode_index": 5,
+          "inputs": [
+            1,
+            89
+          ],
+          "outputs": [
+            88
+          ],
+          "builtin_options_type": "ReshapeOptions",
+          "builtin_options": {
+            "new_shape": [
+              1,
+              -1
+            ]
+          }
+        },
+        {
+          "opcode_index": 4,
+          "inputs": [
+            88
+          ],
+          "outputs": [
+            93
+          ],
+          "builtin_options_type": "SoftmaxOptions",
+          "builtin_options": {
+            "beta": 1.0
+          }
+        }
+      ]
+    }
+  ],
+  "description": "TOCO Converted."
+}

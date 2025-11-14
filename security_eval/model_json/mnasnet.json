@@ -1,0 +1,2967 @@
+{
+  "version": 3,
+  "operator_codes": [
+    {
+    },
+    {
+      "deprecated_builtin_code": 3
+    },
+    {
+      "deprecated_builtin_code": 4
+    },
+    {
+      "deprecated_builtin_code": 9
+    },
+    {
+      "deprecated_builtin_code": 40
+    }
+  ],
+  "subgraphs": [
+    {
+      "tensors": [
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 72,
+          "name": "input",
+          "quantization": {
+            "min": [
+              0.0
+            ],
+            "max": [
+              255.0
+            ]
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            576
+          ],
+          "buffer": 126,
+          "name": "mnasnet/cell_11/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            576,
+            1,
+            1,
+            96
+          ],
+          "buffer": 144,
+          "name": "mnasnet/cell_11/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96,
+            1,
+            1,
+            576
+          ],
+          "buffer": 116,
+          "name": "mnasnet/cell_11/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            1152
+          ],
+          "buffer": 73,
+          "name": "mnasnet/cell_13/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152,
+            1,
+            1,
+            192
+          ],
+          "buffer": 96,
+          "name": "mnasnet/cell_13/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            1152
+          ],
+          "buffer": 155,
+          "name": "mnasnet/cell_13/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            1152
+          ],
+          "buffer": 84,
+          "name": "mnasnet/cell_14/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152,
+            1,
+            1,
+            192
+          ],
+          "buffer": 99,
+          "name": "mnasnet/cell_14/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            1152
+          ],
+          "buffer": 142,
+          "name": "mnasnet/cell_14/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            1152
+          ],
+          "buffer": 109,
+          "name": "mnasnet/cell_15/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152,
+            1,
+            1,
+            192
+          ],
+          "buffer": 95,
+          "name": "mnasnet/cell_15/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            1152
+          ],
+          "buffer": 129,
+          "name": "mnasnet/cell_15/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            72
+          ],
+          "buffer": 107,
+          "name": "mnasnet/cell_2/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            72,
+            1,
+            1,
+            24
+          ],
+          "buffer": 89,
+          "name": "mnasnet/cell_2/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24,
+            1,
+            1,
+            72
+          ],
+          "buffer": 63,
+          "name": "mnasnet/cell_2/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            72
+          ],
+          "buffer": 76,
+          "name": "mnasnet/cell_3/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            72,
+            1,
+            1,
+            24
+          ],
+          "buffer": 157,
+          "name": "mnasnet/cell_3/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24,
+            1,
+            1,
+            72
+          ],
+          "buffer": 80,
+          "name": "mnasnet/cell_3/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            120
+          ],
+          "buffer": 115,
+          "name": "mnasnet/cell_5/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            120,
+            1,
+            1,
+            40
+          ],
+          "buffer": 81,
+          "name": "mnasnet/cell_5/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            40,
+            1,
+            1,
+            120
+          ],
+          "buffer": 130,
+          "name": "mnasnet/cell_5/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            120
+          ],
+          "buffer": 110,
+          "name": "mnasnet/cell_6/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            120,
+            1,
+            1,
+            40
+          ],
+          "buffer": 125,
+          "name": "mnasnet/cell_6/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            40,
+            1,
+            1,
+            120
+          ],
+          "buffer": 114,
+          "name": "mnasnet/cell_6/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            480
+          ],
+          "buffer": 78,
+          "name": "mnasnet/cell_8/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480,
+            1,
+            1,
+            80
+          ],
+          "buffer": 83,
+          "name": "mnasnet/cell_8/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80,
+            1,
+            1,
+            480
+          ],
+          "buffer": 120,
+          "name": "mnasnet/cell_8/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            480
+          ],
+          "buffer": 101,
+          "name": "mnasnet/cell_9/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480,
+            1,
+            1,
+            80
+          ],
+          "buffer": 90,
+          "name": "mnasnet/cell_9/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80,
+            1,
+            1,
+            480
+          ],
+          "buffer": 122,
+          "name": "mnasnet/cell_9/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            32
+          ],
+          "buffer": 128,
+          "name": "mnasnet/lead_cell_0/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            16,
+            1,
+            1,
+            32
+          ],
+          "buffer": 88,
+          "name": "mnasnet/lead_cell_0/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            48
+          ],
+          "buffer": 147,
+          "name": "mnasnet/lead_cell_1/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            48,
+            1,
+            1,
+            16
+          ],
+          "buffer": 97,
+          "name": "mnasnet/lead_cell_1/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24,
+            1,
+            1,
+            48
+          ],
+          "buffer": 92,
+          "name": "mnasnet/lead_cell_1/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            480
+          ],
+          "buffer": 86,
+          "name": "mnasnet/lead_cell_10/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480,
+            1,
+            1,
+            80
+          ],
+          "buffer": 118,
+          "name": "mnasnet/lead_cell_10/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96,
+            1,
+            1,
+            480
+          ],
+          "buffer": 117,
+          "name": "mnasnet/lead_cell_10/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            576
+          ],
+          "buffer": 138,
+          "name": "mnasnet/lead_cell_12/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            576,
+            1,
+            1,
+            96
+          ],
+          "buffer": 74,
+          "name": "mnasnet/lead_cell_12/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            576
+          ],
+          "buffer": 98,
+          "name": "mnasnet/lead_cell_12/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            1152
+          ],
+          "buffer": 65,
+          "name": "mnasnet/lead_cell_16/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152,
+            1,
+            1,
+            192
+          ],
+          "buffer": 66,
+          "name": "mnasnet/lead_cell_16/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            320,
+            1,
+            1,
+            1152
+          ],
+          "buffer": 61,
+          "name": "mnasnet/lead_cell_16/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1280,
+            1,
+            1,
+            320
+          ],
+          "buffer": 64,
+          "name": "mnasnet/lead_cell_17/op_0/conv2d_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            72
+          ],
+          "buffer": 60,
+          "name": "mnasnet/lead_cell_4/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            72,
+            1,
+            1,
+            24
+          ],
+          "buffer": 70,
+          "name": "mnasnet/lead_cell_4/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            40,
+            1,
+            1,
+            72
+          ],
+          "buffer": 124,
+          "name": "mnasnet/lead_cell_4/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            240
+          ],
+          "buffer": 108,
+          "name": "mnasnet/lead_cell_7/op_0/depthwise_0/depthwise_kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            240,
+            1,
+            1,
+            40
+          ],
+          "buffer": 161,
+          "name": "mnasnet/lead_cell_7/op_0/expand_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80,
+            1,
+            1,
+            240
+          ],
+          "buffer": 87,
+          "name": "mnasnet/lead_cell_7/op_0/project_0/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1001,
+            1280
+          ],
+          "buffer": 2,
+          "name": "mnasnet/output/fc/tf_layer/kernel/transpose",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32,
+            3,
+            3,
+            3
+          ],
+          "buffer": 91,
+          "name": "mnasnet/stem/conv/tf_layer/kernel",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            576
+          ],
+          "buffer": 172,
+          "name": "mnasnet_1/cell_11/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            576
+          ],
+          "buffer": 104,
+          "name": "mnasnet_1/cell_11/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            96
+          ],
+          "buffer": 79,
+          "name": "mnasnet_1/cell_11/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            576
+          ],
+          "buffer": 18,
+          "name": "mnasnet_1/cell_11/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            576
+          ],
+          "buffer": 19,
+          "name": "mnasnet_1/cell_11/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96
+          ],
+          "buffer": 17,
+          "name": "mnasnet_1/cell_11/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            96
+          ],
+          "buffer": 94,
+          "name": "mnasnet_1/cell_11/output",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 53,
+          "name": "mnasnet_1/cell_13/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 52,
+          "name": "mnasnet_1/cell_13/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 51,
+          "name": "mnasnet_1/cell_13/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 12,
+          "name": "mnasnet_1/cell_13/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 13,
+          "name": "mnasnet_1/cell_13/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 11,
+          "name": "mnasnet_1/cell_13/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 50,
+          "name": "mnasnet_1/cell_13/output",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 49,
+          "name": "mnasnet_1/cell_14/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 77,
+          "name": "mnasnet_1/cell_14/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 48,
+          "name": "mnasnet_1/cell_14/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 9,
+          "name": "mnasnet_1/cell_14/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 10,
+          "name": "mnasnet_1/cell_14/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 8,
+          "name": "mnasnet_1/cell_14/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 47,
+          "name": "mnasnet_1/cell_14/output",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 153,
+          "name": "mnasnet_1/cell_15/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 150,
+          "name": "mnasnet_1/cell_15/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 152,
+          "name": "mnasnet_1/cell_15/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 7,
+          "name": "mnasnet_1/cell_15/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 22,
+          "name": "mnasnet_1/cell_15/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 6,
+          "name": "mnasnet_1/cell_15/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 132,
+          "name": "mnasnet_1/cell_15/output",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            72
+          ],
+          "buffer": 148,
+          "name": "mnasnet_1/cell_2/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            72
+          ],
+          "buffer": 134,
+          "name": "mnasnet_1/cell_2/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            24
+          ],
+          "buffer": 149,
+          "name": "mnasnet_1/cell_2/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            72
+          ],
+          "buffer": 93,
+          "name": "mnasnet_1/cell_2/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            72
+          ],
+          "buffer": 37,
+          "name": "mnasnet_1/cell_2/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 156,
+          "name": "mnasnet_1/cell_2/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            24
+          ],
+          "buffer": 137,
+          "name": "mnasnet_1/cell_2/output",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            72
+          ],
+          "buffer": 58,
+          "name": "mnasnet_1/cell_3/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            72
+          ],
+          "buffer": 106,
+          "name": "mnasnet_1/cell_3/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            24
+          ],
+          "buffer": 100,
+          "name": "mnasnet_1/cell_3/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            72
+          ],
+          "buffer": 82,
+          "name": "mnasnet_1/cell_3/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            72
+          ],
+          "buffer": 136,
+          "name": "mnasnet_1/cell_3/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 36,
+          "name": "mnasnet_1/cell_3/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            24
+          ],
+          "buffer": 154,
+          "name": "mnasnet_1/cell_3/output",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            120
+          ],
+          "buffer": 140,
+          "name": "mnasnet_1/cell_5/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            120
+          ],
+          "buffer": 135,
+          "name": "mnasnet_1/cell_5/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            40
+          ],
+          "buffer": 139,
+          "name": "mnasnet_1/cell_5/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            120
+          ],
+          "buffer": 31,
+          "name": "mnasnet_1/cell_5/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            120
+          ],
+          "buffer": 32,
+          "name": "mnasnet_1/cell_5/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            40
+          ],
+          "buffer": 30,
+          "name": "mnasnet_1/cell_5/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            40
+          ],
+          "buffer": 162,
+          "name": "mnasnet_1/cell_5/output",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            120
+          ],
+          "buffer": 111,
+          "name": "mnasnet_1/cell_6/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            120
+          ],
+          "buffer": 121,
+          "name": "mnasnet_1/cell_6/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            40
+          ],
+          "buffer": 69,
+          "name": "mnasnet_1/cell_6/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            120
+          ],
+          "buffer": 29,
+          "name": "mnasnet_1/cell_6/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            120
+          ],
+          "buffer": 167,
+          "name": "mnasnet_1/cell_6/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            40
+          ],
+          "buffer": 28,
+          "name": "mnasnet_1/cell_6/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            40
+          ],
+          "buffer": 112,
+          "name": "mnasnet_1/cell_6/output",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 102,
+          "name": "mnasnet_1/cell_8/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 151,
+          "name": "mnasnet_1/cell_8/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            80
+          ],
+          "buffer": 59,
+          "name": "mnasnet_1/cell_8/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 25,
+          "name": "mnasnet_1/cell_8/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 26,
+          "name": "mnasnet_1/cell_8/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80
+          ],
+          "buffer": 103,
+          "name": "mnasnet_1/cell_8/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            80
+          ],
+          "buffer": 166,
+          "name": "mnasnet_1/cell_8/output",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 123,
+          "name": "mnasnet_1/cell_9/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 168,
+          "name": "mnasnet_1/cell_9/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            80
+          ],
+          "buffer": 131,
+          "name": "mnasnet_1/cell_9/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 24,
+          "name": "mnasnet_1/cell_9/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 34,
+          "name": "mnasnet_1/cell_9/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80
+          ],
+          "buffer": 23,
+          "name": "mnasnet_1/cell_9/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            80
+          ],
+          "buffer": 163,
+          "name": "mnasnet_1/cell_9/output",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            112,
+            112,
+            32
+          ],
+          "buffer": 71,
+          "name": "mnasnet_1/lead_cell_0/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            112,
+            112,
+            16
+          ],
+          "buffer": 143,
+          "name": "mnasnet_1/lead_cell_0/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32
+          ],
+          "buffer": 41,
+          "name": "mnasnet_1/lead_cell_0/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            16
+          ],
+          "buffer": 40,
+          "name": "mnasnet_1/lead_cell_0/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            112,
+            112,
+            48
+          ],
+          "buffer": 105,
+          "name": "mnasnet_1/lead_cell_1/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            48
+          ],
+          "buffer": 145,
+          "name": "mnasnet_1/lead_cell_1/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            24
+          ],
+          "buffer": 75,
+          "name": "mnasnet_1/lead_cell_1/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            48
+          ],
+          "buffer": 38,
+          "name": "mnasnet_1/lead_cell_1/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            48
+          ],
+          "buffer": 39,
+          "name": "mnasnet_1/lead_cell_1/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 55,
+          "name": "mnasnet_1/lead_cell_1/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 146,
+          "name": "mnasnet_1/lead_cell_10/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 170,
+          "name": "mnasnet_1/lead_cell_10/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            96
+          ],
+          "buffer": 171,
+          "name": "mnasnet_1/lead_cell_10/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 67,
+          "name": "mnasnet_1/lead_cell_10/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 21,
+          "name": "mnasnet_1/lead_cell_10/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96
+          ],
+          "buffer": 20,
+          "name": "mnasnet_1/lead_cell_10/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            576
+          ],
+          "buffer": 56,
+          "name": "mnasnet_1/lead_cell_12/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            576
+          ],
+          "buffer": 169,
+          "name": "mnasnet_1/lead_cell_12/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 54,
+          "name": "mnasnet_1/lead_cell_12/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            576
+          ],
+          "buffer": 15,
+          "name": "mnasnet_1/lead_cell_12/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            576
+          ],
+          "buffer": 16,
+          "name": "mnasnet_1/lead_cell_12/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 14,
+          "name": "mnasnet_1/lead_cell_12/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 45,
+          "name": "mnasnet_1/lead_cell_16/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 113,
+          "name": "mnasnet_1/lead_cell_16/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            320
+          ],
+          "buffer": 44,
+          "name": "mnasnet_1/lead_cell_16/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 5,
+          "name": "mnasnet_1/lead_cell_16/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 85,
+          "name": "mnasnet_1/lead_cell_16/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            320
+          ],
+          "buffer": 4,
+          "name": "mnasnet_1/lead_cell_16/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1280
+          ],
+          "buffer": 119,
+          "name": "mnasnet_1/lead_cell_17/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1280
+          ],
+          "buffer": 3,
+          "name": "mnasnet_1/lead_cell_17/op_0/conv2d_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            72
+          ],
+          "buffer": 158,
+          "name": "mnasnet_1/lead_cell_4/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            72
+          ],
+          "buffer": 159,
+          "name": "mnasnet_1/lead_cell_4/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            40
+          ],
+          "buffer": 160,
+          "name": "mnasnet_1/lead_cell_4/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            72
+          ],
+          "buffer": 46,
+          "name": "mnasnet_1/lead_cell_4/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            72
+          ],
+          "buffer": 35,
+          "name": "mnasnet_1/lead_cell_4/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            40
+          ],
+          "buffer": 33,
+          "name": "mnasnet_1/lead_cell_4/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            240
+          ],
+          "buffer": 164,
+          "name": "mnasnet_1/lead_cell_7/op_0/Relu",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            240
+          ],
+          "buffer": 68,
+          "name": "mnasnet_1/lead_cell_7/op_0/Relu_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            80
+          ],
+          "buffer": 165,
+          "name": "mnasnet_1/lead_cell_7/op_0/bn2_0/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            240
+          ],
+          "buffer": 57,
+          "name": "mnasnet_1/lead_cell_7/op_0/depthwise_0/depthwise_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            240
+          ],
+          "buffer": 62,
+          "name": "mnasnet_1/lead_cell_7/op_0/expand_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80
+          ],
+          "buffer": 27,
+          "name": "mnasnet_1/lead_cell_7/op_0/project_0/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1280
+          ],
+          "buffer": 43,
+          "name": "mnasnet_1/output/Mean",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            2
+          ],
+          "type": "INT32",
+          "buffer": 127,
+          "name": "mnasnet_1/output/Mean/reduction_indices",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1001
+          ],
+          "buffer": 1,
+          "name": "mnasnet_1/output/fc/MatMul_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            112,
+            112,
+            32
+          ],
+          "buffer": 141,
+          "name": "mnasnet_1/stem/bn/FusedBatchNorm",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32
+          ],
+          "buffer": 42,
+          "name": "mnasnet_1/stem/conv/Conv2D_bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1001
+          ],
+          "buffer": 133,
+          "name": "output",
+          "quantization": {
+          }
+        }
+      ],
+      "inputs": [
+        0
+      ],
+      "outputs": [
+        171
+      ],
+      "operators": [
+        {
+          "opcode_index": 1,
+          "inputs": [
+            0,
+            53,
+            170
+          ],
+          "outputs": [
+            169
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            169,
+            31,
+            126
+          ],
+          "outputs": [
+            124
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            124,
+            32,
+            127
+          ],
+          "outputs": [
+            125
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            125,
+            34,
+            132
+          ],
+          "outputs": [
+            128
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            128,
+            33,
+            131
+          ],
+          "outputs": [
+            129
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            129,
+            35,
+            133
+          ],
+          "outputs": [
+            130
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            130,
+            14,
+            86
+          ],
+          "outputs": [
+            82
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            82,
+            13,
+            85
+          ],
+          "outputs": [
+            83
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            83,
+            15,
+            87
+          ],
+          "outputs": [
+            84
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            84,
+            130
+          ],
+          "outputs": [
+            88
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            88,
+            17,
+            93
+          ],
+          "outputs": [
+            89
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            89,
+            16,
+            92
+          ],
+          "outputs": [
+            90
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            90,
+            18,
+            94
+          ],
+          "outputs": [
+            91
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            91,
+            88
+          ],
+          "outputs": [
+            95
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            95,
+            47,
+            158
+          ],
+          "outputs": [
+            154
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            154,
+            46,
+            157
+          ],
+          "outputs": [
+            155
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            155,
+            48,
+            159
+          ],
+          "outputs": [
+            156
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            156,
+            20,
+            100
+          ],
+          "outputs": [
+            96
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            96,
+            19,
+            99
+          ],
+          "outputs": [
+            97
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            97,
+            21,
+            101
+          ],
+          "outputs": [
+            98
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            98,
+            156
+          ],
+          "outputs": [
+            102
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            102,
+            23,
+            107
+          ],
+          "outputs": [
+            103
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            103,
+            22,
+            106
+          ],
+          "outputs": [
+            104
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            104,
+            24,
+            108
+          ],
+          "outputs": [
+            105
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            105,
+            102
+          ],
+          "outputs": [
+            109
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            109,
+            50,
+            164
+          ],
+          "outputs": [
+            160
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            160,
+            49,
+            163
+          ],
+          "outputs": [
+            161
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            161,
+            51,
+            165
+          ],
+          "outputs": [
+            162
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            162,
+            26,
+            114
+          ],
+          "outputs": [
+            110
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            110,
+            25,
+            113
+          ],
+          "outputs": [
+            111
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            111,
+            27,
+            115
+          ],
+          "outputs": [
+            112
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            112,
+            162
+          ],
+          "outputs": [
+            116
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            116,
+            29,
+            121
+          ],
+          "outputs": [
+            117
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            117,
+            28,
+            120
+          ],
+          "outputs": [
+            118
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            118,
+            30,
+            122
+          ],
+          "outputs": [
+            119
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            119,
+            116
+          ],
+          "outputs": [
+            123
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            123,
+            37,
+            138
+          ],
+          "outputs": [
+            134
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            134,
+            36,
+            137
+          ],
+          "outputs": [
+            135
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            135,
+            38,
+            139
+          ],
+          "outputs": [
+            136
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            136,
+            2,
+            58
+          ],
+          "outputs": [
+            54
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            54,
+            1,
+            57
+          ],
+          "outputs": [
+            55
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            55,
+            3,
+            59
+          ],
+          "outputs": [
+            56
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            56,
+            136
+          ],
+          "outputs": [
+            60
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            60,
+            40,
+            144
+          ],
+          "outputs": [
+            140
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            140,
+            39,
+            143
+          ],
+          "outputs": [
+            141
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            141,
+            41,
+            145
+          ],
+          "outputs": [
+            142
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            142,
+            5,
+            65
+          ],
+          "outputs": [
+            61
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            61,
+            4,
+            64
+          ],
+          "outputs": [
+            62
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            62,
+            6,
+            66
+          ],
+          "outputs": [
+            63
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            63,
+            142
+          ],
+          "outputs": [
+            67
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            67,
+            8,
+            72
+          ],
+          "outputs": [
+            68
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            68,
+            7,
+            71
+          ],
+          "outputs": [
+            69
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            69,
+            9,
+            73
+          ],
+          "outputs": [
+            70
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            70,
+            67
+          ],
+          "outputs": [
+            74
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            74,
+            11,
+            79
+          ],
+          "outputs": [
+            75
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            75,
+            10,
+            78
+          ],
+          "outputs": [
+            76
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            76,
+            12,
+            80
+          ],
+          "outputs": [
+            77
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            77,
+            74
+          ],
+          "outputs": [
+            81
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            81,
+            43,
+            150
+          ],
+          "outputs": [
+            146
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            146,
+            42,
+            149
+          ],
+          "outputs": [
+            147
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            147,
+            44,
+            151
+          ],
+          "outputs": [
+            148
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            148,
+            45,
+            153
+          ],
+          "outputs": [
+            152
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU"
+          }
+        },
+        {
+          "opcode_index": 4,
+          "inputs": [
+            152,
+            167
+          ],
+          "outputs": [
+            166
+          ],
+          "builtin_options_type": "ReducerOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 3,
+          "inputs": [
+            166,
+            52,
+            168
+          ],
+          "outputs": [
+            171
+          ],
+          "builtin_options_type": "FullyConnectedOptions",
+          "builtin_options": {
+          }
+        }
+      ]
+    }
+  ],
+  "description": "TOCO Converted."
+}

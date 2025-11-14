@@ -1,0 +1,477 @@
+{
+  "op_type_reference": [
+    {
+      "type": "CONV_2D",
+      "builtin_options_keys": ["padding", "stride_w", "stride_h", "fused_activation_function"],
+      "builtin_options_examples": [
+        {"padding": "SAME", "stride_w": 1, "stride_h": 1, "fused_activation_function": "NONE"},
+        {"padding": "VALID", "stride_w": 2, "stride_h": 2, "fused_activation_function": "RELU"}
+      ],
+      "notes": "Weights shape typically [out_channels, kernel_h, kernel_w, in_channels].",
+      "signature": {"inputs_min": 2, "inputs_max": 3, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [
+        {"slot": 1, "rank": 4, "name": "weights", "shape_semantics": "[O, Kh, Kw, I]"},
+        {"slot": 2, "rank": 1, "name": "bias(optional)", "shape_semantics": "[O]"}
+      ],
+      "shape_signals": "Output HW from input HW via padding/stride/(dilation if present); channels_out = weights[0].",
+      "dtype_signals": "Float types common; with quantization int8/uint8 may appear with scales/zero-points.",
+      "topology_hints": "Often followed by activation (RELU/RELU6/LOGISTIC) or BN folding; distinguish from DEPTHWISE by weight layout.",
+      "contradictions": "If weights look like [1,Kh,Kw,I*dm] and channels_out == in_channels*dm, it suggests DEPTHWISE_CONV_2D."
+    },
+    {
+      "type": "DEPTHWISE_CONV_2D",
+      "builtin_options_keys": ["padding", "stride_w", "stride_h", "depth_multiplier", "fused_activation_function"],
+      "builtin_options_examples": [
+        {"padding": "SAME", "stride_w": 1, "stride_h": 1, "depth_multiplier": 1, "fused_activation_function": "NONE"}
+      ],
+      "notes": "Weights shape [1, kernel_h, kernel_w, in_channels*depth_multiplier].",
+      "signature": {"inputs_min": 2, "inputs_max": 3, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [
+        {"slot": 1, "rank": 4, "name": "depthwise_weights", "shape_semantics": "[1, Kh, Kw, I*dm]"},
+        {"slot": 2, "rank": 1, "name": "bias(optional)", "shape_semantics": "[I*dm]"}
+      ],
+      "shape_signals": "Channels expand by depth_multiplier; spatial dims follow conv rules.",
+      "dtype_signals": "Float or quantized.",
+      "topology_hints": "Typical MobileNet pattern: depthwise then pointwise (1x1) conv.",
+      "contradictions": "If first weight dim != 1 or layout [O,Kh,Kw,I], it suggests regular CONV_2D."
+    },
+    {
+      "type": "MAX_POOL_2D",
+      "builtin_options_keys": ["padding", "stride_w", "stride_h", "filter_width", "filter_height", "fused_activation_function"],
+      "builtin_options_examples": [
+        {"padding": "SAME", "stride_w": 2, "stride_h": 2, "filter_width": 2, "filter_height": 2, "fused_activation_function": "NONE"}
+      ],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Windowed downsampling; channels preserved; H/W change per stride/padding.",
+      "dtype_signals": "Same as input; float or quantized integers.",
+      "topology_hints": "Common for downsampling; may be followed by activation.",
+      "contradictions": "If channels change or trainable weights exist, not pooling."
+    },
+    {
+      "type": "AVERAGE_POOL_2D",
+      "builtin_options_keys": ["padding", "stride_w", "stride_h", "filter_width", "filter_height", "fused_activation_function"],
+      "builtin_options_examples": [
+        {"padding": "SAME", "stride_w": 2, "stride_h": 2, "filter_width": 2, "filter_height": 2, "fused_activation_function": "NONE"}
+      ],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Like MAX_POOL_2D but averaging; channels preserved.",
+      "dtype_signals": "Same as input; averaging may affect precision.",
+      "topology_hints": "Used for downsampling or global average at the tail.",
+      "contradictions": "If trainable params exist or channels change, exclude."
+    },
+    {
+      "type": "TRANSPOSE_CONV",
+      "builtin_options_keys": ["padding", "stride_w", "stride_h", "fused_activation_function"],
+      "builtin_options_examples": [
+        {"padding": "SAME", "stride_w": 2, "stride_h": 2, "fused_activation_function": "NONE"}
+      ],
+      "signature": {"inputs_min": 2, "inputs_max": 3, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [
+        {"slot": 1, "rank": 4, "name": "weights", "shape_semantics": "[I, Kh, Kw, O] (common layout)"},
+        {"slot": 2, "rank": 1, "name": "bias(optional)", "shape_semantics": "[O]"}
+      ],
+      "shape_signals": "Upsampling in spatial dims: H/W scale by stride; output channels from last weight dim.",
+      "dtype_signals": "Float or quantized.",
+      "topology_hints": "Decoder/upsampling; often followed by BN/activation.",
+      "contradictions": "If spatial size shrinks or weights resemble forward conv, be cautious."
+    },
+    {
+      "type": "FULLY_CONNECTED",
+      "builtin_options_keys": ["fused_activation_function", "keep_num_dims", "asymmetric_quantize_inputs"],
+      "builtin_options_examples": [
+        {"fused_activation_function": "NONE", "keep_num_dims": false, "asymmetric_quantize_inputs": false}
+      ],
+      "notes": "Weights often 2D; output units is weights[0].",
+      "signature": {"inputs_min": 2, "inputs_max": 3, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [
+        {"slot": 1, "rank": 2, "name": "weights", "shape_semantics": "[O, I]"},
+        {"slot": 2, "rank": 1, "name": "bias(optional)", "shape_semantics": "[O]"}
+      ],
+      "shape_signals": "Matrix multiply after flatten; output last dim = O.",
+      "dtype_signals": "Float or quantized; int8 weights common for quantized.",
+      "topology_hints": "Often classifier head; also mid-layer projection.",
+      "contradictions": "If weights are 4D kernels, suggests CONV_2D."
+    },
+    {
+      "type": "CONV_3D",
+      "builtin_options_keys": ["padding", "stride_w", "stride_h", "fused_activation_function"],
+      "builtin_options_examples": [
+        {"padding": "SAME", "stride_w": 1, "stride_h": 1, "fused_activation_function": "NONE"}
+      ],
+      "signature": {"inputs_min": 2, "inputs_max": 3, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [
+        {"slot": 1, "rank": 5, "name": "weights", "shape_semantics": "[O, Kd, Kh, Kw, I]"},
+        {"slot": 2, "rank": 1, "name": "bias(optional)", "shape_semantics": "[O]"}
+      ],
+      "shape_signals": "D/H/W change per stride/padding; channels like 2D conv semantics.",
+      "dtype_signals": "Mostly float; quantized rarer.",
+      "topology_hints": "Video/volumetric models.",
+      "contradictions": "Exclude if weight rank != 5 or input not 5D (B,D,H,W,C)."
+    },
+    {
+      "type": "CONV_3D_TRANSPOSE",
+      "builtin_options_keys": ["padding", "stride_w", "stride_h", "fused_activation_function"],
+      "builtin_options_examples": [
+        {"padding": "SAME", "stride_w": 1, "stride_h": 1, "fused_activation_function": "NONE"}
+      ],
+      "signature": {"inputs_min": 2, "inputs_max": 3, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [
+        {"slot": 1, "rank": 5, "name": "weights", "shape_semantics": "[I, Kd, Kh, Kw, O] (common)"},
+        {"slot": 2, "rank": 1, "name": "bias(optional)", "shape_semantics": "[O]"}
+      ],
+      "shape_signals": "Volumetric upsampling; D/H/W enlarge.",
+      "dtype_signals": "Mostly float.",
+      "topology_hints": "3D decoders.",
+      "contradictions": "If D/H/W shrink, suggests CONV_3D."
+    },
+    {
+      "type": "ADD",
+      "builtin_options_keys": ["fused_activation_function"],
+      "builtin_options_examples": [
+        {"fused_activation_function": "NONE"}
+      ],
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Binary elementwise with broadcasting; output shape is broadcasted shape.",
+      "dtype_signals": "Same type or safely promoted; boolean addition not applicable.",
+      "topology_hints": "Residual merges; bias add.",
+      "contradictions": "Exclude if arity != 2 or rank reduced."
+    },
+    {
+      "type": "MUL",
+      "builtin_options_keys": ["fused_activation_function"],
+      "builtin_options_examples": [
+        {"fused_activation_function": "NONE"}
+      ],
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Binary elementwise product with broadcasting; often scaling.",
+      "dtype_signals": "Numeric; bool×bool implies logical AND semantics.",
+      "topology_hints": "BN folding/scaling; LayerNorm.",
+      "contradictions": "Exclude if output rank violates broadcasting."
+    },
+    {
+      "type": "SUB",
+      "builtin_options_keys": ["fused_activation_function"],
+      "builtin_options_examples": [
+        {"fused_activation_function": "NONE"}
+      ],
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Binary elementwise subtraction with broadcasting.",
+      "dtype_signals": "Numeric.",
+      "topology_hints": "Residuals/centering.",
+      "contradictions": "Exclude if not binary or rank change inconsistent."
+    },
+    {
+      "type": "SQUARED_DIFFERENCE",
+      "builtin_options_keys": [],
+      "builtin_options_examples": [],
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "(x - y)^2 elementwise with broadcasting; output shape matches broadcasted.",
+      "dtype_signals": "Usually float.",
+      "topology_hints": "MSE/distance metrics.",
+      "contradictions": "Exclude if unary or rank changes."
+    },
+    {
+      "type": "RELU",
+      "builtin_options_keys": [],
+      "builtin_options_examples": [],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Unary elementwise; shape preserved.",
+      "dtype_signals": "Usually float; quantized possible.",
+      "topology_hints": "Often follows Conv/FC.",
+      "contradictions": "Exclude if shapes differ or binary arity."
+    },
+    {
+      "type": "RELU6",
+      "builtin_options_keys": [],
+      "builtin_options_examples": [],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Unary elementwise clamp to [0,6].",
+      "dtype_signals": "Float/quantized.",
+      "topology_hints": "Common in MobileNet.",
+      "contradictions": "Exclude if trainable params or shape changes."
+    },
+    {
+      "type": "LOGISTIC",
+      "builtin_options_keys": [],
+      "builtin_options_examples": [],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Unary elementwise Sigmoid; shape preserved.",
+      "dtype_signals": "Float/quantized.",
+      "topology_hints": "Binary classifiers/gating.",
+      "contradictions": "Exclude if boolean output or binary arity."
+    },
+    {
+      "type": "TANH",
+      "builtin_options_keys": [],
+      "builtin_options_examples": [],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Unary elementwise tanh; shape preserved.",
+      "dtype_signals": "Float.",
+      "topology_hints": "RNN/activation blocks.",
+      "contradictions": "Exclude if weights exist or shape changes."
+    },
+    {
+      "type": "SOFTMAX",
+      "builtin_options_keys": ["beta"],
+      "builtin_options_examples": [
+        {"beta": 1.0}
+      ],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Normalize over the last dimension; shape preserved.",
+      "dtype_signals": "Float.",
+      "topology_hints": "Classifier head.",
+      "contradictions": "Exclude if rank changes or binary inputs present."
+    },
+    {
+      "type": "GELU",
+      "builtin_options_keys": ["approximate"],
+      "builtin_options_examples": [
+        {"approximate": true}
+      ],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Unary elementwise; shape preserved.",
+      "dtype_signals": "Float.",
+      "topology_hints": "Transformer FFN common.",
+      "contradictions": "Exclude if weights exist or shape changes."
+    },
+    {
+      "type": "RSQRT",
+      "builtin_options_keys": [],
+      "builtin_options_examples": [],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Unary elementwise: y = 1/sqrt(x); output shape equals input.",
+      "dtype_signals": "Usually float; input should be non-negative to avoid NaN.",
+      "topology_hints": "Normalization motif: MEAN/VAR→ADD(eps)→RSQRT→MUL(scale).",
+      "contradictions": "Exclude if binary or rank changes; be cautious when RECIP/SQRT appear explicitly in neighbors."
+    },
+    {
+      "type": "RESHAPE",
+      "builtin_options_keys": ["new_shape"],
+      "builtin_options_examples": [
+        {"new_shape": [1, -1]}
+      ]
+      ,
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [{"slot": "tensor", "rank": 1, "name": "new_shape (can be param tensor)", "shape_semantics": "[-1 allowed]"}],
+      "shape_signals": "Shape-only change; element count conserved (supports -1 inference).",
+      "dtype_signals": "dtype unchanged.",
+      "topology_hints": "Flatten/restore or before FC.",
+      "contradictions": "Exclude if element count not conserved or trainable weights exist."
+    },
+    {
+      "type": "TRANSPOSE",
+      "builtin_options_keys": [],
+      "builtin_options_examples": [],
+      "notes": "Permutation usually provided as a parameter tensor (e.g., [0,2,1,3]).",
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [{"slot": 1, "rank": 1, "name": "perm", "shape_semantics": "permutation vector"}],
+      "shape_signals": "Axis permutation only; element count conserved; dtype unchanged.",
+      "dtype_signals": "Same as input.",
+      "topology_hints": "Layout transform/channel-first reordering.",
+      "contradictions": "Exclude if perm invalid or rank changes unexpectedly."
+    },
+    {
+      "type": "SQUEEZE",
+      "builtin_options_keys": ["squeeze_dims"],
+      "builtin_options_examples": [
+        {"squeeze_dims": [1, 3]}
+      ],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Remove dims of size 1; default removes all 1-dims if unspecified.",
+      "dtype_signals": "Unchanged.",
+      "topology_hints": "Shape alignment.",
+      "contradictions": "Exclude if element count changes or non-1 dims removed."
+    },
+    {
+      "type": "EXPAND_DIMS",
+      "builtin_options_keys": [],
+      "builtin_options_examples": [],
+      "notes": "Axis usually provided via a small parameter tensor.",
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [{"slot": 1, "rank": 0, "name": "axis", "shape_semantics": "scalar axis"}],
+      "shape_signals": "Insert a size-1 dim at axis; element count conserved.",
+      "dtype_signals": "Unchanged.",
+      "topology_hints": "Prepare for broadcasting or conv layout.",
+      "contradictions": "Exclude if axis out of range or element count changes."
+    },
+    {
+      "type": "STRIDED_SLICE",
+      "builtin_options_keys": ["begin_mask", "end_mask", "ellipsis_mask", "new_axis_mask", "shrink_axis_mask"],
+      "builtin_options_examples": [
+        {"begin_mask": 0, "end_mask": 0, "ellipsis_mask": 0, "new_axis_mask": 0, "shrink_axis_mask": 0}
+      ],
+      "signature": {"inputs_min": 4, "inputs_max": 4, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [
+        {"slot": 1, "name": "begin", "rank": 1}, {"slot": 2, "name": "end", "rank": 1}, {"slot": 3, "name": "strides", "rank": 1}
+      ],
+      "shape_signals": "Strided slicing; may reduce rank (via shrink_axis_mask).",
+      "dtype_signals": "Same as input.",
+      "topology_hints": "Subtensor extraction / sliding windows.",
+      "contradictions": "Stride 0 or out-of-bounds; output element count > input."
+    },
+    {
+      "type": "SHAPE",
+      "builtin_options_keys": ["out_type"],
+      "builtin_options_examples": [
+        {"out_type": "INT32"}
+      ],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Outputs a 1D shape vector; length equals input rank.",
+      "dtype_signals": "Output dtype usually INT32/INT64 (key: out_type).",
+      "topology_hints": "Shape inference / control flow prep.",
+      "contradictions": "Exclude if output not 1D or values mismatch actual input shape."
+    },
+    {
+      "type": "RANGE",
+      "builtin_options_keys": [],
+      "builtin_options_examples": [],
+      "notes": "Start/limit/delta usually come from parameter tensors.",
+      "signature": {"inputs_min": 3, "inputs_max": 3, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [{"slot": 0, "name": "start"}, {"slot": 1, "name": "limit"}, {"slot": 2, "name": "delta"}],
+      "shape_signals": "Outputs 1D sequence; length depends on (start,limit,delta).",
+      "dtype_signals": "Integer or float depending on inputs.",
+      "topology_hints": "Index/mask construction.",
+      "contradictions": "delta == 0 or direction contradicts (start,limit)."
+    },
+    {
+      "type": "PACK",
+      "builtin_options_keys": ["values_count", "axis"],
+      "builtin_options_examples": [
+        {"values_count": 2, "axis": 0}
+      ],
+      "signature": {"inputs_min": 1, "inputs_max": 2048, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Add a new dim along axis and stack N same-shaped inputs; output rank = input rank + 1.",
+      "dtype_signals": "Same as inputs.",
+      "topology_hints": "Batch/channel stacking.",
+      "contradictions": "Input shapes mismatch or axis out of range."
+    },
+    {
+      "type": "SPLIT",
+      "builtin_options_keys": ["num_splits"],
+      "builtin_options_examples": [
+        {"num_splits": 3}
+      ],
+      "notes": "Split axis often provided as a small parameter tensor.",
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 2048},
+      "param_tensors": [{"slot": 0, "name": "axis", "rank": 0}],
+      "shape_signals": "Evenly split along axis; each output equals input except axis length/num_splits.",
+      "dtype_signals": "Same as input.",
+      "topology_hints": "Channel/sequence splitting.",
+      "contradictions": "Axis length not divisible by num_splits."
+    },
+    {
+      "type": "GATHER",
+      "builtin_options_keys": ["axis", "batch_dims"],
+      "builtin_options_examples": [
+        {"axis": 0, "batch_dims": 0}
+      ],
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [{"slot": 1, "name": "indices"}],
+      "shape_signals": "Select along axis by indices; output rank = input_rank - 1 + indices_rank (affected by batch_dims).",
+      "dtype_signals": "Output dtype = input data dtype; indices are integer.",
+      "topology_hints": "Embedding/table lookup or index selection.",
+      "contradictions": "Indices not integer or axis out of range."
+    },
+    {
+      "type": "RESIZE_BILINEAR",
+      "builtin_options_keys": ["align_corners", "half_pixel_centers"],
+      "builtin_options_examples": [
+        {"align_corners": false, "half_pixel_centers": false}
+      ],
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [{"slot": 1, "name": "size", "rank": 1, "shape_semantics": "[new_h, new_w]"}],
+      "shape_signals": "Resize H/W to given size; N and C preserved.",
+      "dtype_signals": "Same as input.",
+      "topology_hints": "Upsampling.",
+      "contradictions": "Size non-positive or length != 2."
+    },
+    {
+      "type": "MEAN",
+      "builtin_options_keys": ["keep_dims"],
+      "builtin_options_examples": [
+        {"keep_dims": false}
+      ],
+      "notes": "Reduction indices often provided as a small parameter tensor.",
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [{"slot": 1, "name": "reduction_indices", "rank": 1}],
+      "shape_signals": "Reduce along axes; rank decreases if keep_dims=false.",
+      "dtype_signals": "Float or integer; output type often same (or upcast).",
+      "topology_hints": "Statistics/normalization precursor.",
+      "contradictions": "Invalid axes or output element count > input."
+    },
+    {
+      "type": "CONCATENATION",
+      "builtin_options_keys": ["axis", "fused_activation_function"],
+      "builtin_options_examples": [
+        {"axis": 3, "fused_activation_function": "NONE"}
+      ],
+      "signature": {"inputs_min": 2, "inputs_max": 2048, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Concatenate along axis; other dims must match; axis length is sum of inputs.",
+      "dtype_signals": "All inputs must share dtype.",
+      "topology_hints": "Merge branches (residuals/FPN).",
+      "contradictions": "Mismatch on non-axis dims or dtype."
+    },
+    {
+      "type": "BATCH_MATMUL",
+      "builtin_options_keys": ["adj_x", "adj_y", "asymmetric_quantize_inputs"],
+      "builtin_options_examples": [
+        {"adj_x": false, "adj_y": false, "asymmetric_quantize_inputs": false}
+      ],
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Batched matrix multiply; shapes follow broadcasting and adj flags.",
+      "dtype_signals": "Typically float; quantized possible.",
+      "topology_hints": "Differentiate from FC: FC has trainable weights.",
+      "contradictions": "Rank < 2 or inner dims mismatch."
+    },
+    {
+      "type": "CAST",
+      "builtin_options_keys": ["in_data_type", "out_data_type"],
+      "builtin_options_examples": [
+        {"in_data_type": "FLOAT32", "out_data_type": "INT32"}
+      ],
+      "signature": {"inputs_min": 1, "inputs_max": 1, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Shape preserved; dtype conversion only.",
+      "dtype_signals": "As specified by keys; in→out.",
+      "topology_hints": "Pre/post-processing.",
+      "contradictions": "Weights present or shape changed."
+    },
+    {
+      "type": "GREATER_EQUAL",
+      "builtin_options_keys": [],
+      "builtin_options_examples": [],
+      "signature": {"inputs_min": 2, "inputs_max": 2, "outputs_min": 1, "outputs_max": 1},
+      "param_tensors": [],
+      "shape_signals": "Binary elementwise comparison with broadcasting; output shape is broadcasted shape.",
+      "dtype_signals": "Output dtype is BOOL; inputs are numeric.",
+      "topology_hints": "Thresholding/mask generation.",
+      "contradictions": "Output not boolean or unary arity."
+    }
+  ],
+  "general_tips": [
+    "Fields under builtin_options can be indicative for certain ops (e.g., padding/strides/activation for convolutions).",
+    "Some ops take small parameter tensors for axes/perm/new_shape; those won’t appear inside builtin_options.",
+    "If the provided model file is encrypted/obfuscated, these cues may be padded or statistically typical; prefer UNKNOWN when evidence is weak.",
+    "Use structural signals aggressively: arity (inputs/outputs count), elementwise vs reduction, shape conservation vs change, rank change via keep_dims, axis legality, and dtype expectations.",
+    "Contradiction filter examples: reductions reduce rank unless keep_dims; activations preserve shape and dtype; CAST preserves shape but changes dtype; pooling changes spatial dims but preserves channels.",
+    "When builtin_options are empty, rely on: unary vs binary, presence of trainable params (weights/bias), typical tensor ranks (e.g., 4D for images), and common topology neighbors (e.g., BN/activation after conv)."
+  ]
+}

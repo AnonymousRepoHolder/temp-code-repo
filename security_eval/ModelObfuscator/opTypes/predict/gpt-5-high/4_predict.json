@@ -1,0 +1,9 @@
+[
+  {"idx":0,"topk":[{"type":"DEPTHWISE_CONV_2D","p":0.4},{"type":"CONV_2D","p":0.34},{"type":"RELU","p":0.26}]},
+  {"idx":1,"topk":[{"type":"DEPTHWISE_CONV_2D","p":0.4},{"type":"CONV_2D","p":0.34},{"type":"RELU","p":0.26}]},
+  {"idx":2,"topk":[{"type":"DEPTHWISE_CONV_2D","p":0.4},{"type":"CONV_2D","p":0.34},{"type":"RELU","p":0.26}]},
+  {"idx":3,"topk":[{"type":"DEPTHWISE_CONV_2D","p":0.4},{"type":"CONV_2D","p":0.34},{"type":"RELU","p":0.26}]},
+  {"idx":4,"topk":[{"type":"DEPTHWISE_CONV_2D","p":0.4},{"type":"CONV_2D","p":0.34},{"type":"RELU","p":0.26}]},
+  {"idx":5,"topk":[{"type":"DEPTHWISE_CONV_2D","p":0.4},{"type":"CONV_2D","p":0.34},{"type":"RELU","p":0.26}]},
+  {"idx":6,"topk":[{"type":"DEPTHWISE_CONV_2D","p":0.4},{"type":"CONV_2D","p":0.34},{"type":"RELU","p":0.26}]}
+]

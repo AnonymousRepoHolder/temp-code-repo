@@ -1,0 +1,17 @@
+{
+  "model_name": "8",
+  "metrics": {
+    "top1_acc": 0.532258,
+    "top3_acc": 0.532258,
+    "top5_acc": 0.532258,
+    "main_dist_coverage": 0.854839,
+    "mean_js_to_main": 0.081411
+  },
+  "metrics_desc": {
+    "top1_acc": "Top-1 accuracy (fraction of operators where the first predicted type equals ground truth).",
+    "top3_acc": "Top-3 accuracy (ground truth appears within the first 3 predicted types).",
+    "top5_acc": "Top-5 accuracy (ground truth appears within the first 5 predicted types).",
+    "main_dist_coverage": "Share of operators whose predicted probability vector equals (rounded to 1e-3) the most frequent vector.",
+    "mean_js_to_main": "Mean Jensen-Shannon divergence between each predicted probability vector and the most frequent vector (lower = more homogeneous)."
+  }
+}

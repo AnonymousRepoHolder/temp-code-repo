@@ -1,0 +1,20 @@
+NeuralVirtualizer
+Copyright (c) 2024 The NeuralVirtualizer Authors
+Licensed under the Apache License, Version 2.0.
+
+This product includes components from:
+
+- TensorFlow Lite (Google LLC)
+  Licensed under the Apache License, Version 2.0.
+
+- FlatBuffers (Google LLC)
+  Licensed under the Apache License, Version 2.0.
+
+Some upstream build integration files and schemas are used and/or
+modified to enable virtualized model reconstruction inside TFLite.
+Where applicable, upstream copyright and license headers are
+preserved, and modifications are Copyright (c) 2024
+The NeuralVirtualizer Authors.
+
+This project is not affiliated with Google or the TensorFlow team.
+

@@ -1,0 +1,2820 @@
+{
+  "version": 3,
+  "operator_codes": [
+    {
+      "deprecated_builtin_code": 3
+    },
+    {
+      "deprecated_builtin_code": 4
+    },
+    {
+    },
+    {
+      "deprecated_builtin_code": 1
+    },
+    {
+      "deprecated_builtin_code": 22
+    },
+    {
+      "deprecated_builtin_code": 9
+    },
+    {
+      "deprecated_builtin_code": 25
+    }
+  ],
+  "subgraphs": [
+    {
+      "tensors": [
+        {
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "buffer": 1,
+          "name": "images",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1000
+          ],
+          "buffer": 2,
+          "name": "efficientnet-lite0/head/dense/bias",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32
+          ],
+          "buffer": 3,
+          "name": "efficientnet-lite0/model/blocks_0/tpu_batch_normalization/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96
+          ],
+          "buffer": 4,
+          "name": "efficientnet-lite0/model/blocks_1/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            672
+          ],
+          "buffer": 5,
+          "name": "efficientnet-lite0/model/blocks_10/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            672
+          ],
+          "buffer": 6,
+          "name": "efficientnet-lite0/model/blocks_11/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 7,
+          "name": "efficientnet-lite0/model/blocks_12/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 8,
+          "name": "efficientnet-lite0/model/blocks_13/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 9,
+          "name": "efficientnet-lite0/model/blocks_14/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 10,
+          "name": "efficientnet-lite0/model/blocks_15/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            144
+          ],
+          "buffer": 11,
+          "name": "efficientnet-lite0/model/blocks_2/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            144
+          ],
+          "buffer": 12,
+          "name": "efficientnet-lite0/model/blocks_3/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            240
+          ],
+          "buffer": 13,
+          "name": "efficientnet-lite0/model/blocks_4/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            240
+          ],
+          "buffer": 14,
+          "name": "efficientnet-lite0/model/blocks_5/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 15,
+          "name": "efficientnet-lite0/model/blocks_6/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 16,
+          "name": "efficientnet-lite0/model/blocks_7/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 17,
+          "name": "efficientnet-lite0/model/blocks_8/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            672
+          ],
+          "buffer": 18,
+          "name": "efficientnet-lite0/model/blocks_9/tpu_batch_normalization_1/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1000,
+            1280
+          ],
+          "buffer": 19,
+          "name": "efficientnet-lite0/model/head/dense/MatMul",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32,
+            3,
+            3,
+            3
+          ],
+          "buffer": 20,
+          "name": "efficientnet-lite0/model/stem/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/stem/conv2d/kernel;efficientnet-lite0/model/stem/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            16,
+            1,
+            1,
+            32
+          ],
+          "buffer": 21,
+          "name": "efficientnet-lite0/model/blocks_0/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/blocks_0/conv2d/kernel;efficientnet-lite0/model/blocks_0/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96,
+            1,
+            1,
+            16
+          ],
+          "buffer": 22,
+          "name": "efficientnet-lite0/model/blocks_1/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_1/conv2d/kernel;efficientnet-lite0/model/blocks_1/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24,
+            1,
+            1,
+            96
+          ],
+          "buffer": 23,
+          "name": "efficientnet-lite0/model/blocks_1/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_1/conv2d_1/kernel;efficientnet-lite0/model/blocks_1/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            144,
+            1,
+            1,
+            24
+          ],
+          "buffer": 24,
+          "name": "efficientnet-lite0/model/blocks_2/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_2/conv2d/kernel;efficientnet-lite0/model/blocks_2/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24,
+            1,
+            1,
+            144
+          ],
+          "buffer": 25,
+          "name": "efficientnet-lite0/model/blocks_2/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_2/conv2d_1/kernel;efficientnet-lite0/model/blocks_2/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            144,
+            1,
+            1,
+            24
+          ],
+          "buffer": 26,
+          "name": "efficientnet-lite0/model/blocks_3/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_3/conv2d/kernel;efficientnet-lite0/model/blocks_3/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            40,
+            1,
+            1,
+            144
+          ],
+          "buffer": 27,
+          "name": "efficientnet-lite0/model/blocks_3/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_3/conv2d_1/kernel;efficientnet-lite0/model/blocks_3/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            240,
+            1,
+            1,
+            40
+          ],
+          "buffer": 28,
+          "name": "efficientnet-lite0/model/blocks_4/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_4/conv2d/kernel;efficientnet-lite0/model/blocks_4/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            40,
+            1,
+            1,
+            240
+          ],
+          "buffer": 29,
+          "name": "efficientnet-lite0/model/blocks_4/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_4/conv2d_1/kernel;efficientnet-lite0/model/blocks_4/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            240,
+            1,
+            1,
+            40
+          ],
+          "buffer": 30,
+          "name": "efficientnet-lite0/model/blocks_5/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_5/conv2d/kernel;efficientnet-lite0/model/blocks_5/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80,
+            1,
+            1,
+            240
+          ],
+          "buffer": 31,
+          "name": "efficientnet-lite0/model/blocks_5/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_5/conv2d_1/kernel;efficientnet-lite0/model/blocks_5/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480,
+            1,
+            1,
+            80
+          ],
+          "buffer": 32,
+          "name": "efficientnet-lite0/model/blocks_6/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_6/conv2d/kernel;efficientnet-lite0/model/blocks_6/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80,
+            1,
+            1,
+            480
+          ],
+          "buffer": 33,
+          "name": "efficientnet-lite0/model/blocks_6/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_6/conv2d_1/kernel;efficientnet-lite0/model/blocks_6/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480,
+            1,
+            1,
+            80
+          ],
+          "buffer": 34,
+          "name": "efficientnet-lite0/model/blocks_7/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_7/conv2d/kernel;efficientnet-lite0/model/blocks_7/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80,
+            1,
+            1,
+            480
+          ],
+          "buffer": 35,
+          "name": "efficientnet-lite0/model/blocks_7/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_7/conv2d_1/kernel;efficientnet-lite0/model/blocks_7/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480,
+            1,
+            1,
+            80
+          ],
+          "buffer": 36,
+          "name": "efficientnet-lite0/model/blocks_8/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_8/conv2d/kernel;efficientnet-lite0/model/blocks_8/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            112,
+            1,
+            1,
+            480
+          ],
+          "buffer": 37,
+          "name": "efficientnet-lite0/model/blocks_8/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_8/conv2d_1/kernel;efficientnet-lite0/model/blocks_8/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            672,
+            1,
+            1,
+            112
+          ],
+          "buffer": 38,
+          "name": "efficientnet-lite0/model/blocks_9/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_9/conv2d/kernel;efficientnet-lite0/model/blocks_9/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            112,
+            1,
+            1,
+            672
+          ],
+          "buffer": 39,
+          "name": "efficientnet-lite0/model/blocks_9/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_9/conv2d_1/kernel;efficientnet-lite0/model/blocks_9/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            672,
+            1,
+            1,
+            112
+          ],
+          "buffer": 40,
+          "name": "efficientnet-lite0/model/blocks_10/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_10/conv2d/kernel;efficientnet-lite0/model/blocks_10/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            112,
+            1,
+            1,
+            672
+          ],
+          "buffer": 41,
+          "name": "efficientnet-lite0/model/blocks_10/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_10/conv2d_1/kernel;efficientnet-lite0/model/blocks_10/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            672,
+            1,
+            1,
+            112
+          ],
+          "buffer": 42,
+          "name": "efficientnet-lite0/model/blocks_11/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_11/conv2d/kernel;efficientnet-lite0/model/blocks_11/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            672
+          ],
+          "buffer": 43,
+          "name": "efficientnet-lite0/model/blocks_11/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_11/conv2d_1/kernel;efficientnet-lite0/model/blocks_11/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152,
+            1,
+            1,
+            192
+          ],
+          "buffer": 44,
+          "name": "efficientnet-lite0/model/blocks_12/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_12/conv2d/kernel;efficientnet-lite0/model/blocks_12/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            1152
+          ],
+          "buffer": 45,
+          "name": "efficientnet-lite0/model/blocks_12/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_12/conv2d_1/kernel;efficientnet-lite0/model/blocks_12/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152,
+            1,
+            1,
+            192
+          ],
+          "buffer": 46,
+          "name": "efficientnet-lite0/model/blocks_13/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_13/conv2d/kernel;efficientnet-lite0/model/blocks_13/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            1152
+          ],
+          "buffer": 47,
+          "name": "efficientnet-lite0/model/blocks_13/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_13/conv2d_1/kernel;efficientnet-lite0/model/blocks_13/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152,
+            1,
+            1,
+            192
+          ],
+          "buffer": 48,
+          "name": "efficientnet-lite0/model/blocks_14/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_14/conv2d/kernel;efficientnet-lite0/model/blocks_14/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192,
+            1,
+            1,
+            1152
+          ],
+          "buffer": 49,
+          "name": "efficientnet-lite0/model/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_14/conv2d_1/kernel;efficientnet-lite0/model/blocks_14/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152,
+            1,
+            1,
+            192
+          ],
+          "buffer": 50,
+          "name": "efficientnet-lite0/model/blocks_15/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/blocks_15/conv2d/kernel;efficientnet-lite0/model/blocks_15/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            320,
+            1,
+            1,
+            1152
+          ],
+          "buffer": 51,
+          "name": "efficientnet-lite0/model/blocks_15/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_15/conv2d_1/kernel;efficientnet-lite0/model/blocks_15/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1280,
+            1,
+            1,
+            320
+          ],
+          "buffer": 52,
+          "name": "efficientnet-lite0/model/head/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/head/conv2d/kernel;efficientnet-lite0/model/head/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32
+          ],
+          "buffer": 53,
+          "name": "efficientnet-lite0/model/stem/Relu6;efficientnet-lite0/model/stem/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_0/depthwise_conv2d/depthwise;efficientnet-lite0/stem/conv2d/kernel;efficientnet-lite0/model/stem/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            32
+          ],
+          "buffer": 54,
+          "name": "efficientnet-lite0/model/blocks_0/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_0/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            16
+          ],
+          "buffer": 55,
+          "name": "efficientnet-lite0/model/blocks_0/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/blocks_0/conv2d/kernel;efficientnet-lite0/model/blocks_0/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            96
+          ],
+          "buffer": 56,
+          "name": "efficientnet-lite0/model/blocks_1/Relu6;efficientnet-lite0/model/blocks_1/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_1/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_1/conv2d/kernel;efficientnet-lite0/model/blocks_1/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            96
+          ],
+          "buffer": 57,
+          "name": "efficientnet-lite0/model/blocks_1/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_1/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 58,
+          "name": "efficientnet-lite0/model/blocks_1/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_2/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_2/conv2d_1/kernel;efficientnet-lite0/model/blocks_2/conv2d_1/Conv2D;efficientnet-lite0/blocks_1/conv2d_1/kernel;efficientnet-lite0/model/blocks_1/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            144
+          ],
+          "buffer": 59,
+          "name": "efficientnet-lite0/model/blocks_2/Relu6;efficientnet-lite0/model/blocks_2/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_3/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_2/conv2d/kernel;efficientnet-lite0/model/blocks_2/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            144
+          ],
+          "buffer": 60,
+          "name": "efficientnet-lite0/model/blocks_2/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_2/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_3/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 61,
+          "name": "efficientnet-lite0/model/blocks_2/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_2/conv2d_1/kernel;efficientnet-lite0/model/blocks_2/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            144
+          ],
+          "buffer": 62,
+          "name": "efficientnet-lite0/model/blocks_3/Relu6;efficientnet-lite0/model/blocks_3/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_3/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_3/conv2d/kernel;efficientnet-lite0/model/blocks_3/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            144
+          ],
+          "buffer": 63,
+          "name": "efficientnet-lite0/model/blocks_3/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_3/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            40
+          ],
+          "buffer": 64,
+          "name": "efficientnet-lite0/model/blocks_3/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_4/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_4/conv2d_1/kernel;efficientnet-lite0/model/blocks_4/conv2d_1/Conv2D;efficientnet-lite0/blocks_3/conv2d_1/kernel;efficientnet-lite0/model/blocks_3/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            240
+          ],
+          "buffer": 65,
+          "name": "efficientnet-lite0/model/blocks_4/Relu6;efficientnet-lite0/model/blocks_4/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_5/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_4/conv2d/kernel;efficientnet-lite0/model/blocks_4/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            240
+          ],
+          "buffer": 66,
+          "name": "efficientnet-lite0/model/blocks_4/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_4/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_5/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            40
+          ],
+          "buffer": 67,
+          "name": "efficientnet-lite0/model/blocks_4/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_4/conv2d_1/kernel;efficientnet-lite0/model/blocks_4/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            240
+          ],
+          "buffer": 68,
+          "name": "efficientnet-lite0/model/blocks_5/Relu6;efficientnet-lite0/model/blocks_5/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_5/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_5/conv2d/kernel;efficientnet-lite0/model/blocks_5/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            240
+          ],
+          "buffer": 69,
+          "name": "efficientnet-lite0/model/blocks_5/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_5/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80
+          ],
+          "buffer": 70,
+          "name": "efficientnet-lite0/model/blocks_5/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_7/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_7/conv2d_1/kernel;efficientnet-lite0/model/blocks_7/conv2d_1/Conv2D;efficientnet-lite0/blocks_5/conv2d_1/kernel;efficientnet-lite0/model/blocks_5/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 71,
+          "name": "efficientnet-lite0/model/blocks_6/Relu6;efficientnet-lite0/model/blocks_6/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_6/conv2d/kernel;efficientnet-lite0/model/blocks_6/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            480
+          ],
+          "buffer": 72,
+          "name": "efficientnet-lite0/model/blocks_6/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_6/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80
+          ],
+          "buffer": 73,
+          "name": "efficientnet-lite0/model/blocks_6/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_7/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_7/conv2d_1/kernel;efficientnet-lite0/model/blocks_7/conv2d_1/Conv2D;efficientnet-lite0/blocks_6/conv2d_1/kernel;efficientnet-lite0/model/blocks_6/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 74,
+          "name": "efficientnet-lite0/model/blocks_7/Relu6;efficientnet-lite0/model/blocks_7/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_7/conv2d/kernel;efficientnet-lite0/model/blocks_7/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            480
+          ],
+          "buffer": 75,
+          "name": "efficientnet-lite0/model/blocks_7/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_7/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            80
+          ],
+          "buffer": 76,
+          "name": "efficientnet-lite0/model/blocks_7/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_7/conv2d_1/kernel;efficientnet-lite0/model/blocks_7/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            480
+          ],
+          "buffer": 77,
+          "name": "efficientnet-lite0/model/blocks_8/Relu6;efficientnet-lite0/model/blocks_8/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_8/conv2d/kernel;efficientnet-lite0/model/blocks_8/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            480
+          ],
+          "buffer": 78,
+          "name": "efficientnet-lite0/model/blocks_8/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            112
+          ],
+          "buffer": 79,
+          "name": "efficientnet-lite0/model/blocks_8/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_10/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_10/conv2d_1/kernel;efficientnet-lite0/model/blocks_10/conv2d_1/Conv2D;efficientnet-lite0/blocks_8/conv2d_1/kernel;efficientnet-lite0/model/blocks_8/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            672
+          ],
+          "buffer": 80,
+          "name": "efficientnet-lite0/model/blocks_9/Relu6;efficientnet-lite0/model/blocks_9/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_9/conv2d/kernel;efficientnet-lite0/model/blocks_9/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            672
+          ],
+          "buffer": 81,
+          "name": "efficientnet-lite0/model/blocks_9/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_9/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            112
+          ],
+          "buffer": 82,
+          "name": "efficientnet-lite0/model/blocks_9/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_10/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_10/conv2d_1/kernel;efficientnet-lite0/model/blocks_10/conv2d_1/Conv2D;efficientnet-lite0/blocks_9/conv2d_1/kernel;efficientnet-lite0/model/blocks_9/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            672
+          ],
+          "buffer": 83,
+          "name": "efficientnet-lite0/model/blocks_10/Relu6;efficientnet-lite0/model/blocks_10/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_10/conv2d/kernel;efficientnet-lite0/model/blocks_10/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            672
+          ],
+          "buffer": 84,
+          "name": "efficientnet-lite0/model/blocks_10/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_10/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            112
+          ],
+          "buffer": 85,
+          "name": "efficientnet-lite0/model/blocks_10/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_10/conv2d_1/kernel;efficientnet-lite0/model/blocks_10/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            672
+          ],
+          "buffer": 86,
+          "name": "efficientnet-lite0/model/blocks_11/Relu6;efficientnet-lite0/model/blocks_11/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_11/conv2d/kernel;efficientnet-lite0/model/blocks_11/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            672
+          ],
+          "buffer": 87,
+          "name": "efficientnet-lite0/model/blocks_11/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 88,
+          "name": "efficientnet-lite0/model/blocks_11/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_14/conv2d_1/kernel;efficientnet-lite0/model/blocks_14/conv2d_1/Conv2D;efficientnet-lite0/blocks_11/conv2d_1/kernel;efficientnet-lite0/model/blocks_11/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 89,
+          "name": "efficientnet-lite0/model/blocks_12/Relu6;efficientnet-lite0/model/blocks_12/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_12/conv2d/kernel;efficientnet-lite0/model/blocks_12/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            1152
+          ],
+          "buffer": 90,
+          "name": "efficientnet-lite0/model/blocks_12/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_12/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 91,
+          "name": "efficientnet-lite0/model/blocks_12/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_14/conv2d_1/kernel;efficientnet-lite0/model/blocks_14/conv2d_1/Conv2D;efficientnet-lite0/blocks_12/conv2d_1/kernel;efficientnet-lite0/model/blocks_12/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 92,
+          "name": "efficientnet-lite0/model/blocks_13/Relu6;efficientnet-lite0/model/blocks_13/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_13/conv2d/kernel;efficientnet-lite0/model/blocks_13/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            1152
+          ],
+          "buffer": 93,
+          "name": "efficientnet-lite0/model/blocks_13/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_13/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 94,
+          "name": "efficientnet-lite0/model/blocks_13/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_14/conv2d_1/kernel;efficientnet-lite0/model/blocks_14/conv2d_1/Conv2D;efficientnet-lite0/blocks_13/conv2d_1/kernel;efficientnet-lite0/model/blocks_13/conv2d_1/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 95,
+          "name": "efficientnet-lite0/model/blocks_14/Relu6;efficientnet-lite0/model/blocks_14/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_14/conv2d/kernel;efficientnet-lite0/model/blocks_14/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            1152
+          ],
+          "buffer": 96,
+          "name": "efficientnet-lite0/model/blocks_14/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_14/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            192
+          ],
+          "buffer": 97,
+          "name": "efficientnet-lite0/model/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_14/conv2d_1/kernel;efficientnet-lite0/model/blocks_14/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1152
+          ],
+          "buffer": 98,
+          "name": "efficientnet-lite0/model/blocks_15/Relu6;efficientnet-lite0/model/blocks_15/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_15/conv2d/kernel;efficientnet-lite0/model/blocks_15/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            1152
+          ],
+          "buffer": 99,
+          "name": "efficientnet-lite0/model/blocks_15/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            320
+          ],
+          "buffer": 100,
+          "name": "efficientnet-lite0/model/blocks_15/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_15/conv2d_1/kernel;efficientnet-lite0/model/blocks_15/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1280
+          ],
+          "buffer": 101,
+          "name": "efficientnet-lite0/model/head/Relu6;efficientnet-lite0/model/head/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/head/conv2d/kernel;efficientnet-lite0/model/head/conv2d/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            2
+          ],
+          "type": "INT32",
+          "buffer": 102,
+          "name": "efficientnet-lite0/model/head/Squeeze",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            112,
+            112,
+            32
+          ],
+          "buffer": 103,
+          "name": "efficientnet-lite0/model/stem/Relu6;efficientnet-lite0/model/stem/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_0/depthwise_conv2d/depthwise;efficientnet-lite0/stem/conv2d/kernel;efficientnet-lite0/model/stem/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            112,
+            112,
+            32
+          ],
+          "buffer": 104,
+          "name": "efficientnet-lite0/model/blocks_0/Relu6;efficientnet-lite0/model/blocks_0/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_0/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            112,
+            112,
+            16
+          ],
+          "buffer": 105,
+          "name": "efficientnet-lite0/model/blocks_0/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/blocks_0/conv2d/kernel;efficientnet-lite0/model/blocks_0/conv2d/Conv2D2",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            112,
+            112,
+            96
+          ],
+          "buffer": 106,
+          "name": "efficientnet-lite0/model/blocks_1/Relu6;efficientnet-lite0/model/blocks_1/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_1/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_1/conv2d/kernel;efficientnet-lite0/model/blocks_1/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            96
+          ],
+          "buffer": 107,
+          "name": "efficientnet-lite0/model/blocks_1/Relu6_1;efficientnet-lite0/model/blocks_1/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_1/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            24
+          ],
+          "buffer": 108,
+          "name": "efficientnet-lite0/model/blocks_1/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_2/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_2/conv2d_1/kernel;efficientnet-lite0/model/blocks_2/conv2d_1/Conv2D;efficientnet-lite0/blocks_1/conv2d_1/kernel;efficientnet-lite0/model/blocks_1/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            144
+          ],
+          "buffer": 109,
+          "name": "efficientnet-lite0/model/blocks_2/Relu6;efficientnet-lite0/model/blocks_2/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_3/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_2/conv2d/kernel;efficientnet-lite0/model/blocks_2/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            144
+          ],
+          "buffer": 110,
+          "name": "efficientnet-lite0/model/blocks_2/Relu6_1;efficientnet-lite0/model/blocks_2/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_3/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_3/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_2/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            24
+          ],
+          "buffer": 111,
+          "name": "efficientnet-lite0/model/blocks_2/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_2/conv2d_1/kernel;efficientnet-lite0/model/blocks_2/conv2d_1/Conv2D2",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            24
+          ],
+          "buffer": 112,
+          "name": "efficientnet-lite0/model/blocks_2/Add",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            56,
+            56,
+            144
+          ],
+          "buffer": 113,
+          "name": "efficientnet-lite0/model/blocks_3/Relu6;efficientnet-lite0/model/blocks_3/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_3/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_3/conv2d/kernel;efficientnet-lite0/model/blocks_3/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            144
+          ],
+          "buffer": 114,
+          "name": "efficientnet-lite0/model/blocks_3/Relu6_1;efficientnet-lite0/model/blocks_3/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_3/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            40
+          ],
+          "buffer": 115,
+          "name": "efficientnet-lite0/model/blocks_3/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_4/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_4/conv2d_1/kernel;efficientnet-lite0/model/blocks_4/conv2d_1/Conv2D;efficientnet-lite0/blocks_3/conv2d_1/kernel;efficientnet-lite0/model/blocks_3/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            240
+          ],
+          "buffer": 116,
+          "name": "efficientnet-lite0/model/blocks_4/Relu6;efficientnet-lite0/model/blocks_4/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_5/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_4/conv2d/kernel;efficientnet-lite0/model/blocks_4/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            240
+          ],
+          "buffer": 117,
+          "name": "efficientnet-lite0/model/blocks_4/Relu6_1;efficientnet-lite0/model/blocks_4/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_5/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_5/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_4/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            40
+          ],
+          "buffer": 118,
+          "name": "efficientnet-lite0/model/blocks_4/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_4/conv2d_1/kernel;efficientnet-lite0/model/blocks_4/conv2d_1/Conv2D2",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            40
+          ],
+          "buffer": 119,
+          "name": "efficientnet-lite0/model/blocks_4/Add",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            28,
+            28,
+            240
+          ],
+          "buffer": 120,
+          "name": "efficientnet-lite0/model/blocks_5/Relu6;efficientnet-lite0/model/blocks_5/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_5/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_5/conv2d/kernel;efficientnet-lite0/model/blocks_5/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            240
+          ],
+          "buffer": 121,
+          "name": "efficientnet-lite0/model/blocks_5/Relu6_1;efficientnet-lite0/model/blocks_5/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_5/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            80
+          ],
+          "buffer": 122,
+          "name": "efficientnet-lite0/model/blocks_5/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_7/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_7/conv2d_1/kernel;efficientnet-lite0/model/blocks_7/conv2d_1/Conv2D;efficientnet-lite0/blocks_5/conv2d_1/kernel;efficientnet-lite0/model/blocks_5/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 123,
+          "name": "efficientnet-lite0/model/blocks_6/Relu6;efficientnet-lite0/model/blocks_6/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_6/conv2d/kernel;efficientnet-lite0/model/blocks_6/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 124,
+          "name": "efficientnet-lite0/model/blocks_6/Relu6_1;efficientnet-lite0/model/blocks_6/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_6/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            80
+          ],
+          "buffer": 125,
+          "name": "efficientnet-lite0/model/blocks_6/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_7/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_7/conv2d_1/kernel;efficientnet-lite0/model/blocks_7/conv2d_1/Conv2D;efficientnet-lite0/blocks_6/conv2d_1/kernel;efficientnet-lite0/model/blocks_6/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            80
+          ],
+          "buffer": 126,
+          "name": "efficientnet-lite0/model/blocks_6/Add",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 127,
+          "name": "efficientnet-lite0/model/blocks_7/Relu6;efficientnet-lite0/model/blocks_7/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_7/conv2d/kernel;efficientnet-lite0/model/blocks_7/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 128,
+          "name": "efficientnet-lite0/model/blocks_7/Relu6_1;efficientnet-lite0/model/blocks_7/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_7/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            80
+          ],
+          "buffer": 129,
+          "name": "efficientnet-lite0/model/blocks_7/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_7/conv2d_1/kernel;efficientnet-lite0/model/blocks_7/conv2d_1/Conv2D2",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            80
+          ],
+          "buffer": 130,
+          "name": "efficientnet-lite0/model/blocks_7/Add",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 131,
+          "name": "efficientnet-lite0/model/blocks_8/Relu6;efficientnet-lite0/model/blocks_8/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_8/conv2d/kernel;efficientnet-lite0/model/blocks_8/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            480
+          ],
+          "buffer": 132,
+          "name": "efficientnet-lite0/model/blocks_8/Relu6_1;efficientnet-lite0/model/blocks_8/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_8/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            112
+          ],
+          "buffer": 133,
+          "name": "efficientnet-lite0/model/blocks_8/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_10/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_10/conv2d_1/kernel;efficientnet-lite0/model/blocks_10/conv2d_1/Conv2D;efficientnet-lite0/blocks_8/conv2d_1/kernel;efficientnet-lite0/model/blocks_8/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            672
+          ],
+          "buffer": 134,
+          "name": "efficientnet-lite0/model/blocks_9/Relu6;efficientnet-lite0/model/blocks_9/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_9/conv2d/kernel;efficientnet-lite0/model/blocks_9/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            672
+          ],
+          "buffer": 135,
+          "name": "efficientnet-lite0/model/blocks_9/Relu6_1;efficientnet-lite0/model/blocks_9/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_9/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            112
+          ],
+          "buffer": 136,
+          "name": "efficientnet-lite0/model/blocks_9/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_10/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_10/conv2d_1/kernel;efficientnet-lite0/model/blocks_10/conv2d_1/Conv2D;efficientnet-lite0/blocks_9/conv2d_1/kernel;efficientnet-lite0/model/blocks_9/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            112
+          ],
+          "buffer": 137,
+          "name": "efficientnet-lite0/model/blocks_9/Add",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            672
+          ],
+          "buffer": 138,
+          "name": "efficientnet-lite0/model/blocks_10/Relu6;efficientnet-lite0/model/blocks_10/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_10/conv2d/kernel;efficientnet-lite0/model/blocks_10/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            672
+          ],
+          "buffer": 139,
+          "name": "efficientnet-lite0/model/blocks_10/Relu6_1;efficientnet-lite0/model/blocks_10/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_10/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            112
+          ],
+          "buffer": 140,
+          "name": "efficientnet-lite0/model/blocks_10/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_10/conv2d_1/kernel;efficientnet-lite0/model/blocks_10/conv2d_1/Conv2D2",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            112
+          ],
+          "buffer": 141,
+          "name": "efficientnet-lite0/model/blocks_10/Add",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            14,
+            14,
+            672
+          ],
+          "buffer": 142,
+          "name": "efficientnet-lite0/model/blocks_11/Relu6;efficientnet-lite0/model/blocks_11/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_11/conv2d/kernel;efficientnet-lite0/model/blocks_11/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            672
+          ],
+          "buffer": 143,
+          "name": "efficientnet-lite0/model/blocks_11/Relu6_1;efficientnet-lite0/model/blocks_11/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_11/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 144,
+          "name": "efficientnet-lite0/model/blocks_11/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_14/conv2d_1/kernel;efficientnet-lite0/model/blocks_14/conv2d_1/Conv2D;efficientnet-lite0/blocks_11/conv2d_1/kernel;efficientnet-lite0/model/blocks_11/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 145,
+          "name": "efficientnet-lite0/model/blocks_12/Relu6;efficientnet-lite0/model/blocks_12/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_12/conv2d/kernel;efficientnet-lite0/model/blocks_12/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 146,
+          "name": "efficientnet-lite0/model/blocks_12/Relu6_1;efficientnet-lite0/model/blocks_12/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_12/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 147,
+          "name": "efficientnet-lite0/model/blocks_12/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_14/conv2d_1/kernel;efficientnet-lite0/model/blocks_14/conv2d_1/Conv2D;efficientnet-lite0/blocks_12/conv2d_1/kernel;efficientnet-lite0/model/blocks_12/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 148,
+          "name": "efficientnet-lite0/model/blocks_12/Add",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 149,
+          "name": "efficientnet-lite0/model/blocks_13/Relu6;efficientnet-lite0/model/blocks_13/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_13/conv2d/kernel;efficientnet-lite0/model/blocks_13/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 150,
+          "name": "efficientnet-lite0/model/blocks_13/Relu6_1;efficientnet-lite0/model/blocks_13/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_13/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 151,
+          "name": "efficientnet-lite0/model/blocks_13/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/model/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_14/conv2d_1/kernel;efficientnet-lite0/model/blocks_14/conv2d_1/Conv2D;efficientnet-lite0/blocks_13/conv2d_1/kernel;efficientnet-lite0/model/blocks_13/conv2d_1/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 152,
+          "name": "efficientnet-lite0/model/blocks_13/Add",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 153,
+          "name": "efficientnet-lite0/model/blocks_14/Relu6;efficientnet-lite0/model/blocks_14/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_14/conv2d/kernel;efficientnet-lite0/model/blocks_14/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 154,
+          "name": "efficientnet-lite0/model/blocks_14/Relu6_1;efficientnet-lite0/model/blocks_14/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/model/blocks_14/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 155,
+          "name": "efficientnet-lite0/model/blocks_14/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_14/conv2d_1/kernel;efficientnet-lite0/model/blocks_14/conv2d_1/Conv2D2",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            192
+          ],
+          "buffer": 156,
+          "name": "efficientnet-lite0/model/blocks_14/Add",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 157,
+          "name": "efficientnet-lite0/model/blocks_15/Relu6;efficientnet-lite0/model/blocks_15/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise;efficientnet-lite0/blocks_15/conv2d/kernel;efficientnet-lite0/model/blocks_15/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1152
+          ],
+          "buffer": 158,
+          "name": "efficientnet-lite0/model/blocks_15/Relu6_1;efficientnet-lite0/model/blocks_15/tpu_batch_normalization_1/FusedBatchNormV3;efficientnet-lite0/model/blocks_15/depthwise_conv2d/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            320
+          ],
+          "buffer": 159,
+          "name": "efficientnet-lite0/model/blocks_15/tpu_batch_normalization_2/FusedBatchNormV3;efficientnet-lite0/blocks_15/conv2d_1/kernel;efficientnet-lite0/model/blocks_15/conv2d_1/Conv2D2",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            7,
+            7,
+            1280
+          ],
+          "buffer": 160,
+          "name": "efficientnet-lite0/model/head/Relu6;efficientnet-lite0/model/head/tpu_batch_normalization/FusedBatchNormV3;efficientnet-lite0/head/conv2d/kernel;efficientnet-lite0/model/head/conv2d/Conv2D1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1,
+            1,
+            1280
+          ],
+          "buffer": 161,
+          "name": "efficientnet-lite0/model/head/AvgPool",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1280
+          ],
+          "buffer": 162,
+          "name": "efficientnet-lite0/model/head/Squeeze1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1000
+          ],
+          "buffer": 163,
+          "name": "efficientnet-lite0/model/head/dense/BiasAdd",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1000
+          ],
+          "buffer": 164,
+          "name": "Softmax",
+          "quantization": {
+          }
+        }
+      ],
+      "inputs": [
+        0
+      ],
+      "outputs": [
+        163
+      ],
+      "operators": [
+        {
+          "inputs": [
+            0,
+            19,
+            52
+          ],
+          "outputs": [
+            102
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            102,
+            53,
+            2
+          ],
+          "outputs": [
+            103
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            103,
+            20,
+            54
+          ],
+          "outputs": [
+            104
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            104,
+            21,
+            55
+          ],
+          "outputs": [
+            105
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            105,
+            56,
+            3
+          ],
+          "outputs": [
+            106
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            106,
+            22,
+            57
+          ],
+          "outputs": [
+            107
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            107,
+            23,
+            58
+          ],
+          "outputs": [
+            108
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            108,
+            59,
+            10
+          ],
+          "outputs": [
+            109
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            109,
+            24,
+            60
+          ],
+          "outputs": [
+            110
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            110,
+            107
+          ],
+          "outputs": [
+            111
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "inputs": [
+            111,
+            25,
+            61
+          ],
+          "outputs": [
+            112
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            112,
+            62,
+            11
+          ],
+          "outputs": [
+            113
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            113,
+            26,
+            63
+          ],
+          "outputs": [
+            114
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            114,
+            27,
+            64
+          ],
+          "outputs": [
+            115
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            115,
+            65,
+            12
+          ],
+          "outputs": [
+            116
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            116,
+            28,
+            66
+          ],
+          "outputs": [
+            117
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            117,
+            114
+          ],
+          "outputs": [
+            118
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "inputs": [
+            118,
+            29,
+            67
+          ],
+          "outputs": [
+            119
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            119,
+            68,
+            13
+          ],
+          "outputs": [
+            120
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            120,
+            30,
+            69
+          ],
+          "outputs": [
+            121
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            121,
+            31,
+            70
+          ],
+          "outputs": [
+            122
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            122,
+            71,
+            14
+          ],
+          "outputs": [
+            123
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            123,
+            32,
+            72
+          ],
+          "outputs": [
+            124
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            124,
+            121
+          ],
+          "outputs": [
+            125
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "inputs": [
+            125,
+            33,
+            73
+          ],
+          "outputs": [
+            126
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            126,
+            74,
+            15
+          ],
+          "outputs": [
+            127
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            127,
+            34,
+            75
+          ],
+          "outputs": [
+            128
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            128,
+            125
+          ],
+          "outputs": [
+            129
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "inputs": [
+            129,
+            35,
+            76
+          ],
+          "outputs": [
+            130
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            130,
+            77,
+            16
+          ],
+          "outputs": [
+            131
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            131,
+            36,
+            78
+          ],
+          "outputs": [
+            132
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            132,
+            37,
+            79
+          ],
+          "outputs": [
+            133
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            133,
+            80,
+            17
+          ],
+          "outputs": [
+            134
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            134,
+            38,
+            81
+          ],
+          "outputs": [
+            135
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            135,
+            132
+          ],
+          "outputs": [
+            136
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "inputs": [
+            136,
+            39,
+            82
+          ],
+          "outputs": [
+            137
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            137,
+            83,
+            4
+          ],
+          "outputs": [
+            138
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            138,
+            40,
+            84
+          ],
+          "outputs": [
+            139
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            139,
+            136
+          ],
+          "outputs": [
+            140
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "inputs": [
+            140,
+            41,
+            85
+          ],
+          "outputs": [
+            141
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            141,
+            86,
+            5
+          ],
+          "outputs": [
+            142
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            142,
+            42,
+            87
+          ],
+          "outputs": [
+            143
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            143,
+            43,
+            88
+          ],
+          "outputs": [
+            144
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            144,
+            89,
+            6
+          ],
+          "outputs": [
+            145
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            145,
+            44,
+            90
+          ],
+          "outputs": [
+            146
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            146,
+            143
+          ],
+          "outputs": [
+            147
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "inputs": [
+            147,
+            45,
+            91
+          ],
+          "outputs": [
+            148
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            148,
+            92,
+            7
+          ],
+          "outputs": [
+            149
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            149,
+            46,
+            93
+          ],
+          "outputs": [
+            150
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            150,
+            147
+          ],
+          "outputs": [
+            151
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "inputs": [
+            151,
+            47,
+            94
+          ],
+          "outputs": [
+            152
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            152,
+            95,
+            8
+          ],
+          "outputs": [
+            153
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            153,
+            48,
+            96
+          ],
+          "outputs": [
+            154
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            154,
+            151
+          ],
+          "outputs": [
+            155
+          ],
+          "builtin_options_type": "AddOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "inputs": [
+            155,
+            49,
+            97
+          ],
+          "outputs": [
+            156
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            156,
+            98,
+            9
+          ],
+          "outputs": [
+            157
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            157,
+            50,
+            99
+          ],
+          "outputs": [
+            158
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "inputs": [
+            158,
+            51,
+            100
+          ],
+          "outputs": [
+            159
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 3,
+          "inputs": [
+            159
+          ],
+          "outputs": [
+            160
+          ],
+          "builtin_options_type": "Pool2DOptions",
+          "builtin_options": {
+            "padding": "VALID",
+            "stride_w": 1,
+            "stride_h": 1,
+            "filter_width": 7,
+            "filter_height": 7
+          }
+        },
+        {
+          "opcode_index": 4,
+          "inputs": [
+            160,
+            101
+          ],
+          "outputs": [
+            161
+          ]
+        },
+        {
+          "opcode_index": 5,
+          "inputs": [
+            161,
+            18,
+            1
+          ],
+          "outputs": [
+            162
+          ],
+          "builtin_options_type": "FullyConnectedOptions",
+          "builtin_options": {
+          }
+        },
+        {
+          "opcode_index": 6,
+          "inputs": [
+            162
+          ],
+          "outputs": [
+            163
+          ],
+          "builtin_options_type": "SoftmaxOptions",
+          "builtin_options": {
+            "beta": 1.0
+          }
+        }
+      ],
+      "name": "main"
+    }
+  ],
+  "description": "MLIR Converted."
+}

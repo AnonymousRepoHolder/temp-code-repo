@@ -1,0 +1,9 @@
+[
+  {"idx": 0, "topk": [{"type": "RELU", "p": 0.40}, {"type": "CONV_2D", "p": 0.35}, {"type": "RELU6", "p": 0.25}]},
+  {"idx": 1, "topk": [{"type": "RELU", "p": 0.40}, {"type": "CONV_2D", "p": 0.35}, {"type": "RELU6", "p": 0.25}]},
+  {"idx": 2, "topk": [{"type": "RELU", "p": 0.40}, {"type": "CONV_2D", "p": 0.35}, {"type": "RELU6", "p": 0.25}]},
+  {"idx": 3, "topk": [{"type": "RELU", "p": 0.40}, {"type": "CONV_2D", "p": 0.35}, {"type": "RELU6", "p": 0.25}]},
+  {"idx": 4, "topk": [{"type": "RELU", "p": 0.40}, {"type": "CONV_2D", "p": 0.35}, {"type": "RELU6", "p": 0.25}]},
+  {"idx": 5, "topk": [{"type": "RELU", "p": 0.40}, {"type": "CONV_2D", "p": 0.35}, {"type": "RELU6", "p": 0.25}]},
+  {"idx": 6, "topk": [{"type": "RELU", "p": 0.40}, {"type": "CONV_2D", "p": 0.35}, {"type": "RELU6", "p": 0.25}]}
+]

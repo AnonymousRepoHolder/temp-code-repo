@@ -1,0 +1,3371 @@
+{
+  "version": 3,
+  "operator_codes": [
+    {
+      "deprecated_builtin_code": 3,
+      "builtin_code": "CONV_2D"
+    },
+    {
+      "deprecated_builtin_code": 4,
+      "builtin_code": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "deprecated_builtin_code": 22,
+      "builtin_code": "RESHAPE"
+    },
+    {
+      "deprecated_builtin_code": 2,
+      "builtin_code": "CONCATENATION"
+    },
+    {
+      "deprecated_builtin_code": 14,
+      "builtin_code": "LOGISTIC"
+    }
+  ],
+  "subgraphs": [
+    {
+      "tensors": [
+        {
+          "shape": [
+            1,
+            320,
+            320,
+            3
+          ],
+          "buffer": 1,
+          "name": "normalized_input_image_tensor",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            3
+          ],
+          "type": "INT32",
+          "buffer": 2,
+          "name": "BoxPredictor_0/Reshape_1/shape",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            4
+          ],
+          "type": "INT32",
+          "buffer": 3,
+          "name": "BoxPredictor_0/Reshape/shape",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 4,
+          "name": "BoxPredictor_0/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 5,
+          "name": "BoxPredictor_0/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1024
+          ],
+          "buffer": 6,
+          "name": "BoxPredictor_1/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1024
+          ],
+          "buffer": 7,
+          "name": "BoxPredictor_1/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 8,
+          "name": "BoxPredictor_2/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 9,
+          "name": "BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 10,
+          "name": "BoxPredictor_3/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 11,
+          "name": "BoxPredictor_3/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 12,
+          "name": "BoxPredictor_4/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 13,
+          "name": "BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 14,
+          "name": "BoxPredictor_5/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 15,
+          "name": "BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32
+          ],
+          "buffer": 16,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 17,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 18,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 19,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 20,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 21,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1024
+          ],
+          "buffer": 22,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1024
+          ],
+          "buffer": 23,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1024
+          ],
+          "buffer": 24,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 25,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_256/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 26,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_128/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 27,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_128/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64
+          ],
+          "buffer": 28,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_64/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 29,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_512/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 30,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_256/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 31,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_256/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 32,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_128/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32
+          ],
+          "buffer": 33,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64
+          ],
+          "buffer": 34,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64
+          ],
+          "buffer": 35,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 36,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 37,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 38,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128
+          ],
+          "buffer": 39,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 40,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 41,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 42,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256
+          ],
+          "buffer": 43,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 44,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 45,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 46,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 47,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 48,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 49,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512
+          ],
+          "buffer": 50,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/BatchNorm/FusedBatchNormV3",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            32,
+            3,
+            3,
+            3
+          ],
+          "buffer": 51,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64,
+            1,
+            1,
+            32
+          ],
+          "buffer": 52,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128,
+            1,
+            1,
+            64
+          ],
+          "buffer": 53,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128,
+            1,
+            1,
+            128
+          ],
+          "buffer": 54,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256,
+            1,
+            1,
+            128
+          ],
+          "buffer": 55,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256,
+            1,
+            1,
+            256
+          ],
+          "buffer": 56,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512,
+            1,
+            1,
+            256
+          ],
+          "buffer": 57,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512,
+            1,
+            1,
+            512
+          ],
+          "buffer": 58,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512,
+            1,
+            1,
+            512
+          ],
+          "buffer": 59,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512,
+            1,
+            1,
+            512
+          ],
+          "buffer": 60,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512,
+            1,
+            1,
+            512
+          ],
+          "buffer": 61,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512,
+            1,
+            1,
+            512
+          ],
+          "buffer": 62,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            12,
+            1,
+            1,
+            512
+          ],
+          "buffer": 63,
+          "name": "BoxPredictor_0/BoxEncodingPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            273,
+            1,
+            1,
+            512
+          ],
+          "buffer": 64,
+          "name": "BoxPredictor_0/ClassPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1024,
+            1,
+            1,
+            512
+          ],
+          "buffer": 65,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1024,
+            1,
+            1,
+            1024
+          ],
+          "buffer": 66,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24,
+            1,
+            1,
+            1024
+          ],
+          "buffer": 67,
+          "name": "BoxPredictor_1/BoxEncodingPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            546,
+            1,
+            1,
+            1024
+          ],
+          "buffer": 68,
+          "name": "BoxPredictor_1/ClassPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256,
+            1,
+            1,
+            1024
+          ],
+          "buffer": 69,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_256/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            512,
+            3,
+            3,
+            256
+          ],
+          "buffer": 70,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_512/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24,
+            1,
+            1,
+            512
+          ],
+          "buffer": 71,
+          "name": "BoxPredictor_2/BoxEncodingPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            546,
+            1,
+            1,
+            512
+          ],
+          "buffer": 72,
+          "name": "BoxPredictor_2/ClassPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128,
+            1,
+            1,
+            512
+          ],
+          "buffer": 73,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_128/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256,
+            3,
+            3,
+            128
+          ],
+          "buffer": 74,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_256/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24,
+            1,
+            1,
+            256
+          ],
+          "buffer": 75,
+          "name": "BoxPredictor_3/BoxEncodingPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            546,
+            1,
+            1,
+            256
+          ],
+          "buffer": 76,
+          "name": "BoxPredictor_3/ClassPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128,
+            1,
+            1,
+            256
+          ],
+          "buffer": 77,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_128/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            256,
+            3,
+            3,
+            128
+          ],
+          "buffer": 78,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_256/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24,
+            1,
+            1,
+            256
+          ],
+          "buffer": 79,
+          "name": "BoxPredictor_4/BoxEncodingPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            546,
+            1,
+            1,
+            256
+          ],
+          "buffer": 80,
+          "name": "BoxPredictor_4/ClassPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            64,
+            1,
+            1,
+            256
+          ],
+          "buffer": 81,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_64/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            128,
+            3,
+            3,
+            64
+          ],
+          "buffer": 82,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_128/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24,
+            1,
+            1,
+            128
+          ],
+          "buffer": 83,
+          "name": "BoxPredictor_5/BoxEncodingPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            546,
+            1,
+            1,
+            128
+          ],
+          "buffer": 84,
+          "name": "BoxPredictor_5/ClassPredictor/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            32
+          ],
+          "buffer": 85,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            64
+          ],
+          "buffer": 86,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_64/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            128
+          ],
+          "buffer": 87,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/depthwise;BoxPredictor_5/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            128
+          ],
+          "buffer": 88,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/depthwise;BoxPredictor_5/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            256
+          ],
+          "buffer": 89,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/depthwise;BoxPredictor_4/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            256
+          ],
+          "buffer": 90,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/depthwise;BoxPredictor_4/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            512
+          ],
+          "buffer": 91,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/depthwise;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            512
+          ],
+          "buffer": 92,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/depthwise;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            512
+          ],
+          "buffer": 93,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/depthwise;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            512
+          ],
+          "buffer": 94,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/depthwise;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            512
+          ],
+          "buffer": 95,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/depthwise;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            512
+          ],
+          "buffer": 96,
+          "name": "BoxPredictor_0/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_0/BoxEncodingPredictor_depthwise/depthwise;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            12
+          ],
+          "buffer": 97,
+          "name": "BoxPredictor_0/BoxEncodingPredictor/BiasAdd;BoxPredictor_0/BoxEncodingPredictor/Conv2D;BoxPredictor_0/BoxEncodingPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            512
+          ],
+          "buffer": 98,
+          "name": "BoxPredictor_0/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_0/ClassPredictor_depthwise/depthwise;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            273
+          ],
+          "buffer": 99,
+          "name": "BoxPredictor_0/ClassPredictor/BiasAdd;BoxPredictor_0/ClassPredictor/Conv2D;BoxPredictor_0/ClassPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            512
+          ],
+          "buffer": 100,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/depthwise;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            1024
+          ],
+          "buffer": 101,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/depthwise;BoxPredictor_1/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            1024
+          ],
+          "buffer": 102,
+          "name": "BoxPredictor_1/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/BoxEncodingPredictor_depthwise/depthwise;BoxPredictor_1/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 103,
+          "name": "BoxPredictor_1/BoxEncodingPredictor/BiasAdd;BoxPredictor_5/BoxEncodingPredictor/Conv2D;BoxPredictor_1/BoxEncodingPredictor/Conv2D;BoxPredictor_1/BoxEncodingPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            1024
+          ],
+          "buffer": 104,
+          "name": "BoxPredictor_1/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            546
+          ],
+          "buffer": 105,
+          "name": "BoxPredictor_1/ClassPredictor/BiasAdd;BoxPredictor_5/ClassPredictor/Conv2D;BoxPredictor_1/ClassPredictor/Conv2D;BoxPredictor_1/ClassPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            512
+          ],
+          "buffer": 106,
+          "name": "BoxPredictor_2/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/BoxEncodingPredictor_depthwise/depthwise;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 107,
+          "name": "BoxPredictor_2/BoxEncodingPredictor/BiasAdd;BoxPredictor_5/BoxEncodingPredictor/Conv2D;BoxPredictor_2/BoxEncodingPredictor/Conv2D;BoxPredictor_2/BoxEncodingPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            512
+          ],
+          "buffer": 108,
+          "name": "BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            546
+          ],
+          "buffer": 109,
+          "name": "BoxPredictor_2/ClassPredictor/BiasAdd;BoxPredictor_5/ClassPredictor/Conv2D;BoxPredictor_2/ClassPredictor/Conv2D;BoxPredictor_2/ClassPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            256
+          ],
+          "buffer": 110,
+          "name": "BoxPredictor_3/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_3/BoxEncodingPredictor_depthwise/depthwise;BoxPredictor_4/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 111,
+          "name": "BoxPredictor_3/BoxEncodingPredictor/BiasAdd;BoxPredictor_5/BoxEncodingPredictor/Conv2D;BoxPredictor_3/BoxEncodingPredictor/Conv2D;BoxPredictor_3/BoxEncodingPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            256
+          ],
+          "buffer": 112,
+          "name": "BoxPredictor_3/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_3/ClassPredictor_depthwise/depthwise;BoxPredictor_4/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            546
+          ],
+          "buffer": 113,
+          "name": "BoxPredictor_3/ClassPredictor/BiasAdd;BoxPredictor_5/ClassPredictor/Conv2D;BoxPredictor_3/ClassPredictor/Conv2D;BoxPredictor_3/ClassPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            256
+          ],
+          "buffer": 114,
+          "name": "BoxPredictor_4/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/BoxEncodingPredictor_depthwise/depthwise;BoxPredictor_4/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 115,
+          "name": "BoxPredictor_4/BoxEncodingPredictor/BiasAdd;BoxPredictor_5/BoxEncodingPredictor/Conv2D;BoxPredictor_4/BoxEncodingPredictor/Conv2D;BoxPredictor_4/BoxEncodingPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            256
+          ],
+          "buffer": 116,
+          "name": "BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            546
+          ],
+          "buffer": 117,
+          "name": "BoxPredictor_4/ClassPredictor/BiasAdd;BoxPredictor_5/ClassPredictor/Conv2D;BoxPredictor_4/ClassPredictor/Conv2D;BoxPredictor_4/ClassPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            128
+          ],
+          "buffer": 118,
+          "name": "BoxPredictor_5/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/BoxEncodingPredictor_depthwise/depthwise;BoxPredictor_5/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            24
+          ],
+          "buffer": 119,
+          "name": "BoxPredictor_5/BoxEncodingPredictor/BiasAdd;BoxPredictor_5/BoxEncodingPredictor/Conv2D;BoxPredictor_5/BoxEncodingPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            3
+          ],
+          "type": "INT32",
+          "buffer": 120,
+          "name": "Squeeze",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            128
+          ],
+          "buffer": 121,
+          "name": "BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            546
+          ],
+          "buffer": 122,
+          "name": "BoxPredictor_5/ClassPredictor/BiasAdd;BoxPredictor_5/ClassPredictor/Conv2D;BoxPredictor_5/ClassPredictor/biases",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            160,
+            160,
+            32
+          ],
+          "buffer": 123,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_0/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            160,
+            160,
+            32
+          ],
+          "buffer": 124,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            160,
+            160,
+            64
+          ],
+          "buffer": 125,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_64/Conv2D;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_1_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            80,
+            80,
+            64
+          ],
+          "buffer": 126,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_64/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            80,
+            80,
+            128
+          ],
+          "buffer": 127,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            80,
+            80,
+            128
+          ],
+          "buffer": 128,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            80,
+            80,
+            128
+          ],
+          "buffer": 129,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_3_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            40,
+            40,
+            128
+          ],
+          "buffer": 130,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            40,
+            40,
+            256
+          ],
+          "buffer": 131,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_4_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            40,
+            40,
+            256
+          ],
+          "buffer": 132,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            40,
+            40,
+            256
+          ],
+          "buffer": 133,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_5_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            256
+          ],
+          "buffer": 134,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 135,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_6_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 136,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 137,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_7_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 138,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 139,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_8_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 140,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 141,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_9_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 142,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 143,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_10_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 144,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 145,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_11_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 146,
+          "name": "BoxPredictor_0/BoxEncodingPredictor_depthwise/Relu6;BoxPredictor_0/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;BoxPredictor_0/BoxEncodingPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            12
+          ],
+          "buffer": 147,
+          "name": "BoxPredictor_0/BoxEncodingPredictor/BiasAdd;BoxPredictor_0/BoxEncodingPredictor/Conv2D;BoxPredictor_0/BoxEncodingPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1200,
+            1,
+            4
+          ],
+          "buffer": 148,
+          "name": "BoxPredictor_0/Reshape",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            512
+          ],
+          "buffer": 149,
+          "name": "BoxPredictor_0/ClassPredictor_depthwise/Relu6;BoxPredictor_0/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_0/ClassPredictor_depthwise/depthwise;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            20,
+            20,
+            273
+          ],
+          "buffer": 150,
+          "name": "BoxPredictor_0/ClassPredictor/BiasAdd;BoxPredictor_0/ClassPredictor/Conv2D;BoxPredictor_0/ClassPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1200,
+            91
+          ],
+          "buffer": 151,
+          "name": "BoxPredictor_0/Reshape_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            10,
+            10,
+            512
+          ],
+          "buffer": 152,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            10,
+            10,
+            1024
+          ],
+          "buffer": 153,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_12_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            10,
+            10,
+            1024
+          ],
+          "buffer": 154,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            10,
+            10,
+            1024
+          ],
+          "buffer": 155,
+          "name": "FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Relu6;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_13_pointwise/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            10,
+            10,
+            1024
+          ],
+          "buffer": 156,
+          "name": "BoxPredictor_1/BoxEncodingPredictor_depthwise/Relu6;BoxPredictor_1/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/ClassPredictor_depthwise/depthwise;BoxPredictor_1/BoxEncodingPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            10,
+            10,
+            24
+          ],
+          "buffer": 157,
+          "name": "BoxPredictor_1/BoxEncodingPredictor/BiasAdd;BoxPredictor_5/BoxEncodingPredictor/Conv2D;BoxPredictor_1/BoxEncodingPredictor/Conv2D;BoxPredictor_1/BoxEncodingPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            600,
+            1,
+            4
+          ],
+          "buffer": 158,
+          "name": "BoxPredictor_1/Reshape",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            10,
+            10,
+            1024
+          ],
+          "buffer": 159,
+          "name": "BoxPredictor_1/ClassPredictor_depthwise/Relu6;BoxPredictor_1/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_1/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            10,
+            10,
+            546
+          ],
+          "buffer": 160,
+          "name": "BoxPredictor_1/ClassPredictor/BiasAdd;BoxPredictor_5/ClassPredictor/Conv2D;BoxPredictor_1/ClassPredictor/Conv2D;BoxPredictor_1/ClassPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            600,
+            91
+          ],
+          "buffer": 161,
+          "name": "BoxPredictor_1/Reshape_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            10,
+            10,
+            256
+          ],
+          "buffer": 162,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_256/Relu6;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_256/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_2_1x1_256/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            512
+          ],
+          "buffer": 163,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_512/Relu6;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_512/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_2_3x3_s2_512/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            512
+          ],
+          "buffer": 164,
+          "name": "BoxPredictor_2/BoxEncodingPredictor_depthwise/Relu6;BoxPredictor_2/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise;BoxPredictor_2/BoxEncodingPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            24
+          ],
+          "buffer": 165,
+          "name": "BoxPredictor_2/BoxEncodingPredictor/BiasAdd;BoxPredictor_5/BoxEncodingPredictor/Conv2D;BoxPredictor_2/BoxEncodingPredictor/Conv2D;BoxPredictor_2/BoxEncodingPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            150,
+            1,
+            4
+          ],
+          "buffer": 166,
+          "name": "BoxPredictor_2/Reshape",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            512
+          ],
+          "buffer": 167,
+          "name": "BoxPredictor_2/ClassPredictor_depthwise/Relu6;BoxPredictor_2/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_2/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            546
+          ],
+          "buffer": 168,
+          "name": "BoxPredictor_2/ClassPredictor/BiasAdd;BoxPredictor_5/ClassPredictor/Conv2D;BoxPredictor_2/ClassPredictor/Conv2D;BoxPredictor_2/ClassPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            150,
+            91
+          ],
+          "buffer": 169,
+          "name": "BoxPredictor_2/Reshape_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            5,
+            5,
+            128
+          ],
+          "buffer": 170,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_128/Relu6;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_128/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_3_1x1_128/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            256
+          ],
+          "buffer": 171,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_256/Relu6;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_256/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_3_3x3_s2_256/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            256
+          ],
+          "buffer": 172,
+          "name": "BoxPredictor_3/BoxEncodingPredictor_depthwise/Relu6;BoxPredictor_3/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise;BoxPredictor_3/BoxEncodingPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            24
+          ],
+          "buffer": 173,
+          "name": "BoxPredictor_3/BoxEncodingPredictor/BiasAdd;BoxPredictor_5/BoxEncodingPredictor/Conv2D;BoxPredictor_3/BoxEncodingPredictor/Conv2D;BoxPredictor_3/BoxEncodingPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            54,
+            1,
+            4
+          ],
+          "buffer": 174,
+          "name": "BoxPredictor_3/Reshape",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            256
+          ],
+          "buffer": 175,
+          "name": "BoxPredictor_3/ClassPredictor_depthwise/Relu6;BoxPredictor_3/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise;BoxPredictor_3/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            546
+          ],
+          "buffer": 176,
+          "name": "BoxPredictor_3/ClassPredictor/BiasAdd;BoxPredictor_5/ClassPredictor/Conv2D;BoxPredictor_3/ClassPredictor/Conv2D;BoxPredictor_3/ClassPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            54,
+            91
+          ],
+          "buffer": 177,
+          "name": "BoxPredictor_3/Reshape_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            3,
+            3,
+            128
+          ],
+          "buffer": 178,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_128/Relu6;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_128/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_4_1x1_128/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            2,
+            2,
+            256
+          ],
+          "buffer": 179,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_256/Relu6;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_256/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_4_3x3_s2_256/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            2,
+            2,
+            256
+          ],
+          "buffer": 180,
+          "name": "BoxPredictor_4/BoxEncodingPredictor_depthwise/Relu6;BoxPredictor_4/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise;BoxPredictor_4/BoxEncodingPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            2,
+            2,
+            24
+          ],
+          "buffer": 181,
+          "name": "BoxPredictor_4/BoxEncodingPredictor/BiasAdd;BoxPredictor_5/BoxEncodingPredictor/Conv2D;BoxPredictor_4/BoxEncodingPredictor/Conv2D;BoxPredictor_4/BoxEncodingPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            24,
+            1,
+            4
+          ],
+          "buffer": 182,
+          "name": "BoxPredictor_4/Reshape",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            2,
+            2,
+            256
+          ],
+          "buffer": 183,
+          "name": "BoxPredictor_4/ClassPredictor_depthwise/Relu6;BoxPredictor_4/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_4/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            2,
+            2,
+            546
+          ],
+          "buffer": 184,
+          "name": "BoxPredictor_4/ClassPredictor/BiasAdd;BoxPredictor_5/ClassPredictor/Conv2D;BoxPredictor_4/ClassPredictor/Conv2D;BoxPredictor_4/ClassPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            24,
+            91
+          ],
+          "buffer": 185,
+          "name": "BoxPredictor_4/Reshape_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            2,
+            2,
+            64
+          ],
+          "buffer": 186,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_64/Relu6;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_64/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/BatchNorm/FusedBatchNormV3;FeatureExtractor/MobilenetV1/MobilenetV1/Conv2d_2_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_1_Conv2d_5_1x1_64/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1,
+            1,
+            128
+          ],
+          "buffer": 187,
+          "name": "FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_128/Relu6;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_128/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/depthwise;FeatureExtractor/MobilenetV1/Conv2d_13_pointwise_2_Conv2d_5_3x3_s2_128/Conv2D",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1,
+            1,
+            128
+          ],
+          "buffer": 188,
+          "name": "BoxPredictor_5/BoxEncodingPredictor_depthwise/Relu6;BoxPredictor_5/BoxEncodingPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/depthwise;BoxPredictor_5/BoxEncodingPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1,
+            1,
+            24
+          ],
+          "buffer": 189,
+          "name": "BoxPredictor_5/BoxEncodingPredictor/BiasAdd;BoxPredictor_5/BoxEncodingPredictor/Conv2D;BoxPredictor_5/BoxEncodingPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            6,
+            1,
+            4
+          ],
+          "buffer": 190,
+          "name": "BoxPredictor_5/Reshape",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            2034,
+            1,
+            4
+          ],
+          "buffer": 191,
+          "name": "concat",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            2034,
+            4
+          ],
+          "buffer": 192,
+          "name": "raw_outputs/box_encodings",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1,
+            1,
+            128
+          ],
+          "buffer": 193,
+          "name": "BoxPredictor_5/ClassPredictor_depthwise/Relu6;BoxPredictor_5/ClassPredictor_depthwise/BatchNorm/FusedBatchNormV3;BoxPredictor_5/ClassPredictor_depthwise/depthwise",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            1,
+            1,
+            546
+          ],
+          "buffer": 194,
+          "name": "BoxPredictor_5/ClassPredictor/BiasAdd;BoxPredictor_5/ClassPredictor/Conv2D;BoxPredictor_5/ClassPredictor/biases1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            6,
+            91
+          ],
+          "buffer": 195,
+          "name": "BoxPredictor_5/Reshape_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            2034,
+            91
+          ],
+          "buffer": 196,
+          "name": "concat_1",
+          "quantization": {
+          }
+        },
+        {
+          "shape": [
+            1,
+            2034,
+            91
+          ],
+          "buffer": 197,
+          "name": "raw_outputs/class_predictions",
+          "quantization": {
+          }
+        }
+      ],
+      "inputs": [
+        0
+      ],
+      "outputs": [
+        191,
+        196
+      ],
+      "operators": [
+        {
+          "inputs": [
+            0,
+            50,
+            15
+          ],
+          "outputs": [
+            122
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            122,
+            84,
+            32
+          ],
+          "outputs": [
+            123
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            123,
+            51,
+            33
+          ],
+          "outputs": [
+            124
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            124,
+            85,
+            34
+          ],
+          "outputs": [
+            125
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            125,
+            52,
+            35
+          ],
+          "outputs": [
+            126
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            126,
+            86,
+            36
+          ],
+          "outputs": [
+            127
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            127,
+            53,
+            37
+          ],
+          "outputs": [
+            128
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            128,
+            87,
+            38
+          ],
+          "outputs": [
+            129
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            129,
+            54,
+            39
+          ],
+          "outputs": [
+            130
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            130,
+            88,
+            40
+          ],
+          "outputs": [
+            131
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            131,
+            55,
+            41
+          ],
+          "outputs": [
+            132
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            132,
+            89,
+            42
+          ],
+          "outputs": [
+            133
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            133,
+            56,
+            43
+          ],
+          "outputs": [
+            134
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            134,
+            90,
+            44
+          ],
+          "outputs": [
+            135
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            135,
+            57,
+            45
+          ],
+          "outputs": [
+            136
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            136,
+            91,
+            46
+          ],
+          "outputs": [
+            137
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            137,
+            58,
+            47
+          ],
+          "outputs": [
+            138
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            138,
+            92,
+            48
+          ],
+          "outputs": [
+            139
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            139,
+            59,
+            49
+          ],
+          "outputs": [
+            140
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            140,
+            93,
+            16
+          ],
+          "outputs": [
+            141
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            141,
+            60,
+            17
+          ],
+          "outputs": [
+            142
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            142,
+            94,
+            18
+          ],
+          "outputs": [
+            143
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            143,
+            61,
+            19
+          ],
+          "outputs": [
+            144
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            144,
+            95,
+            3
+          ],
+          "outputs": [
+            145
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            145,
+            62,
+            96
+          ],
+          "outputs": [
+            146
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            146,
+            2
+          ],
+          "outputs": [
+            147
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            144,
+            97,
+            4
+          ],
+          "outputs": [
+            148
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            148,
+            63,
+            98
+          ],
+          "outputs": [
+            149
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            149,
+            1
+          ],
+          "outputs": [
+            150
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            144,
+            99,
+            20
+          ],
+          "outputs": [
+            151
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            151,
+            64,
+            21
+          ],
+          "outputs": [
+            152
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            152,
+            100,
+            22
+          ],
+          "outputs": [
+            153
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            153,
+            65,
+            23
+          ],
+          "outputs": [
+            154
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            154,
+            101,
+            5
+          ],
+          "outputs": [
+            155
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            155,
+            66,
+            102
+          ],
+          "outputs": [
+            156
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            156,
+            2
+          ],
+          "outputs": [
+            157
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            154,
+            103,
+            6
+          ],
+          "outputs": [
+            158
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            158,
+            67,
+            104
+          ],
+          "outputs": [
+            159
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            159,
+            1
+          ],
+          "outputs": [
+            160
+          ]
+        },
+        {
+          "inputs": [
+            154,
+            68,
+            24
+          ],
+          "outputs": [
+            161
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            161,
+            69,
+            28
+          ],
+          "outputs": [
+            162
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            162,
+            105,
+            7
+          ],
+          "outputs": [
+            163
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            163,
+            70,
+            106
+          ],
+          "outputs": [
+            164
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            164,
+            2
+          ],
+          "outputs": [
+            165
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            162,
+            107,
+            8
+          ],
+          "outputs": [
+            166
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            166,
+            71,
+            108
+          ],
+          "outputs": [
+            167
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            167,
+            1
+          ],
+          "outputs": [
+            168
+          ]
+        },
+        {
+          "inputs": [
+            162,
+            72,
+            25
+          ],
+          "outputs": [
+            169
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            169,
+            73,
+            29
+          ],
+          "outputs": [
+            170
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            170,
+            109,
+            9
+          ],
+          "outputs": [
+            171
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            171,
+            74,
+            110
+          ],
+          "outputs": [
+            172
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            172,
+            2
+          ],
+          "outputs": [
+            173
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            170,
+            111,
+            10
+          ],
+          "outputs": [
+            174
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            174,
+            75,
+            112
+          ],
+          "outputs": [
+            175
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            175,
+            1
+          ],
+          "outputs": [
+            176
+          ]
+        },
+        {
+          "inputs": [
+            170,
+            76,
+            26
+          ],
+          "outputs": [
+            177
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            177,
+            77,
+            30
+          ],
+          "outputs": [
+            178
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            178,
+            113,
+            11
+          ],
+          "outputs": [
+            179
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            179,
+            78,
+            114
+          ],
+          "outputs": [
+            180
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            180,
+            2
+          ],
+          "outputs": [
+            181
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            178,
+            115,
+            12
+          ],
+          "outputs": [
+            182
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            182,
+            79,
+            116
+          ],
+          "outputs": [
+            183
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            183,
+            1
+          ],
+          "outputs": [
+            184
+          ]
+        },
+        {
+          "inputs": [
+            178,
+            80,
+            27
+          ],
+          "outputs": [
+            185
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            185,
+            81,
+            31
+          ],
+          "outputs": [
+            186
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 2,
+            "stride_h": 2,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            186,
+            117,
+            13
+          ],
+          "outputs": [
+            187
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            187,
+            82,
+            118
+          ],
+          "outputs": [
+            188
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            188,
+            2
+          ],
+          "outputs": [
+            189
+          ]
+        },
+        {
+          "opcode_index": 3,
+          "inputs": [
+            147,
+            157,
+            165,
+            173,
+            181,
+            189
+          ],
+          "outputs": [
+            190
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            190,
+            119
+          ],
+          "outputs": [
+            191
+          ]
+        },
+        {
+          "opcode_index": 1,
+          "inputs": [
+            186,
+            120,
+            14
+          ],
+          "outputs": [
+            192
+          ],
+          "builtin_options_type": "DepthwiseConv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1,
+            "depth_multiplier": 1,
+            "fused_activation_function": "RELU6"
+          }
+        },
+        {
+          "inputs": [
+            192,
+            83,
+            121
+          ],
+          "outputs": [
+            193
+          ],
+          "builtin_options_type": "Conv2DOptions",
+          "builtin_options": {
+            "stride_w": 1,
+            "stride_h": 1
+          }
+        },
+        {
+          "opcode_index": 2,
+          "inputs": [
+            193,
+            1
+          ],
+          "outputs": [
+            194
+          ]
+        },
+        {
+          "opcode_index": 3,
+          "inputs": [
+            150,
+            160,
+            168,
+            176,
+            184,
+            194
+          ],
+          "outputs": [
+            195
+          ],
+          "builtin_options_type": "ConcatenationOptions",
+          "builtin_options": {
+            "axis": 1
+          }
+        },
+        {
+          "opcode_index": 4,
+          "inputs": [
+            195
+          ],
+          "outputs": [
+            196
+          ]
+        }
+      ],
+      "name": "main"
+    }
+  ],
+  "description": "MLIR Converted."
+}

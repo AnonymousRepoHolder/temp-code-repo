@@ -1,0 +1,9 @@
+.DS_Store
+.git
+.gitignore
+.gitattributes
+__pycache__
+*.pyc
+*.json
+*.bin
+model_converter

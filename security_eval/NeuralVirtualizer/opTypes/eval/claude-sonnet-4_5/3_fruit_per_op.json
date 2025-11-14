@@ -1,0 +1,622 @@
+[
+  {
+    "idx": 156,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.42
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.33
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.42
+  },
+  {
+    "idx": 171,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.45
+      },
+      {
+        "type": "RELU6",
+        "p": 0.35
+      },
+      {
+        "type": "ADD",
+        "p": 0.2
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 127,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "MUL",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 260,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "ADD",
+        "p": 0.43
+      },
+      {
+        "type": "MUL",
+        "p": 0.32
+      },
+      {
+        "type": "RELU",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 111,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.41
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.34
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.41
+  },
+  {
+    "idx": 226,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU6",
+        "p": 0.44
+      },
+      {
+        "type": "RELU",
+        "p": 0.33
+      },
+      {
+        "type": "LOGISTIC",
+        "p": 0.23
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 234,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "MEAN",
+        "p": 0.38
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.35
+      },
+      {
+        "type": "CONCATENATION",
+        "p": 0.27
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 104,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.42
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.33
+      },
+      {
+        "type": "ADD",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.33
+  },
+  {
+    "idx": 98,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "MUL",
+        "p": 0.4
+      },
+      {
+        "type": "ADD",
+        "p": 0.35
+      },
+      {
+        "type": "RSQRT",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 194,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.43
+      },
+      {
+        "type": "RELU6",
+        "p": 0.32
+      },
+      {
+        "type": "GELU",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 92,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.35
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.4
+  },
+  {
+    "idx": 78,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "RESHAPE",
+        "p": 0.39
+      },
+      {
+        "type": "TRANSPOSE",
+        "p": 0.34
+      },
+      {
+        "type": "SQUEEZE",
+        "p": 0.27
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 230,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "ADD",
+        "p": 0.42
+      },
+      {
+        "type": "MUL",
+        "p": 0.33
+      },
+      {
+        "type": "SUB",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 28,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.41
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.34
+      },
+      {
+        "type": "RELU",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.41
+  },
+  {
+    "idx": 57,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU6",
+        "p": 0.43
+      },
+      {
+        "type": "RELU",
+        "p": 0.32
+      },
+      {
+        "type": "ADD",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 72,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "MUL",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.35
+  },
+  {
+    "idx": 309,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "MEAN",
+        "p": 0.42
+      },
+      {
+        "type": "RSQRT",
+        "p": 0.33
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 293,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "MUL",
+        "p": 0.41
+      },
+      {
+        "type": "ADD",
+        "p": 0.34
+      },
+      {
+        "type": "RELU",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 32,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.43
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.32
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 2,
+    "p_real": 0.32
+  },
+  {
+    "idx": 62,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU",
+        "p": 0.44
+      },
+      {
+        "type": "RELU6",
+        "p": 0.31
+      },
+      {
+        "type": "ADD",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 47,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.42
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.33
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.42
+  },
+  {
+    "idx": 235,
+    "real_type": "SOFTMAX",
+    "pred_topk": [
+      {
+        "type": "ADD",
+        "p": 0.4
+      },
+      {
+        "type": "MUL",
+        "p": 0.35
+      },
+      {
+        "type": "CONCATENATION",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 176,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RESHAPE",
+        "p": 0.41
+      },
+      {
+        "type": "TRANSPOSE",
+        "p": 0.34
+      },
+      {
+        "type": "MEAN",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 220,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RESHAPE",
+        "p": 0.38
+      },
+      {
+        "type": "TRANSPOSE",
+        "p": 0.35
+      },
+      {
+        "type": "SQUEEZE",
+        "p": 0.27
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 130,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.42
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.33
+      },
+      {
+        "type": "RELU",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.42
+  },
+  {
+    "idx": 190,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "RELU6",
+        "p": 0.43
+      },
+      {
+        "type": "RELU",
+        "p": 0.32
+      },
+      {
+        "type": "MUL",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 245,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "ADD",
+        "p": 0.41
+      },
+      {
+        "type": "MUL",
+        "p": 0.34
+      },
+      {
+        "type": "RELU",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 275,
+    "real_type": "AVERAGE_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.4
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.35
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 223,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "MEAN",
+        "p": 0.42
+      },
+      {
+        "type": "RESHAPE",
+        "p": 0.33
+      },
+      {
+        "type": "RSQRT",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 186,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "MUL",
+        "p": 0.43
+      },
+      {
+        "type": "ADD",
+        "p": 0.32
+      },
+      {
+        "type": "RELU",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "idx": 8,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.41
+      },
+      {
+        "type": "CONV_2D",
+        "p": 0.34
+      },
+      {
+        "type": "FULLY_CONNECTED",
+        "p": 0.25
+      }
+    ],
+    "rank_of_real": 1,
+    "p_real": 0.41
+  }
+]

@@ -1,0 +1,285 @@
+[
+  {
+    "idx": 31,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 174,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 78,
+    "topk": [
+      {"type": "FULLY_CONNECTED", "p": 0.40},
+      {"type": "CONV_2D", "p": 0.30},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 81,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.40},
+      {"type": "FULLY_CONNECTED", "p": 0.30},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 277,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  },
+  {
+    "idx": 243,
+    "topk": [
+      {"type": "ADD", "p": 0.40},
+      {"type": "MUL", "p": 0.25},
+      {"type": "SUB", "p": 0.15},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 289,
+    "topk": [
+      {"type": "ADD", "p": 0.40},
+      {"type": "MUL", "p": 0.25},
+      {"type": "SUB", "p": 0.15},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 122,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 230,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  },
+  {
+    "idx": 301,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  },
+  {
+    "idx": 10,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 296,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 293,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  },
+  {
+    "idx": 180,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 34,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 184,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  },
+  {
+    "idx": 123,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 5,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 142,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  },
+  {
+    "idx": 48,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 181,
+    "topk": [
+      {"type": "CONV_2D", "p": 0.40},
+      {"type": "FULLY_CONNECTED", "p": 0.30},
+      {"type": "UNKNOWN", "p": 0.30}
+    ]
+  },
+  {
+    "idx": 264,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 196,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  },
+  {
+    "idx": 61,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 47,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 109,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  },
+  {
+    "idx": 130,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  },
+  {
+    "idx": 321,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 124,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  },
+  {
+    "idx": 268,
+    "topk": [
+      {"type": "ADD", "p": 0.40},
+      {"type": "MUL", "p": 0.25},
+      {"type": "SUB", "p": 0.15},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 39,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 203,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "LOGISTIC", "p": 0.20},
+      {"type": "UNKNOWN", "p": 0.20}
+    ]
+  },
+  {
+    "idx": 260,
+    "topk": [
+      {"type": "RELU", "p": 0.35},
+      {"type": "RELU6", "p": 0.25},
+      {"type": "UNKNOWN", "p": 0.40}
+    ]
+  }
+]

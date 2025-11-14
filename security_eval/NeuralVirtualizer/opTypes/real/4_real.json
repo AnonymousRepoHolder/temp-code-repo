@@ -1,0 +1,9 @@
+[
+    {"idx":49,"type":"LOGISTIC"},
+    {"idx":59,"type":"CONV_2D"},
+    {"idx":13,"type":"MAX_POOL_2D"},
+    {"idx":14,"type":"FULLY_CONNECTED"},
+    {"idx":68,"type":"MAX_POOL_2D"},
+    {"idx":32,"type":"FULLY_CONNECTED"},
+    {"idx":39,"type":"CONV_2D"}
+]
