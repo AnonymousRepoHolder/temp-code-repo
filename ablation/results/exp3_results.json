@@ -1,0 +1,52 @@
+{
+  "experiment": "exp3",
+  "models": [
+    {
+      "model_id": "model_0",
+      "top1_acc": 0.0,
+      "top3_acc": 0.0,
+      "top5_acc": 0.0
+    },
+    {
+      "model_id": "model_1",
+      "top1_acc": 0.0,
+      "top3_acc": 0.0,
+      "top5_acc": 0.0
+    },
+    {
+      "model_id": "model_2",
+      "top1_acc": 0.0,
+      "top3_acc": 0.0,
+      "top5_acc": 0.0
+    },
+    {
+      "model_id": "model_3",
+      "top1_acc": 0.0,
+      "top3_acc": 0.0,
+      "top5_acc": 0.0
+    },
+    {
+      "model_id": "model_4",
+      "top1_acc": 0.0,
+      "top3_acc": 0.0,
+      "top5_acc": 0.0
+    },
+    {
+      "model_id": "model_5",
+      "top1_acc": 0.0,
+      "top3_acc": 0.0,
+      "top5_acc": 0.0
+    },
+    {
+      "model_id": "model_6",
+      "top1_acc": 0.0,
+      "top3_acc": 0.0,
+      "top5_acc": 0.0
+    }
+  ],
+  "average": {
+    "top1_acc": 0.0,
+    "top3_acc": 0.0,
+    "top5_acc": 0.0
+  }
+}

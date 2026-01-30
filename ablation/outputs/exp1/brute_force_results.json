@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "top_candidate": {
+    "modulus": 251,
+    "score": 0.6962,
+    "common_ratio": 0.9966,
+    "unique_count": 11
+  },
+  "total_candidates": 2
+}

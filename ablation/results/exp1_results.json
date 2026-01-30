@@ -1,0 +1,28 @@
+{
+  "experiment": "exp1",
+  "models": [
+    {
+      "model_id": "model_0",
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "top5_acc": 1.0
+    },
+    {
+      "model_id": "model_1",
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "top5_acc": 1.0
+    },
+    {
+      "model_id": "model_2",
+      "top1_acc": 1.0,
+      "top3_acc": 1.0,
+      "top5_acc": 1.0
+    }
+  ],
+  "average": {
+    "top1_acc": 1.0,
+    "top3_acc": 1.0,
+    "top5_acc": 1.0
+  }
+}

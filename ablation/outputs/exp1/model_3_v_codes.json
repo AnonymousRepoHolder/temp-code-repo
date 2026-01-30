@@ -1,0 +1,378 @@
+{
+  "model_id": "model_3",
+  "experiment": "exp1_mod_only",
+  "operators": [
+    {
+      "index": 0,
+      "v_code": 113957,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 1,
+      "v_code": 682473,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 2,
+      "v_code": 1258768,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 3,
+      "v_code": 2428428,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 4,
+      "v_code": 708577,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 5,
+      "v_code": 94630,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 6,
+      "v_code": 1837825,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 7,
+      "v_code": 1076543,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 8,
+      "v_code": 1392802,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 9,
+      "v_code": 486940,
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 10,
+      "v_code": 1822765,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 11,
+      "v_code": 1519809,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 12,
+      "v_code": 1487680,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 13,
+      "v_code": 1063239,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 14,
+      "v_code": 1791140,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 15,
+      "v_code": 1155607,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 16,
+      "v_code": 1140293,
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 17,
+      "v_code": 1362682,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 18,
+      "v_code": 1607910,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 19,
+      "v_code": 405619,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 20,
+      "v_code": 679962,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 21,
+      "v_code": 2240430,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 22,
+      "v_code": 1479397,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 23,
+      "v_code": 781614,
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 24,
+      "v_code": 2053434,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 25,
+      "v_code": 1039395,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 26,
+      "v_code": 2485656,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 27,
+      "v_code": 2496948,
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 28,
+      "v_code": 97642,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 29,
+      "v_code": 1945003,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 30,
+      "v_code": 83586,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 31,
+      "v_code": 612192,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 32,
+      "v_code": 558228,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 33,
+      "v_code": 548438,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 34,
+      "v_code": 363699,
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 35,
+      "v_code": 190261,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 36,
+      "v_code": 139560,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 37,
+      "v_code": 1424177,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 38,
+      "v_code": 1662875,
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 39,
+      "v_code": 1192002,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 40,
+      "v_code": 724641,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 41,
+      "v_code": 296936,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 42,
+      "v_code": 37904,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 43,
+      "v_code": 202310,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 44,
+      "v_code": 1007015,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 45,
+      "v_code": 1784861,
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 46,
+      "v_code": 1762274,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 47,
+      "v_code": 2277327,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 48,
+      "v_code": 674189,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 49,
+      "v_code": 1726378,
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 50,
+      "v_code": 46438,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 51,
+      "v_code": 2070001,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 52,
+      "v_code": 1499728,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 53,
+      "v_code": 2046654,
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 54,
+      "v_code": 892810,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 55,
+      "v_code": 2089077,
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 56,
+      "v_code": 254015,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 57,
+      "v_code": 992206,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 58,
+      "v_code": 755762,
+      "real_code": 1,
+      "op_type": "AVERAGE_POOL_2D"
+    },
+    {
+      "index": 59,
+      "v_code": 71306,
+      "real_code": 22,
+      "op_type": "RESHAPE"
+    },
+    {
+      "index": 60,
+      "v_code": 906872,
+      "real_code": 9,
+      "op_type": "FULLY_CONNECTED"
+    },
+    {
+      "index": 61,
+      "v_code": 1238961,
+      "real_code": 25,
+      "op_type": "SOFTMAX"
+    }
+  ]
+}

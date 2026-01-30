@@ -1,0 +1,258 @@
+[
+  {
+    "idx": 0,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 1,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 2,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 3,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 4,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 5,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 6,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 7,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 8,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 9,
+    "type": "ADD"
+  },
+  {
+    "idx": 10,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 11,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 12,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 13,
+    "type": "ADD"
+  },
+  {
+    "idx": 14,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 15,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 16,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 17,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 18,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 19,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 20,
+    "type": "ADD"
+  },
+  {
+    "idx": 21,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 22,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 23,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 24,
+    "type": "ADD"
+  },
+  {
+    "idx": 25,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 26,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 27,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 28,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 29,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 30,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 31,
+    "type": "ADD"
+  },
+  {
+    "idx": 32,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 33,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 34,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 35,
+    "type": "ADD"
+  },
+  {
+    "idx": 36,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 37,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 38,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 39,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 40,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 41,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 42,
+    "type": "ADD"
+  },
+  {
+    "idx": 43,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 44,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 45,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 46,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 47,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 48,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 49,
+    "type": "ADD"
+  },
+  {
+    "idx": 50,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 51,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 52,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 53,
+    "type": "ADD"
+  },
+  {
+    "idx": 54,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 55,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 56,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 57,
+    "type": "ADD"
+  },
+  {
+    "idx": 58,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 59,
+    "type": "DEPTHWISE_CONV_2D"
+  },
+  {
+    "idx": 60,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 61,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 62,
+    "type": "MEAN"
+  },
+  {
+    "idx": 63,
+    "type": "FULLY_CONNECTED"
+  }
+]

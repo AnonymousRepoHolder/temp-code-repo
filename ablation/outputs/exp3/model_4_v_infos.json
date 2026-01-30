@@ -1,0 +1,204 @@
+{
+  "model_id": "model_4",
+  "experiment": "exp3_full_protection",
+  "operators": [
+    {
+      "index": 0,
+      "v_op_code_data": "Sjzn0w==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 1,
+      "v_op_code_data": "tsCfxw==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 2,
+      "v_op_code_data": "sX0S0w==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 3,
+      "v_op_code_data": "WTt7lA==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 4,
+      "v_op_code_data": "PppRaw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 5,
+      "v_op_code_data": "Yv/w5g==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 6,
+      "v_op_code_data": "UmC5Qw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 7,
+      "v_op_code_data": "NrN3PA==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 8,
+      "v_op_code_data": "II47Lw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 9,
+      "v_op_code_data": "KdemKA==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 10,
+      "v_op_code_data": "B3EmYw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 11,
+      "v_op_code_data": "8Mqx7g==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 12,
+      "v_op_code_data": "eRUKcg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 13,
+      "v_op_code_data": "OerPGg==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 14,
+      "v_op_code_data": "5Z3pPg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 15,
+      "v_op_code_data": "0TkMYg==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 16,
+      "v_op_code_data": "RQ9q2A==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 17,
+      "v_op_code_data": "up/ORA==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 18,
+      "v_op_code_data": "kUH5gw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 19,
+      "v_op_code_data": "Li3d/w==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 20,
+      "v_op_code_data": "vKKAwQ==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 21,
+      "v_op_code_data": "H64OxA==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 22,
+      "v_op_code_data": "TnUWmA==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 23,
+      "v_op_code_data": "7MnX/Q==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 24,
+      "v_op_code_data": "fwtubw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 25,
+      "v_op_code_data": "Ee2p8Q==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 26,
+      "v_op_code_data": "ixzvOQ==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 27,
+      "v_op_code_data": "XxSLpg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 28,
+      "v_op_code_data": "6mnRbg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 29,
+      "v_op_code_data": "8oaoYg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 30,
+      "v_op_code_data": "gcnmYw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 31,
+      "v_op_code_data": "/GfsBw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 32,
+      "v_op_code_data": "CsBUvw==",
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    }
+  ]
+}

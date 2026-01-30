@@ -1,0 +1,69 @@
+{
+  "ablation_study": "Security Contribution of Protection Mechanisms",
+  "experiments": {
+    "exp1_mod_only": {
+      "description": "Modular arithmetic only (no encryption)",
+      "attack_method": "Brute-force modulus search + LLM inference",
+      "results": {
+        "top1_acc": 1.0,
+        "top3_acc": 1.0,
+        "top5_acc": 1.0
+      }
+    },
+    "exp2_enc_only": {
+      "description": "Encryption only (no modular arithmetic)",
+      "attack_method": "Cross-model frequency analysis + LLM inference",
+      "results": {
+        "top1_acc": 0.5022828571428571,
+        "top3_acc": 0.7904867142857143,
+        "top5_acc": 0.7904867142857143
+      },
+      "collision_analysis": {
+        "collision_total": 233,
+        "collision_top2_correct": 219,
+        "collision_precision": 0.9399141630901288,
+        "non_collision_total": 59,
+        "non_collision_top2_correct": 24,
+        "non_collision_precision": 0.4067796610169492,
+        "collision_rate": 0.797945205479452,
+        "information_gain": 0.5331345020731796
+      }
+    },
+    "exp3_full_protection": {
+      "description": "Full protection (modular arithmetic + encryption)",
+      "attack_method": "LLM inference with local signals only",
+      "results": {
+        "top1_acc": 0.0,
+        "top3_acc": 0.0,
+        "top5_acc": 0.0
+      },
+      "collision_analysis": {
+        "collision_total": 0,
+        "collision_top2_correct": 0,
+        "collision_precision": null,
+        "non_collision_total": 292,
+        "non_collision_top2_correct": 243,
+        "non_collision_precision": 0.8321917808219178,
+        "collision_rate": 0.0,
+        "information_gain": null
+      }
+    }
+  },
+  "improvements": {
+    "exp1_to_exp3": {
+      "top1_reduction": 100.0,
+      "top3_reduction": 100.0,
+      "top5_reduction": 100.0
+    },
+    "exp2_to_exp3": {
+      "top1_reduction": 50.23,
+      "top3_reduction": 79.05,
+      "top5_reduction": 79.05
+    }
+  },
+  "conclusion": {
+    "modular_arithmetic_contribution": "50.23% Top-1 accuracy reduction",
+    "encryption_contribution": "49.77% Top-1 accuracy reduction",
+    "synergy": "Both mechanisms are necessary for robust protection"
+  }
+}

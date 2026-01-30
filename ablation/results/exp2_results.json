@@ -1,0 +1,52 @@
+{
+  "experiment": "exp2",
+  "models": [
+    {
+      "model_id": "model_0",
+      "top1_acc": 0.483871,
+      "top3_acc": 0.903226,
+      "top5_acc": 0.903226
+    },
+    {
+      "model_id": "model_1",
+      "top1_acc": 0.6,
+      "top3_acc": 0.6,
+      "top5_acc": 0.6
+    },
+    {
+      "model_id": "model_2",
+      "top1_acc": 0.453125,
+      "top3_acc": 0.625,
+      "top5_acc": 0.625
+    },
+    {
+      "model_id": "model_3",
+      "top1_acc": 0.435484,
+      "top3_acc": 0.629032,
+      "top5_acc": 0.629032
+    },
+    {
+      "model_id": "model_4",
+      "top1_acc": 0.575758,
+      "top3_acc": 0.969697,
+      "top5_acc": 0.969697
+    },
+    {
+      "model_id": "model_5",
+      "top1_acc": 0.483871,
+      "top3_acc": 0.903226,
+      "top5_acc": 0.903226
+    },
+    {
+      "model_id": "model_6",
+      "top1_acc": 0.483871,
+      "top3_acc": 0.903226,
+      "top5_acc": 0.903226
+    }
+  ],
+  "average": {
+    "top1_acc": 0.5022828571428571,
+    "top3_acc": 0.7904867142857143,
+    "top5_acc": 0.7904867142857143
+  }
+}

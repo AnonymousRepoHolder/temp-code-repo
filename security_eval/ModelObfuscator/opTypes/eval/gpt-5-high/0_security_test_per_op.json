@@ -1,0 +1,158 @@
+[
+  {
+    "array_pos": 0,
+    "pred_idx": 0,
+    "real_type": "FULLY_CONNECTED",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 1,
+    "pred_idx": 1,
+    "real_type": "SOFTMAX",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 2,
+    "pred_idx": 2,
+    "real_type": "AVERAGE_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 3,
+    "pred_idx": 3,
+    "real_type": "CONV_2D",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 4,
+    "pred_idx": 4,
+    "real_type": "DEPTHWISE_CONV_2D",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 5,
+    "pred_idx": 5,
+    "real_type": "CONCATENATION",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 6,
+    "pred_idx": 6,
+    "real_type": "MAX_POOL_2D",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 7,
+    "pred_idx": 7,
+    "real_type": "ADD",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 8,
+    "pred_idx": 8,
+    "real_type": "MEAN",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 9,
+    "pred_idx": 9,
+    "real_type": "RESHAPE",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 10,
+    "pred_idx": 10,
+    "real_type": "RESHAPE",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  },
+  {
+    "array_pos": 11,
+    "pred_idx": 11,
+    "real_type": "RESIZE_BILINEAR",
+    "pred_topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ],
+    "rank_of_real": null,
+    "p_real": 0.0
+  }
+]

@@ -1,0 +1,1246 @@
+{
+  "experiment": "exp1_mod_only",
+  "attack_context": {
+    "protection_removed": "Encryption (AES-256-CTR)",
+    "protection_remaining": "Modular arithmetic virtualization",
+    "attacker_knowledge": {
+      "modulus": {
+        "modulus": 251,
+        "score": 0.6962,
+        "common_ratio": 0.9966,
+        "unique_count": 11
+      },
+      "modular_arithmetic_rule": "real_code = v_code % modulus, where real_code in [0, 189]",
+      "note": "Attacker has brute-forced the modulus. Compute real_code = v_code % modulus, then lookup operator type from opcode."
+    }
+  },
+  "prior_knowledge": {
+    "common_operator_frequencies": {
+      "CONV_2D": 0.22,
+      "DEPTHWISE_CONV_2D": 0.18,
+      "RELU": 0.15,
+      "RELU6": 0.12,
+      "ADD": 0.08,
+      "MUL": 0.05,
+      "RESHAPE": 0.04,
+      "CONCATENATION": 0.03,
+      "AVERAGE_POOL_2D": 0.03,
+      "MAX_POOL_2D": 0.02,
+      "FULLY_CONNECTED": 0.02,
+      "SOFTMAX": 0.01,
+      "OTHER": 0.05
+    }
+  },
+  "models": [
+    {
+      "model_id": "model_0",
+      "num_operators": 31,
+      "operators": [
+        {
+          "index": 0,
+          "v_code": 1758760
+        },
+        {
+          "index": 1,
+          "v_code": 1693501
+        },
+        {
+          "index": 2,
+          "v_code": 1606654
+        },
+        {
+          "index": 3,
+          "v_code": 811236
+        },
+        {
+          "index": 4,
+          "v_code": 1672416
+        },
+        {
+          "index": 5,
+          "v_code": 770574
+        },
+        {
+          "index": 6,
+          "v_code": 1199281
+        },
+        {
+          "index": 7,
+          "v_code": 342368
+        },
+        {
+          "index": 8,
+          "v_code": 2287366
+        },
+        {
+          "index": 9,
+          "v_code": 2443740
+        },
+        {
+          "index": 10,
+          "v_code": 8286
+        },
+        {
+          "index": 11,
+          "v_code": 779610
+        },
+        {
+          "index": 12,
+          "v_code": 2274816
+        },
+        {
+          "index": 13,
+          "v_code": 1345113
+        },
+        {
+          "index": 14,
+          "v_code": 1472871
+        },
+        {
+          "index": 15,
+          "v_code": 765805
+        },
+        {
+          "index": 16,
+          "v_code": 2236664
+        },
+        {
+          "index": 17,
+          "v_code": 1674425
+        },
+        {
+          "index": 18,
+          "v_code": 2068745
+        },
+        {
+          "index": 19,
+          "v_code": 1489187
+        },
+        {
+          "index": 20,
+          "v_code": 1997210
+        },
+        {
+          "index": 21,
+          "v_code": 1899321
+        },
+        {
+          "index": 22,
+          "v_code": 2400065
+        },
+        {
+          "index": 23,
+          "v_code": 155122
+        },
+        {
+          "index": 24,
+          "v_code": 2499963
+        },
+        {
+          "index": 25,
+          "v_code": 363452
+        },
+        {
+          "index": 26,
+          "v_code": 1368957
+        },
+        {
+          "index": 27,
+          "v_code": 1279097
+        },
+        {
+          "index": 28,
+          "v_code": 568769
+        },
+        {
+          "index": 29,
+          "v_code": 2212357
+        },
+        {
+          "index": 30,
+          "v_code": 751268
+        }
+      ]
+    },
+    {
+      "model_id": "model_1",
+      "num_operators": 40,
+      "operators": [
+        {
+          "index": 0,
+          "v_code": 824789
+        },
+        {
+          "index": 1,
+          "v_code": 2179199
+        },
+        {
+          "index": 2,
+          "v_code": 36900
+        },
+        {
+          "index": 3,
+          "v_code": 1527087
+        },
+        {
+          "index": 4,
+          "v_code": 607172
+        },
+        {
+          "index": 5,
+          "v_code": 1236930
+        },
+        {
+          "index": 6,
+          "v_code": 997226
+        },
+        {
+          "index": 7,
+          "v_code": 911133
+        },
+        {
+          "index": 8,
+          "v_code": 1213337
+        },
+        {
+          "index": 9,
+          "v_code": 379514
+        },
+        {
+          "index": 10,
+          "v_code": 1962823
+        },
+        {
+          "index": 11,
+          "v_code": 1557458
+        },
+        {
+          "index": 12,
+          "v_code": 604913
+        },
+        {
+          "index": 13,
+          "v_code": 2233902
+        },
+        {
+          "index": 14,
+          "v_code": 308998
+        },
+        {
+          "index": 15,
+          "v_code": 1645810
+        },
+        {
+          "index": 16,
+          "v_code": 2309454
+        },
+        {
+          "index": 17,
+          "v_code": 955560
+        },
+        {
+          "index": 18,
+          "v_code": 546680
+        },
+        {
+          "index": 19,
+          "v_code": 2151073
+        },
+        {
+          "index": 20,
+          "v_code": 484684
+        },
+        {
+          "index": 21,
+          "v_code": 1789131
+        },
+        {
+          "index": 22,
+          "v_code": 1937220
+        },
+        {
+          "index": 23,
+          "v_code": 2379734
+        },
+        {
+          "index": 24,
+          "v_code": 1032366
+        },
+        {
+          "index": 25,
+          "v_code": 1398575
+        },
+        {
+          "index": 26,
+          "v_code": 2459802
+        },
+        {
+          "index": 27,
+          "v_code": 2251222
+        },
+        {
+          "index": 28,
+          "v_code": 1922412
+        },
+        {
+          "index": 29,
+          "v_code": 449293
+        },
+        {
+          "index": 30,
+          "v_code": 1115195
+        },
+        {
+          "index": 31,
+          "v_code": 966367
+        },
+        {
+          "index": 32,
+          "v_code": 2408097
+        },
+        {
+          "index": 33,
+          "v_code": 764549
+        },
+        {
+          "index": 34,
+          "v_code": 2132750
+        },
+        {
+          "index": 35,
+          "v_code": 1071772
+        },
+        {
+          "index": 36,
+          "v_code": 2058956
+        },
+        {
+          "index": 37,
+          "v_code": 1473873
+        },
+        {
+          "index": 38,
+          "v_code": 222408
+        },
+        {
+          "index": 39,
+          "v_code": 1542671
+        }
+      ]
+    },
+    {
+      "model_id": "model_2",
+      "num_operators": 64,
+      "operators": [
+        {
+          "index": 0,
+          "v_code": 2113674
+        },
+        {
+          "index": 1,
+          "v_code": 391062
+        },
+        {
+          "index": 2,
+          "v_code": 2184205
+        },
+        {
+          "index": 3,
+          "v_code": 1388786
+        },
+        {
+          "index": 4,
+          "v_code": 1568252
+        },
+        {
+          "index": 5,
+          "v_code": 1903838
+        },
+        {
+          "index": 6,
+          "v_code": 2425165
+        },
+        {
+          "index": 7,
+          "v_code": 1750729
+        },
+        {
+          "index": 8,
+          "v_code": 659631
+        },
+        {
+          "index": 9,
+          "v_code": 1850372
+        },
+        {
+          "index": 10,
+          "v_code": 2240931
+        },
+        {
+          "index": 11,
+          "v_code": 279869
+        },
+        {
+          "index": 12,
+          "v_code": 535386
+        },
+        {
+          "index": 13,
+          "v_code": 1552435
+        },
+        {
+          "index": 14,
+          "v_code": 105925
+        },
+        {
+          "index": 15,
+          "v_code": 392568
+        },
+        {
+          "index": 16,
+          "v_code": 1712827
+        },
+        {
+          "index": 17,
+          "v_code": 458078
+        },
+        {
+          "index": 18,
+          "v_code": 187501
+        },
+        {
+          "index": 19,
+          "v_code": 470628
+        },
+        {
+          "index": 20,
+          "v_code": 1270311
+        },
+        {
+          "index": 21,
+          "v_code": 67271
+        },
+        {
+          "index": 22,
+          "v_code": 2254737
+        },
+        {
+          "index": 23,
+          "v_code": 2460054
+        },
+        {
+          "index": 24,
+          "v_code": 121484
+        },
+        {
+          "index": 25,
+          "v_code": 2100120
+        },
+        {
+          "index": 26,
+          "v_code": 920923
+        },
+        {
+          "index": 27,
+          "v_code": 770071
+        },
+        {
+          "index": 28,
+          "v_code": 527354
+        },
+        {
+          "index": 29,
+          "v_code": 701047
+        },
+        {
+          "index": 30,
+          "v_code": 1297422
+        },
+        {
+          "index": 31,
+          "v_code": 299694
+        },
+        {
+          "index": 32,
+          "v_code": 2065733
+        },
+        {
+          "index": 33,
+          "v_code": 2198513
+        },
+        {
+          "index": 34,
+          "v_code": 1687476
+        },
+        {
+          "index": 35,
+          "v_code": 1879237
+        },
+        {
+          "index": 36,
+          "v_code": 737190
+        },
+        {
+          "index": 37,
+          "v_code": 300200
+        },
+        {
+          "index": 38,
+          "v_code": 2109407
+        },
+        {
+          "index": 39,
+          "v_code": 2299163
+        },
+        {
+          "index": 40,
+          "v_code": 454816
+        },
+        {
+          "index": 41,
+          "v_code": 731668
+        },
+        {
+          "index": 42,
+          "v_code": 1468350
+        },
+        {
+          "index": 43,
+          "v_code": 732672
+        },
+        {
+          "index": 44,
+          "v_code": 1540140
+        },
+        {
+          "index": 45,
+          "v_code": 540908
+        },
+        {
+          "index": 46,
+          "v_code": 898081
+        },
+        {
+          "index": 47,
+          "v_code": 188003
+        },
+        {
+          "index": 48,
+          "v_code": 465859
+        },
+        {
+          "index": 49,
+          "v_code": 2134755
+        },
+        {
+          "index": 50,
+          "v_code": 1138539
+        },
+        {
+          "index": 51,
+          "v_code": 1445513
+        },
+        {
+          "index": 52,
+          "v_code": 660635
+        },
+        {
+          "index": 53,
+          "v_code": 454812
+        },
+        {
+          "index": 54,
+          "v_code": 103917
+        },
+        {
+          "index": 55,
+          "v_code": 1749976
+        },
+        {
+          "index": 56,
+          "v_code": 386543
+        },
+        {
+          "index": 57,
+          "v_code": 1272319
+        },
+        {
+          "index": 58,
+          "v_code": 2358399
+        },
+        {
+          "index": 59,
+          "v_code": 837591
+        },
+        {
+          "index": 60,
+          "v_code": 1538633
+        },
+        {
+          "index": 61,
+          "v_code": 1951528
+        },
+        {
+          "index": 62,
+          "v_code": 1867480
+        },
+        {
+          "index": 63,
+          "v_code": 358186
+        }
+      ]
+    },
+    {
+      "model_id": "model_3",
+      "num_operators": 62,
+      "operators": [
+        {
+          "index": 0,
+          "v_code": 113957
+        },
+        {
+          "index": 1,
+          "v_code": 682473
+        },
+        {
+          "index": 2,
+          "v_code": 1258768
+        },
+        {
+          "index": 3,
+          "v_code": 2428428
+        },
+        {
+          "index": 4,
+          "v_code": 708577
+        },
+        {
+          "index": 5,
+          "v_code": 94630
+        },
+        {
+          "index": 6,
+          "v_code": 1837825
+        },
+        {
+          "index": 7,
+          "v_code": 1076543
+        },
+        {
+          "index": 8,
+          "v_code": 1392802
+        },
+        {
+          "index": 9,
+          "v_code": 486940
+        },
+        {
+          "index": 10,
+          "v_code": 1822765
+        },
+        {
+          "index": 11,
+          "v_code": 1519809
+        },
+        {
+          "index": 12,
+          "v_code": 1487680
+        },
+        {
+          "index": 13,
+          "v_code": 1063239
+        },
+        {
+          "index": 14,
+          "v_code": 1791140
+        },
+        {
+          "index": 15,
+          "v_code": 1155607
+        },
+        {
+          "index": 16,
+          "v_code": 1140293
+        },
+        {
+          "index": 17,
+          "v_code": 1362682
+        },
+        {
+          "index": 18,
+          "v_code": 1607910
+        },
+        {
+          "index": 19,
+          "v_code": 405619
+        },
+        {
+          "index": 20,
+          "v_code": 679962
+        },
+        {
+          "index": 21,
+          "v_code": 2240430
+        },
+        {
+          "index": 22,
+          "v_code": 1479397
+        },
+        {
+          "index": 23,
+          "v_code": 781614
+        },
+        {
+          "index": 24,
+          "v_code": 2053434
+        },
+        {
+          "index": 25,
+          "v_code": 1039395
+        },
+        {
+          "index": 26,
+          "v_code": 2485656
+        },
+        {
+          "index": 27,
+          "v_code": 2496948
+        },
+        {
+          "index": 28,
+          "v_code": 97642
+        },
+        {
+          "index": 29,
+          "v_code": 1945003
+        },
+        {
+          "index": 30,
+          "v_code": 83586
+        },
+        {
+          "index": 31,
+          "v_code": 612192
+        },
+        {
+          "index": 32,
+          "v_code": 558228
+        },
+        {
+          "index": 33,
+          "v_code": 548438
+        },
+        {
+          "index": 34,
+          "v_code": 363699
+        },
+        {
+          "index": 35,
+          "v_code": 190261
+        },
+        {
+          "index": 36,
+          "v_code": 139560
+        },
+        {
+          "index": 37,
+          "v_code": 1424177
+        },
+        {
+          "index": 38,
+          "v_code": 1662875
+        },
+        {
+          "index": 39,
+          "v_code": 1192002
+        },
+        {
+          "index": 40,
+          "v_code": 724641
+        },
+        {
+          "index": 41,
+          "v_code": 296936
+        },
+        {
+          "index": 42,
+          "v_code": 37904
+        },
+        {
+          "index": 43,
+          "v_code": 202310
+        },
+        {
+          "index": 44,
+          "v_code": 1007015
+        },
+        {
+          "index": 45,
+          "v_code": 1784861
+        },
+        {
+          "index": 46,
+          "v_code": 1762274
+        },
+        {
+          "index": 47,
+          "v_code": 2277327
+        },
+        {
+          "index": 48,
+          "v_code": 674189
+        },
+        {
+          "index": 49,
+          "v_code": 1726378
+        },
+        {
+          "index": 50,
+          "v_code": 46438
+        },
+        {
+          "index": 51,
+          "v_code": 2070001
+        },
+        {
+          "index": 52,
+          "v_code": 1499728
+        },
+        {
+          "index": 53,
+          "v_code": 2046654
+        },
+        {
+          "index": 54,
+          "v_code": 892810
+        },
+        {
+          "index": 55,
+          "v_code": 2089077
+        },
+        {
+          "index": 56,
+          "v_code": 254015
+        },
+        {
+          "index": 57,
+          "v_code": 992206
+        },
+        {
+          "index": 58,
+          "v_code": 755762
+        },
+        {
+          "index": 59,
+          "v_code": 71306
+        },
+        {
+          "index": 60,
+          "v_code": 906872
+        },
+        {
+          "index": 61,
+          "v_code": 1238961
+        }
+      ]
+    },
+    {
+      "model_id": "model_4",
+      "num_operators": 33,
+      "operators": [
+        {
+          "index": 0,
+          "v_code": 103666
+        },
+        {
+          "index": 1,
+          "v_code": 113456
+        },
+        {
+          "index": 2,
+          "v_code": 2102881
+        },
+        {
+          "index": 3,
+          "v_code": 1032367
+        },
+        {
+          "index": 4,
+          "v_code": 1633511
+        },
+        {
+          "index": 5,
+          "v_code": 1338336
+        },
+        {
+          "index": 6,
+          "v_code": 1355403
+        },
+        {
+          "index": 7,
+          "v_code": 474896
+        },
+        {
+          "index": 8,
+          "v_code": 1658360
+        },
+        {
+          "index": 9,
+          "v_code": 599894
+        },
+        {
+          "index": 10,
+          "v_code": 2430938
+        },
+        {
+          "index": 11,
+          "v_code": 1334571
+        },
+        {
+          "index": 12,
+          "v_code": 2095100
+        },
+        {
+          "index": 13,
+          "v_code": 1641544
+        },
+        {
+          "index": 14,
+          "v_code": 1315745
+        },
+        {
+          "index": 15,
+          "v_code": 1199533
+        },
+        {
+          "index": 16,
+          "v_code": 269828
+        },
+        {
+          "index": 17,
+          "v_code": 1150086
+        },
+        {
+          "index": 18,
+          "v_code": 1688480
+        },
+        {
+          "index": 19,
+          "v_code": 1654094
+        },
+        {
+          "index": 20,
+          "v_code": 1232915
+        },
+        {
+          "index": 21,
+          "v_code": 648086
+        },
+        {
+          "index": 22,
+          "v_code": 1380754
+        },
+        {
+          "index": 23,
+          "v_code": 1627739
+        },
+        {
+          "index": 24,
+          "v_code": 19079
+        },
+        {
+          "index": 25,
+          "v_code": 1599376
+        },
+        {
+          "index": 26,
+          "v_code": 303713
+        },
+        {
+          "index": 27,
+          "v_code": 863443
+        },
+        {
+          "index": 28,
+          "v_code": 2334805
+        },
+        {
+          "index": 29,
+          "v_code": 555466
+        },
+        {
+          "index": 30,
+          "v_code": 482174
+        },
+        {
+          "index": 31,
+          "v_code": 2351622
+        },
+        {
+          "index": 32,
+          "v_code": 968360
+        }
+      ]
+    },
+    {
+      "model_id": "model_5",
+      "num_operators": 31,
+      "operators": [
+        {
+          "index": 0,
+          "v_code": 2443739
+        },
+        {
+          "index": 1,
+          "v_code": 377006
+        },
+        {
+          "index": 2,
+          "v_code": 1886268
+        },
+        {
+          "index": 3,
+          "v_code": 1832555
+        },
+        {
+          "index": 4,
+          "v_code": 2003987
+        },
+        {
+          "index": 5,
+          "v_code": 763295
+        },
+        {
+          "index": 6,
+          "v_code": 449544
+        },
+        {
+          "index": 7,
+          "v_code": 220884
+        },
+        {
+          "index": 8,
+          "v_code": 932468
+        },
+        {
+          "index": 9,
+          "v_code": 2409353
+        },
+        {
+          "index": 10,
+          "v_code": 1660619
+        },
+        {
+          "index": 11,
+          "v_code": 1723872
+        },
+        {
+          "index": 12,
+          "v_code": 1896057
+        },
+        {
+          "index": 13,
+          "v_code": 1667899
+        },
+        {
+          "index": 14,
+          "v_code": 505517
+        },
+        {
+          "index": 15,
+          "v_code": 2416381
+        },
+        {
+          "index": 16,
+          "v_code": 2050171
+        },
+        {
+          "index": 17,
+          "v_code": 244227
+        },
+        {
+          "index": 18,
+          "v_code": 32884
+        },
+        {
+          "index": 19,
+          "v_code": 2084057
+        },
+        {
+          "index": 20,
+          "v_code": 1748971
+        },
+        {
+          "index": 21,
+          "v_code": 1172927
+        },
+        {
+          "index": 22,
+          "v_code": 265059
+        },
+        {
+          "index": 23,
+          "v_code": 1420413
+        },
+        {
+          "index": 24,
+          "v_code": 970871
+        },
+        {
+          "index": 25,
+          "v_code": 378010
+        },
+        {
+          "index": 26,
+          "v_code": 2346351
+        },
+        {
+          "index": 27,
+          "v_code": 1929940
+        },
+        {
+          "index": 28,
+          "v_code": 1176189
+        },
+        {
+          "index": 29,
+          "v_code": 1143816
+        },
+        {
+          "index": 30,
+          "v_code": 234459
+        }
+      ]
+    },
+    {
+      "model_id": "model_6",
+      "num_operators": 31,
+      "operators": [
+        {
+          "index": 0,
+          "v_code": 1651081
+        },
+        {
+          "index": 1,
+          "v_code": 1138038
+        },
+        {
+          "index": 2,
+          "v_code": 1844351
+        },
+        {
+          "index": 3,
+          "v_code": 290913
+        },
+        {
+          "index": 4,
+          "v_code": 554211
+        },
+        {
+          "index": 5,
+          "v_code": 1364942
+        },
+        {
+          "index": 6,
+          "v_code": 1110176
+        },
+        {
+          "index": 7,
+          "v_code": 2081296
+        },
+        {
+          "index": 8,
+          "v_code": 894065
+        },
+        {
+          "index": 9,
+          "v_code": 164911
+        },
+        {
+          "index": 10,
+          "v_code": 2172910
+        },
+        {
+          "index": 11,
+          "v_code": 693266
+        },
+        {
+          "index": 12,
+          "v_code": 1940484
+        },
+        {
+          "index": 13,
+          "v_code": 2367185
+        },
+        {
+          "index": 14,
+          "v_code": 93626
+        },
+        {
+          "index": 15,
+          "v_code": 1063491
+        },
+        {
+          "index": 16,
+          "v_code": 821777
+        },
+        {
+          "index": 17,
+          "v_code": 945521
+        },
+        {
+          "index": 18,
+          "v_code": 1949771
+        },
+        {
+          "index": 19,
+          "v_code": 2281594
+        },
+        {
+          "index": 20,
+          "v_code": 245983
+        },
+        {
+          "index": 21,
+          "v_code": 1439991
+        },
+        {
+          "index": 22,
+          "v_code": 2386260
+        },
+        {
+          "index": 23,
+          "v_code": 1070519
+        },
+        {
+          "index": 24,
+          "v_code": 1937221
+        },
+        {
+          "index": 25,
+          "v_code": 1177194
+        },
+        {
+          "index": 26,
+          "v_code": 1789884
+        },
+        {
+          "index": 27,
+          "v_code": 1306205
+        },
+        {
+          "index": 28,
+          "v_code": 2478377
+        },
+        {
+          "index": 29,
+          "v_code": 627007
+        },
+        {
+          "index": 30,
+          "v_code": 2105162
+        }
+      ]
+    }
+  ]
+}

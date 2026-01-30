@@ -1,0 +1,50 @@
+[
+    {
+        "idx": 0,
+        "type": "FULLY_CONNECTED"
+    },
+    {
+        "idx": 1,
+        "type": "SOFTMAX"
+    },
+    {
+        "idx": 2,
+        "type": "AVERAGE_POOL_2D"
+    },
+    {
+        "idx": 3,
+        "type": "CONV_2D"
+    },
+    {
+        "idx": 4,
+        "type": "DEPTHWISE_CONV_2D"
+    },
+    {
+        "idx": 5,
+        "type": "CONCATENATION"
+    },
+    {
+        "idx": 6,
+        "type": "MAX_POOL_2D"
+    },
+    {
+        "idx": 7,
+        "type": "ADD"
+    },
+    {
+        "idx": 8,
+        "type": "MEAN"
+    },
+    {
+        "idx": 9,
+        "type": "RESHAPE"
+    },
+    {
+        "idx": 10,
+        "type": "RESHAPE"
+    },
+    {
+        "idx": 11,
+        "type": "RESIZE_BILINEAR"
+    }
+]

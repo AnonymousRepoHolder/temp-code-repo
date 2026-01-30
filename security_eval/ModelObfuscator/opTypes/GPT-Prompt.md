@@ -4,10 +4,10 @@ You will receive two JSON documents:
 2) File B: a compact reference of common operator types in flatc‑expanded TFLite JSON (fields/meanings/examples).
 
 Files and paths:
-- File A: security_eval/ModelObfuscator/opTypes/obf_model/10_obf.json
+- File A: security_eval/ModelObfuscator/opTypes/obf_model/0_obf.json
 - File B: security_eval/operators.json
 - Output (write a single valid JSON array file):
-  security_eval/ModelObfuscator/opTypes/predict/gpt-5-high/10_predict.json
+  security_eval/ModelObfuscator/opTypes/predict/gpt-5-high/0_predict.json
 
 ## CRITICAL: Obfuscation Method Disclosure & Reasoning Framework
 
@@ -117,9 +117,9 @@ Calibration rule:
 
 [USER]
 Task:
-- Read File A: security_eval/ModelObfuscator/opTypes/obf_model/10_obf.json
+- Read File A: security_eval/ModelObfuscator/opTypes/obf_model/0_obf.json
 - Read File B: security_eval/operators.json
 - Apply the decision policy above. Prefer informed concrete predictions over UNKNOWN when evidence passes T_unknown; otherwise use UNKNOWN with calibrated probability.
 - Write the single JSON file to:
-  security_eval/ModelObfuscator/opTypes/predict/gpt-5-high/10_predict.json
+  security_eval/ModelObfuscator/opTypes/predict/gpt-5-high/0_predict.json
   Process ALL operators in one run; do not skip or request another batch.

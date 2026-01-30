@@ -1,0 +1,378 @@
+{
+  "model_id": "model_3",
+  "experiment": "exp2_enc_only",
+  "operators": [
+    {
+      "index": 0,
+      "v_op_code_data": "xabF0w==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 1,
+      "v_op_code_data": "W6mVxw==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 2,
+      "v_op_code_data": "2TYH0w==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 3,
+      "v_op_code_data": "vPVxlA==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 4,
+      "v_op_code_data": "lz1baw==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 5,
+      "v_op_code_data": "BLPx5g==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 6,
+      "v_op_code_data": "A2WdQw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 7,
+      "v_op_code_data": "midzPA==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 8,
+      "v_op_code_data": "6ZQgLw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 9,
+      "v_op_code_data": "VM2mKA==",
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 10,
+      "v_op_code_data": "XOQ3Yw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 11,
+      "v_op_code_data": "smem7g==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 12,
+      "v_op_code_data": "Qe8Ccg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 13,
+      "v_op_code_data": "v8LUGg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 14,
+      "v_op_code_data": "FJHhPg==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 15,
+      "v_op_code_data": "U/AJYg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 16,
+      "v_op_code_data": "csFx2A==",
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 17,
+      "v_op_code_data": "MaTNRA==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 18,
+      "v_op_code_data": "Xnnmgw==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 19,
+      "v_op_code_data": "uh7Z/w==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 20,
+      "v_op_code_data": "/L6gwQ==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 21,
+      "v_op_code_data": "AnABxA==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 22,
+      "v_op_code_data": "jEU3mA==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 23,
+      "v_op_code_data": "Qc73/Q==",
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 24,
+      "v_op_code_data": "BEZubw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 25,
+      "v_op_code_data": "Gjy78Q==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 26,
+      "v_op_code_data": "bpTNOQ==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 27,
+      "v_op_code_data": "dTWrpg==",
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 28,
+      "v_op_code_data": "Z8HQbg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 29,
+      "v_op_code_data": "2Ky8Yg==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 30,
+      "v_op_code_data": "Apj7Yw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 31,
+      "v_op_code_data": "nf/8Bw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 32,
+      "v_op_code_data": "CTVVvw==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 33,
+      "v_op_code_data": "tjUktg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 34,
+      "v_op_code_data": "xTHuAw==",
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 35,
+      "v_op_code_data": "f+s/7g==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 36,
+      "v_op_code_data": "JgXV/Q==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 37,
+      "v_op_code_data": "Gx3jHw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 38,
+      "v_op_code_data": "RThRLw==",
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 39,
+      "v_op_code_data": "67Lgfg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 40,
+      "v_op_code_data": "8HvDcw==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 41,
+      "v_op_code_data": "p5+s3A==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 42,
+      "v_op_code_data": "9vdJqQ==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 43,
+      "v_op_code_data": "5V0Wdw==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 44,
+      "v_op_code_data": "guPVCw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 45,
+      "v_op_code_data": "L1ra6Q==",
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 46,
+      "v_op_code_data": "5Kp57A==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 47,
+      "v_op_code_data": "cyZTWQ==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 48,
+      "v_op_code_data": "4YpkhQ==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 49,
+      "v_op_code_data": "ndRvKA==",
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 50,
+      "v_op_code_data": "pbE3xQ==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 51,
+      "v_op_code_data": "RxNbFg==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 52,
+      "v_op_code_data": "iKS/Rw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 53,
+      "v_op_code_data": "LhJCRA==",
+      "real_code": 0,
+      "op_type": "ADD"
+    },
+    {
+      "index": 54,
+      "v_op_code_data": "V3m+Tg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 55,
+      "v_op_code_data": "gyVukg==",
+      "real_code": 4,
+      "op_type": "DEPTHWISE_CONV_2D"
+    },
+    {
+      "index": 56,
+      "v_op_code_data": "Up1X2g==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 57,
+      "v_op_code_data": "iwSTSg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 58,
+      "v_op_code_data": "q/fAsw==",
+      "real_code": 1,
+      "op_type": "AVERAGE_POOL_2D"
+    },
+    {
+      "index": 59,
+      "v_op_code_data": "cw6/Yg==",
+      "real_code": 22,
+      "op_type": "RESHAPE"
+    },
+    {
+      "index": 60,
+      "v_op_code_data": "CInSUg==",
+      "real_code": 9,
+      "op_type": "FULLY_CONNECTED"
+    },
+    {
+      "index": 61,
+      "v_op_code_data": "H7nfzQ==",
+      "real_code": 25,
+      "op_type": "SOFTMAX"
+    }
+  ]
+}

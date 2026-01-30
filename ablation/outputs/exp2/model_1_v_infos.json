@@ -1,0 +1,246 @@
+{
+  "model_id": "model_1",
+  "experiment": "exp2_enc_only",
+  "operators": [
+    {
+      "index": 0,
+      "v_op_code_data": "xabF0w==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 1,
+      "v_op_code_data": "TqmVxw==",
+      "real_code": 17,
+      "op_type": "MAX_POOL_2D"
+    },
+    {
+      "index": 2,
+      "v_op_code_data": "2TYH0w==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 3,
+      "v_op_code_data": "vPVxlA==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 4,
+      "v_op_code_data": "kD1baw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 5,
+      "v_op_code_data": "BbPx5g==",
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 6,
+      "v_op_code_data": "A2WdQw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 7,
+      "v_op_code_data": "nSdzPA==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 8,
+      "v_op_code_data": "6ZQgLw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 9,
+      "v_op_code_data": "Vs2mKA==",
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 10,
+      "v_op_code_data": "XOQ3Yw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 11,
+      "v_op_code_data": "tWem7g==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 12,
+      "v_op_code_data": "Qe8Ccg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 13,
+      "v_op_code_data": "vsLUGg==",
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 14,
+      "v_op_code_data": "AZHhPg==",
+      "real_code": 17,
+      "op_type": "MAX_POOL_2D"
+    },
+    {
+      "index": 15,
+      "v_op_code_data": "U/AJYg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 16,
+      "v_op_code_data": "ccFx2A==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 17,
+      "v_op_code_data": "MaTNRA==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 18,
+      "v_op_code_data": "WHnmgw==",
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 19,
+      "v_op_code_data": "uh7Z/w==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 20,
+      "v_op_code_data": "/L6gwQ==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 21,
+      "v_op_code_data": "BXABxA==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 22,
+      "v_op_code_data": "jUU3mA==",
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 23,
+      "v_op_code_data": "Qs73/Q==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 24,
+      "v_op_code_data": "BEZubw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 25,
+      "v_op_code_data": "HTy78Q==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 26,
+      "v_op_code_data": "b5TNOQ==",
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 27,
+      "v_op_code_data": "djWrpg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 28,
+      "v_op_code_data": "Z8HQbg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 29,
+      "v_op_code_data": "36y8Yg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 30,
+      "v_op_code_data": "A5j7Yw==",
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 31,
+      "v_op_code_data": "j//8Bw==",
+      "real_code": 17,
+      "op_type": "MAX_POOL_2D"
+    },
+    {
+      "index": 32,
+      "v_op_code_data": "DjVVvw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 33,
+      "v_op_code_data": "tjUktg==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 34,
+      "v_op_code_data": "xjHuAw==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 35,
+      "v_op_code_data": "fus/7g==",
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 36,
+      "v_op_code_data": "IQXV/Q==",
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 37,
+      "v_op_code_data": "GR3jHw==",
+      "real_code": 1,
+      "op_type": "AVERAGE_POOL_2D"
+    },
+    {
+      "index": 38,
+      "v_op_code_data": "UzhRLw==",
+      "real_code": 22,
+      "op_type": "RESHAPE"
+    },
+    {
+      "index": 39,
+      "v_op_code_data": "8bLgfg==",
+      "real_code": 25,
+      "op_type": "SOFTMAX"
+    }
+  ]
+}

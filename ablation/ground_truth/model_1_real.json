@@ -1,0 +1,162 @@
+[
+  {
+    "idx": 0,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 1,
+    "type": "MAX_POOL_2D"
+  },
+  {
+    "idx": 2,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 3,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 4,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 5,
+    "type": "CONCATENATION"
+  },
+  {
+    "idx": 6,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 7,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 8,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 9,
+    "type": "CONCATENATION"
+  },
+  {
+    "idx": 10,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 11,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 12,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 13,
+    "type": "CONCATENATION"
+  },
+  {
+    "idx": 14,
+    "type": "MAX_POOL_2D"
+  },
+  {
+    "idx": 15,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 16,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 17,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 18,
+    "type": "CONCATENATION"
+  },
+  {
+    "idx": 19,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 20,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 21,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 22,
+    "type": "CONCATENATION"
+  },
+  {
+    "idx": 23,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 24,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 25,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 26,
+    "type": "CONCATENATION"
+  },
+  {
+    "idx": 27,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 28,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 29,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 30,
+    "type": "CONCATENATION"
+  },
+  {
+    "idx": 31,
+    "type": "MAX_POOL_2D"
+  },
+  {
+    "idx": 32,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 33,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 34,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 35,
+    "type": "CONCATENATION"
+  },
+  {
+    "idx": 36,
+    "type": "CONV_2D"
+  },
+  {
+    "idx": 37,
+    "type": "AVERAGE_POOL_2D"
+  },
+  {
+    "idx": 38,
+    "type": "RESHAPE"
+  },
+  {
+    "idx": 39,
+    "type": "SOFTMAX"
+  }
+]

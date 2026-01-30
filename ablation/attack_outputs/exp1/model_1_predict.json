@@ -1,0 +1,522 @@
+[
+  {
+    "idx": 0,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 1,
+    "topk": [
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 2,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 3,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 4,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 5,
+    "topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 6,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 7,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 8,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 9,
+    "topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 10,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 11,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 12,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 13,
+    "topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 14,
+    "topk": [
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 15,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 16,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 17,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 18,
+    "topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 19,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 20,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 21,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 22,
+    "topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 23,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 24,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 25,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 26,
+    "topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 27,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 28,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 29,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 30,
+    "topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 31,
+    "topk": [
+      {
+        "type": "MAX_POOL_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 32,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 33,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 34,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 35,
+    "topk": [
+      {
+        "type": "CONCATENATION",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 36,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 37,
+    "topk": [
+      {
+        "type": "AVERAGE_POOL_2D",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 38,
+    "topk": [
+      {
+        "type": "RESHAPE",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  },
+  {
+    "idx": 39,
+    "topk": [
+      {
+        "type": "SOFTMAX",
+        "p": 0.98
+      },
+      {
+        "type": "UNKNOWN",
+        "p": 0.02
+      }
+    ]
+  }
+]

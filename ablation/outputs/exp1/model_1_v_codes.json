@@ -1,0 +1,246 @@
+{
+  "model_id": "model_1",
+  "experiment": "exp1_mod_only",
+  "operators": [
+    {
+      "index": 0,
+      "v_code": 824789,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 1,
+      "v_code": 2179199,
+      "real_code": 17,
+      "op_type": "MAX_POOL_2D"
+    },
+    {
+      "index": 2,
+      "v_code": 36900,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 3,
+      "v_code": 1527087,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 4,
+      "v_code": 607172,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 5,
+      "v_code": 1236930,
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 6,
+      "v_code": 997226,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 7,
+      "v_code": 911133,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 8,
+      "v_code": 1213337,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 9,
+      "v_code": 379514,
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 10,
+      "v_code": 1962823,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 11,
+      "v_code": 1557458,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 12,
+      "v_code": 604913,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 13,
+      "v_code": 2233902,
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 14,
+      "v_code": 308998,
+      "real_code": 17,
+      "op_type": "MAX_POOL_2D"
+    },
+    {
+      "index": 15,
+      "v_code": 1645810,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 16,
+      "v_code": 2309454,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 17,
+      "v_code": 955560,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 18,
+      "v_code": 546680,
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 19,
+      "v_code": 2151073,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 20,
+      "v_code": 484684,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 21,
+      "v_code": 1789131,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 22,
+      "v_code": 1937220,
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 23,
+      "v_code": 2379734,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 24,
+      "v_code": 1032366,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 25,
+      "v_code": 1398575,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 26,
+      "v_code": 2459802,
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 27,
+      "v_code": 2251222,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 28,
+      "v_code": 1922412,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 29,
+      "v_code": 449293,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 30,
+      "v_code": 1115195,
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 31,
+      "v_code": 966367,
+      "real_code": 17,
+      "op_type": "MAX_POOL_2D"
+    },
+    {
+      "index": 32,
+      "v_code": 2408097,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 33,
+      "v_code": 764549,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 34,
+      "v_code": 2132750,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 35,
+      "v_code": 1071772,
+      "real_code": 2,
+      "op_type": "CONCATENATION"
+    },
+    {
+      "index": 36,
+      "v_code": 2058956,
+      "real_code": 3,
+      "op_type": "CONV_2D"
+    },
+    {
+      "index": 37,
+      "v_code": 1473873,
+      "real_code": 1,
+      "op_type": "AVERAGE_POOL_2D"
+    },
+    {
+      "index": 38,
+      "v_code": 222408,
+      "real_code": 22,
+      "op_type": "RESHAPE"
+    },
+    {
+      "index": 39,
+      "v_code": 1542671,
+      "real_code": 25,
+      "op_type": "SOFTMAX"
+    }
+  ]
+}

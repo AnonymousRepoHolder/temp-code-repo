@@ -1,0 +1,458 @@
+[
+  {
+    "idx": 0,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 1,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 2,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 3,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 4,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 5,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 6,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 7,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 8,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 9,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 10,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 11,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 12,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 13,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 14,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 15,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 16,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 17,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 18,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 19,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 20,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 21,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 22,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 23,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 24,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 25,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 26,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 27,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 28,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 29,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 30,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 31,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 32,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 33,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 34,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 35,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 36,
+    "topk": [
+      {
+        "type": "CONV_2D",
+        "p": 0.5
+      },
+      {
+        "type": "DEPTHWISE_CONV_2D",
+        "p": 0.5
+      }
+    ]
+  },
+  {
+    "idx": 37,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 38,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  },
+  {
+    "idx": 39,
+    "topk": [
+      {
+        "type": "UNKNOWN",
+        "p": 1.0
+      }
+    ]
+  }
+]
