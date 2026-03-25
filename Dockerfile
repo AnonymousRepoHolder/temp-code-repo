@@ -55,7 +55,7 @@ RUN find /NeuralVirtualizer -type f \( -name '*.sh' -o -name '*.bzl' -o -name 'B
     | xargs -0 dos2unix
 
 # Install Python dependencies
-RUN python3 -m pip install --no-cache-dir -r requirements.txt
+RUN python3 -m pip install --no-cache-dir -r requirements.txt --break-system-packages
 
 # Install Clang-20
 RUN wget https://apt.llvm.org/llvm.sh && \

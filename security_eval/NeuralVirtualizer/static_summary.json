@@ -1,0 +1,178 @@
+{
+  "original": {
+    "per_model": [
+      {
+        "model_id": 1,
+        "model_name": "squeezenet",
+        "operator_recovery": 1.0,
+        "structure_recovery": 1.0,
+        "static_reconstruction": true
+      },
+      {
+        "model_id": 2,
+        "model_name": "posenet",
+        "operator_recovery": 1.0,
+        "structure_recovery": 1.0,
+        "static_reconstruction": true
+      },
+      {
+        "model_id": 3,
+        "model_name": "fruit",
+        "operator_recovery": 1.0,
+        "structure_recovery": 1.0,
+        "static_reconstruction": true
+      },
+      {
+        "model_id": 4,
+        "model_name": "lenet",
+        "operator_recovery": 1.0,
+        "structure_recovery": 1.0,
+        "static_reconstruction": true
+      },
+      {
+        "model_id": 5,
+        "model_name": "mobilenet",
+        "operator_recovery": 1.0,
+        "structure_recovery": 1.0,
+        "static_reconstruction": true
+      },
+      {
+        "model_id": 6,
+        "model_name": "skin",
+        "operator_recovery": 1.0,
+        "structure_recovery": 1.0,
+        "static_reconstruction": true
+      },
+      {
+        "model_id": 7,
+        "model_name": "mnasnet",
+        "operator_recovery": 1.0,
+        "structure_recovery": 1.0,
+        "static_reconstruction": true
+      },
+      {
+        "model_id": 8,
+        "model_name": "efficientnet",
+        "operator_recovery": 1.0,
+        "structure_recovery": 1.0,
+        "static_reconstruction": true
+      },
+      {
+        "model_id": 9,
+        "model_name": "ssd",
+        "operator_recovery": 1.0,
+        "structure_recovery": 1.0,
+        "static_reconstruction": true
+      },
+      {
+        "model_id": 10,
+        "model_name": "depth_estimation",
+        "operator_recovery": 1.0,
+        "structure_recovery": 1.0,
+        "static_reconstruction": true
+      }
+    ],
+    "aggregate": {
+      "mean_operator_recovery": 1.0,
+      "mean_structure_recovery": 1.0,
+      "static_reconstruction_successes": 10,
+      "static_reconstruction_total": 10,
+      "static_reconstruction_ratio": "10/10"
+    }
+  },
+  "virtualized": {
+    "per_model": [
+      {
+        "model_id": 1,
+        "model_name": "squeezenet",
+        "operator_recovery": 0.0,
+        "structure_recovery": 0.0,
+        "static_reconstruction": false
+      },
+      {
+        "model_id": 2,
+        "model_name": "posenet",
+        "operator_recovery": 0.0,
+        "structure_recovery": 0.0,
+        "static_reconstruction": false
+      },
+      {
+        "model_id": 3,
+        "model_name": "fruit",
+        "operator_recovery": 0.0,
+        "structure_recovery": 0.0,
+        "static_reconstruction": false
+      },
+      {
+        "model_id": 4,
+        "model_name": "lenet",
+        "operator_recovery": 0.0,
+        "structure_recovery": 0.0,
+        "static_reconstruction": false
+      },
+      {
+        "model_id": 5,
+        "model_name": "mobilenet",
+        "operator_recovery": 0.0,
+        "structure_recovery": 0.0,
+        "static_reconstruction": false
+      },
+      {
+        "model_id": 6,
+        "model_name": "skin",
+        "operator_recovery": 0.0,
+        "structure_recovery": 0.0,
+        "static_reconstruction": false
+      },
+      {
+        "model_id": 7,
+        "model_name": "mnasnet",
+        "operator_recovery": 0.0,
+        "structure_recovery": 0.0,
+        "static_reconstruction": false
+      },
+      {
+        "model_id": 8,
+        "model_name": "efficientnet",
+        "operator_recovery": 0.0,
+        "structure_recovery": 0.0,
+        "static_reconstruction": false
+      },
+      {
+        "model_id": 9,
+        "model_name": "ssd",
+        "operator_recovery": 0.0,
+        "structure_recovery": 0.0,
+        "static_reconstruction": false
+      },
+      {
+        "model_id": 10,
+        "model_name": "depth_estimation",
+        "operator_recovery": 0.0,
+        "structure_recovery": 0.0,
+        "static_reconstruction": false
+      }
+    ],
+    "aggregate": {
+      "mean_operator_recovery": 0.0,
+      "mean_structure_recovery": 0.0,
+      "static_reconstruction_successes": 0,
+      "static_reconstruction_total": 10,
+      "static_reconstruction_ratio": "0/10"
+    }
+  },
+  "paper_table": [
+    {
+      "artifact": "Original .tflite",
+      "operator_recovery": 1.0,
+      "structure_recovery": 1.0,
+      "static_reconstruction": "10/10"
+    },
+    {
+      "artifact": "NeuralVirtualizer artifacts",
+      "operator_recovery": 0.0,
+      "structure_recovery": 0.0,
+      "static_reconstruction": "0/10"
+    }
+  ]
+}

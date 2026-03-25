@@ -230,13 +230,13 @@ The following flow contains first‑time TensorFlow checkout and overlay steps. 
 ### 1) Build the Docker image (host)
 
 ```bash
-docker build -t NeuralVirtualizer .
+docker build -t neuralvirtualizer .
 ```
 
 ### 2) Start a container (host)
 
 ```bash
-docker run --rm -it NeuralVirtualizer
+docker run -it neuralvirtualizer
 ```
 
 ### 3) First‑time only: clone TensorFlow v2.18.1
