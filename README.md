@@ -129,10 +129,13 @@ FlatBufferModel::BuildFromVirtualizedFiles(info, params)
     - `BUILD` — Bazel rules updated to link the new entry point (must be copied as well).
 
 - `test_comparison/`
-  - `test_virtualized_interpreter.cc` — loads virtualized (`<model>_v_infos.json` + `<model>_params.bin`) and original (`.tflite`) models; accepts `--model_name` parameter for testing different models; runs equivalence checks; reports MSE/MAE/MaxAE/RelMAE/Top‑1 accuracy metrics, inference timing (total wallclock for 10 runs), and final RSS memory usage.
-  - `comparison_utils.{h,cc}` — utilities for inputs/outputs, metrics, printing, dynamic tests.
+  - `test_virtualized_interpreter.cc` — single-model correctness test; supports `--model_name`, `--num_inputs`, `--seed`, and optional `--output_json`.
+  - `test_virtualized_only.cc` / `test_original_only.cc` — single-model performance and peak RSS tests; support `--model_name`, `--num_iters`, `--seed`, and optional `--output_json`.
+  - `test_suite_runner.cc` — batch runner for `RQ1` / `RQ2`; supports model sets, batch execution, ratio calculation, and markdown/json report generation.
+  - `experiment_utils.{h,cc}` — shared single-model execution logic, model-set resolution, and report serialization.
+  - `comparison_utils.{h,cc}` — low-level utilities for inputs/outputs, metrics, printing, dynamic tests, and deterministic input seeding.
   - `memory_monitor.{h,cc}` — cross‑platform RSS monitor (Linux: `/proc/self/status`, Windows: `GetProcessMemoryInfo`).
-  - `CMakeLists.txt` — builds the test binary and links Bazel‑built `libtensorflowlite.so`.
+  - `CMakeLists.txt` — builds all test binaries and links Bazel‑built `libtensorflowlite.so`.
 
 - `tflite_model/` — sample `.tflite` models consumed by the virtualizer and test harness.
 - `model_converter/` — optional converters to produce `.tflite` (e.g., DistilGPT‑2 helpers), using transformers==4.54.0.
@@ -271,10 +274,14 @@ python3 scripts/generate_keys.py
 
 **Phase 2: Virtualize each model (repeatable)**
 ```bash
-# Pick models present under tflite_model/
-python3 virtualizer/virtualization.py --model_name=squeezenet
-python3 virtualizer/virtualization.py --model_name=ssd
-python3 virtualizer/virtualization.py --model_name=distilgpt2-official
+# Virtualize the predefined 11-model evaluation set in one command (`paper11`)
+python3 virtualizer/virtualization.py --model_set=paper11
+
+# Or virtualize every .tflite file currently present under tflite_model/
+python3 virtualizer/virtualization.py --all_models
+
+# Or virtualize a custom subset
+python3 virtualizer/virtualization.py --models=squeezenet,ssd,distilgpt2-official
 # Each outputs: <model>_v_infos.json, <model>_params.bin at repo root
 # All models share the same keys from keys_and_offsets.bin
 ```
@@ -306,11 +313,36 @@ cd /NeuralVirtualizer/test_comparison
 mkdir -p build && cd build
 cmake .. && make
 cd ../..
-./test_comparison/build/test_virtualized_only --model_name=squeezenet
-./test_comparison/build/test_original_only --model_name=squeezenet
-./test_comparison/build/test_virtualized_interpreter --model_name=squeezenet
-./test_comparison/build/test_virtualized_interpreter --model_name=ssd
-./test_comparison/build/test_virtualized_interpreter --model_name=distilgpt2-official
+
+# Run the full 11-model evaluation set on x86 and generate RQ1/RQ2 reports
+./test_comparison/build/test_suite_runner \
+  --suite=all \
+  --model_set=paper11 \
+  --correctness_inputs=1000 \
+  --perf_iters=1000 \
+  --seed=42 \
+  --platform_label=x86 \
+  --output_dir=results-x86
+# Note: output_dir is overwritten by default. Add --fail_if_exists if you want a safety check.
+
+# Optional: rerun a single model or a single measurement path
+./test_comparison/build/test_virtualized_interpreter \
+  --model_name=squeezenet \
+  --num_inputs=1000 \
+  --seed=42 \
+  --output_json=results-x86/raw/squeezenet.correctness.json
+
+./test_comparison/build/test_virtualized_only \
+  --model_name=squeezenet \
+  --num_iters=1000 \
+  --seed=42 \
+  --output_json=results-x86/raw/squeezenet.virtualized.json
+
+./test_comparison/build/test_original_only \
+  --model_name=squeezenet \
+  --num_iters=1000 \
+  --seed=42 \
+  --output_json=results-x86/raw/squeezenet.original.json
 ```
 
 Notes
@@ -325,7 +357,7 @@ Notes
     - Phase 3 deletes `keys_and_offsets.bin` after injection - no more models can be added to this batch.
     - If virtualization warns "Connection modulus too small", increase `conn_modulus` in `scripts/generate_keys.py` and restart from Phase 1.
   - Step 6 (build): **Must rebuild** TFLite after Phase 3 to compile the injected keys.
-  - Step 7 (test): Test each model with `--model_name=<model>`.
+  - Step 7 (test): Prefer `test_suite_runner` for batch execution and report generation; keep the single-model binaries for debugging or partial reruns.
 - **Important**: All models in a batch must be virtualized (Phase 2) before running Phase 3 (inject keys). Once Phase 3 is complete, you cannot add more models - you must start a new batch from Phase 1.
 - **Android builds & on-device testing**: See the section "Android Device (arm64) Build & Testing" below for SDK/NDK setup, Bazel Android build, and ADB-run steps.
 
@@ -337,7 +369,7 @@ You will need Linux, Python 3, flatc, Bazelisk/Bazel compatible with TF v2.18.1,
 - Overlay this repo’s `tensorflow_src_parser` subtrees via `cp -rv` as shown above (parser/ and core/ into `tensorflow/lite/`).
 - Install prerequisites: `flatc` (version matching schema), `npm i -g jsonrepair`, and `libssl-dev` on Ubuntu.
 - Run `python3 configure.py` → `bazel build -c opt //tensorflow/lite:libtensorflowlite.so`.
-- Build `test_comparison` with CMake and run the test binary.
+- Build `test_comparison` with CMake and run `test_suite_runner` (or any single-model binary) from the repo root.
 
 
 ## Use in your C++ application
@@ -405,7 +437,7 @@ cp -rv /NeuralVirtualizer/tensorflow_src_parser/tensorflow/lite/parser ${TF_UPST
 cp -rv /NeuralVirtualizer/tensorflow_src_parser/tensorflow/lite/core   ${TF_UPSTREAM_ROOT}/tensorflow/lite/
 
 python3 scripts/generate_keys.py
-python3 virtualizer/virtualization.py --model_name=squeezenet
+python3 virtualizer/virtualization.py --model_set=paper11
 python3 scripts/inject_keys_to_backend.py
 ```
 
@@ -475,9 +507,28 @@ cd /data/local/tmp/NeuralVirtualizer
 chmod +x test_comparison/build-android-arm64/test_*
 export LD_LIBRARY_PATH=/data/local/tmp/NeuralVirtualizer/tensorflow_src/bazel-bin/tensorflow/lite:/data/local/tmp/NeuralVirtualizer/test_comparison/build-android-arm64:$LD_LIBRARY_PATH
 
-./test_comparison/build-android-arm64/test_virtualized_interpreter --model_name=squeezenet
-./test_comparison/build-android-arm64/test_virtualized_only        --model_name=squeezenet
-./test_comparison/build-android-arm64/test_original_only           --model_name=squeezenet
+# Run the full 11-model evaluation set on the device and generate RQ1/RQ2 reports locally
+./test_comparison/build-android-arm64/test_suite_runner \
+  --suite=all \
+  --model_set=paper11 \
+  --correctness_inputs=1000 \
+  --perf_iters=1000 \
+  --seed=42 \
+  --platform_label=arm64 \
+  --output_dir=results-arm64
+# Note: output_dir is overwritten by default. Add --fail_if_exists if you want a safety check.
+
+# Optional: rerun a single model
+./test_comparison/build-android-arm64/test_virtualized_interpreter \
+  --model_name=squeezenet \
+  --num_inputs=1000 \
+  --seed=42 \
+  --output_json=results-arm64/raw/squeezenet.correctness.json
+```
+
+After the suite finishes, pull the generated reports back to the host:
+```bash
+adb -d pull /data/local/tmp/NeuralVirtualizer/results-arm64 ./results-arm64
 ```
 
 Troubleshooting
@@ -487,7 +538,7 @@ Troubleshooting
 - Device selection: Use `adb -d` to force USB device (avoid `-e` emulator).
 
 Performance
-- On-device latency and memory closely match desktop behavior; see the Android table in `RESULTS.md` (e.g., Redmi K50 Ultra, Android 14).
+- On-device latency and memory closely match desktop behavior; see the generated Android-side `RQ2.md` (e.g., Redmi K50 Ultra, Android 14).
 
 
 ## Testing & metrics
@@ -497,22 +548,31 @@ The `test_comparison` suite includes:
 **test_virtualized_interpreter**:
 - Loads both the virtualized model (`<model>_v_infos.json` + `<model>_params.bin`) and the original `.tflite` file.
 - Generates identical random inputs (dtype‑aware) for static/dynamic shapes.
-- Runs multi‑iteration inference (10 runs) and reports:
-  - Errors: MSE, MAE, MaxAE, RelMAE, Top‑1 match rate.
+- Supports `--num_inputs=<N>` and `--seed=<S>`; for dynamic models, the total input budget is evenly distributed across the predefined length buckets.
+- Reports MSE, MAE, MaxAE, RelMAE, and Top‑1 agreement rate, and can emit a structured JSON file via `--output_json`.
 
 **test_virtualized_only / test_original_only**:
 - Isolated performance measurement for each model type.
-- Runs 10-iteration inference and reports:
+- Support `--num_iters=<N>` and `--seed=<S>`.
+- Report:
   - Timing: model loading time + total inference time.
-  - Memory: peak RSS from model loading start to inference completion (PeakMemoryTracker with 5ms sampling interval, Linux/Windows).
-- Peak RSS measurements reported in RESULTS.md.
+  - Memory: peak RSS from model loading start through the first inference completion (PeakMemoryTracker with 5ms sampling interval, Linux/Android/Windows).
+  - Optional JSON output via `--output_json`.
+
+**test_suite_runner**:
+- Runs `RQ1`, `RQ2`, or both in batch mode with a single command.
+- Supports `--model_name`, `--models`, `--model_set`, and `--all_models`.
+- Generates:
+  - `RQ1.md` — model-level functional equivalence table.
+  - `RQ2.md` — model-level inference latency and peak RSS table.
+  - `summary.json` and `raw/<model>.json` — structured intermediate results.
 
 
-## Performance & Memory Notes (See RESULTS.md for details)
+## Performance & Memory Notes (See generated `RQ2.md` for details)
 
 ### Inference Performance
 - **One-time decryption cost**: Decryption occurs once during `BuildFromVirtualizedFiles`; inference uses plaintext data thereafter.
-- **Performance comparable to native TFLite**: See RESULTS.md for detailed benchmarks across 11 models (from 4.8MB squeezenet to 460MB distilgpt2-official).
+- **Performance comparable to native TFLite**: See the generated `RQ2.md` for detailed benchmarks across the selected model set.
 - Functional equivalence verified via comprehensive metrics (MSE/MAE/MaxAE/RelMAE/Top-1).
 
 ### Loading Performance
@@ -524,12 +584,12 @@ The `test_comparison` suite includes:
 ### Memory Usage
 - **Zero-copy architecture**: DevirtualizedParam stores pointers (data_ptr) directly to params_array_ or mmap region, eliminating duplicate parameter copies during model construction.
 - **Delayed release strategy**: Parameter data (params_array_/mmap) remains alive until flatbuffer construction completes, then released. This causes temporary peak memory increase during model loading.
-- **Model-dependent impact** (see RESULTS.md for detailed measurements):
+- **Model-dependent impact** (see the generated `RQ2.md` for detailed measurements):
   - Small models (<100MB): Minimal peak RSS overhead (typically ≤10%, e.g., squeezenet 24.8/24.5 ≈ 101%, mobilenet 28.0/27.8 ≈ 101%)
   - Large models (distilgpt2-official 460MB): Higher peak RSS (942/627 ≈ 150%) due to simultaneous presence of raw parameters and constructed flatbuffer during loading phase
 - **Optional mmap**: Can reduce peak RSS for large models by eliminating params_array_ heap allocation; parameters accessed directly from OS page cache.
 - Memory overhead primarily from resident flatbuffer copy and optional delegate workspace.
-- Note: Peak RSS measurements capture maximum memory usage from model loading start through inference completion (PeakMemoryTracker with 5ms sampling in test_virtualized_only/test_original_only). The peak typically occurs during model loading when both raw parameters and constructed flatbuffer temporarily co-exist.
+- Note: Peak RSS measurements capture maximum memory usage from model loading start through the first inference completion (PeakMemoryTracker with 5ms sampling in test_virtualized_only/test_original_only). This keeps the memory metric focused on runtime footprint rather than long-run harness buffering. The peak typically occurs during model loading when both raw parameters and constructed flatbuffer temporarily co-exist.
 
 ## Security Evaluation: Comparative Analysis
 
@@ -563,12 +623,95 @@ ModelObfuscator protects on-device models by obfuscating the original `.tflite` 
 #### Phase 1: Prepare Ground Truth Graphs (10 Test Models)
 
 ```bash
-# Generate ground truth graphs for evaluation
-python3 security_eval/tflite2json.py
-# Outputs: security_eval/model_json/<model>.json (squeezenet, mobilenet, lenet, etc.)
+# Generate ground truth JSONs for the original .tflite artifacts
+for model in squeezenet posenet fruit lenet mobilenet skin mnasnet efficientnet ssd depth_estimation; do
+  python3 security_eval/tflite2json.py --model_name "$model"
+done
+# Outputs: security_eval/model_json/<model>.json
 ```
 
-#### Phase 2: Attack ModelObfuscator
+#### Phase 2: Static File-Level Reverse Engineering Baseline
+
+This baseline compares two artifact types under the same schema-aware static parsing setting:
+- `Original .tflite`: direct static recovery from the standard FlatBuffer artifact
+- `NeuralVirtualizer artifacts`: direct static recovery from `<model>_v_infos.json + <model>_params.bin`
+
+The static attack scripts intentionally operate on delivered files only. For NeuralVirtualizer, they remove the Base64 wrapper and interpret the decoded bytes directly, but **do not** invoke backend restoration logic or use any embedded keys. Although attackers are assumed to also possess `<model>_params.bin`, the static baseline focuses on `Operator Recovery` and `Structure Recovery`; raw parameter bytes are not directly actionable for these two tasks without decrypting `v_position_data` and `v_shape`.
+
+**One-command batch run (recommended)**:
+
+```bash
+bash security_eval/NeuralVirtualizer/run_static_all.sh
+
+# Final summary:
+#   security_eval/NeuralVirtualizer/static_summary.json
+#
+# Intermediate outputs:
+#   security_eval/NeuralVirtualizer/opTypes/predict/static_original/
+#   security_eval/NeuralVirtualizer/opTypes/predict/static_virtualized/
+#   security_eval/NeuralVirtualizer/opTypes/real_original/
+#   security_eval/NeuralVirtualizer/opTypes/eval/static_original/
+#   security_eval/NeuralVirtualizer/opTypes/eval/static_virtualized/
+#   security_eval/NeuralVirtualizer/struct/predict/static_original/
+#   security_eval/NeuralVirtualizer/struct/predict/static_virtualized/
+#   security_eval/NeuralVirtualizer/struct/eval/static_original/
+#   security_eval/NeuralVirtualizer/struct/eval/static_virtualized/
+```
+
+**Manual run for one model** (example: model id `5`, i.e., `mobilenet`):
+
+```bash
+# 1) Original .tflite -> operator recovery
+python3 security_eval/NeuralVirtualizer/opTypes/static_attack.py \
+  --model_name 5 \
+  --artifact original \
+  --tag static_original
+python3 security_eval/NeuralVirtualizer/opTypes/compare_eval.py \
+  --model_name 5 \
+  --LLM static_original \
+  --real_subdir real_original
+
+# 2) Original .tflite -> structure recovery
+python3 security_eval/NeuralVirtualizer/struct/static_attack.py \
+  --model_name 5 \
+  --artifact original \
+  --tag static_original
+python3 security_eval/NeuralVirtualizer/struct/visualize_struct.py \
+  --model_name 5 \
+  --LLM static_original
+
+# 3) Virtualized artifacts -> operator recovery
+python3 security_eval/NeuralVirtualizer/opTypes/static_attack.py \
+  --model_name 5 \
+  --artifact virtualized \
+  --tag static_virtualized
+python3 security_eval/NeuralVirtualizer/opTypes/compare_eval.py \
+  --model_name 5 \
+  --LLM static_virtualized \
+  --real_subdir real
+
+# 4) Virtualized artifacts -> structure recovery
+python3 security_eval/NeuralVirtualizer/struct/static_attack.py \
+  --model_name 5 \
+  --artifact virtualized \
+  --tag static_virtualized
+python3 security_eval/NeuralVirtualizer/struct/visualize_struct.py \
+  --model_name 5 \
+  --LLM static_virtualized
+
+# 5) Aggregate all generated static results (after you run the desired models)
+python3 security_eval/NeuralVirtualizer/summarize_static_results.py \
+  --orig_tag static_original \
+  --virt_tag static_virtualized \
+  --model_ids 5
+```
+
+**Metrics reported by `static_summary.json`**:
+- `Operator Recovery`: mean Top-1 exact recovery rate from `opTypes/eval/<tag>/*_eval.json`
+- `Structure Recovery`: mean ground-truth similarity from `struct/eval/<tag>/*_similarity.json`
+- `Static Reconstruction`: number of models whose operator recovery is `1.0` and structure recovery is `1.0`
+
+#### Phase 3: Attack ModelObfuscator
 
 **Test**: Structure Recovery from `obf.tflite`
 
@@ -592,7 +735,7 @@ bash security_eval/ModelObfuscator/struct/run_all.sh
 
 **Operator Type Recovery**: Not tested (recompiled operators are inherently unrecognizable).
 
-#### Phase 3: Attack NeuralVirtualizer
+#### Phase 4: Attack NeuralVirtualizer
 
 **Test 1**: Operator Type Recovery from `v_infos.json`
 

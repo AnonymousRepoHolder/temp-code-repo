@@ -39,6 +39,7 @@ message(STATUS "Found TensorFlow Lite library: ${TENSORFLOW_LITE_LIB}")
 # Common source files
 set(COMMON_SOURCES
     comparison_utils.cc
+    experiment_utils.cc
     memory_monitor.cc
     peak_memory_tracker.cc
 )
@@ -61,6 +62,11 @@ add_executable(test_original_only
     ${COMMON_SOURCES}
 )
 
+add_executable(test_suite_runner
+    test_suite_runner.cc
+    ${COMMON_SOURCES}
+)
+
 # Include directories (shared by all targets)
 set(COMMON_INCLUDES
     ${CMAKE_SOURCE_DIR}/../tensorflow_src
@@ -72,11 +78,13 @@ set(COMMON_INCLUDES
 target_include_directories(test_virtualized_interpreter PRIVATE ${COMMON_INCLUDES})
 target_include_directories(test_virtualized_only PRIVATE ${COMMON_INCLUDES})
 target_include_directories(test_original_only PRIVATE ${COMMON_INCLUDES})
+target_include_directories(test_suite_runner PRIVATE ${COMMON_INCLUDES})
 
 # Link libraries
 target_link_libraries(test_virtualized_interpreter ${TENSORFLOW_LITE_LIB})
 target_link_libraries(test_virtualized_only ${TENSORFLOW_LITE_LIB})
 target_link_libraries(test_original_only ${TENSORFLOW_LITE_LIB})
+target_link_libraries(test_suite_runner ${TENSORFLOW_LITE_LIB})
 
 # Platform-specific linking and compiler settings
 if(WIN32)
@@ -84,10 +92,12 @@ if(WIN32)
     target_link_libraries(test_virtualized_interpreter psapi)
     target_link_libraries(test_virtualized_only psapi)
     target_link_libraries(test_original_only psapi)
+    target_link_libraries(test_suite_runner psapi)
 
     target_compile_definitions(test_virtualized_interpreter PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN)
     target_compile_definitions(test_virtualized_only PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN)
     target_compile_definitions(test_original_only PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN)
+    target_compile_definitions(test_suite_runner PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN)
 elseif(ANDROID)
     # Android-specific settings (bionic provides pthread/dl; no extra linking needed)
     # Enable Android logging if needed:
@@ -99,6 +109,7 @@ elseif(UNIX AND NOT ANDROID)
     target_link_libraries(test_virtualized_interpreter pthread dl)
     target_link_libraries(test_virtualized_only pthread dl)
     target_link_libraries(test_original_only pthread dl)
+    target_link_libraries(test_suite_runner pthread dl)
 
     set_target_properties(test_virtualized_interpreter PROPERTIES
         BUILD_RPATH_USE_ORIGIN TRUE
@@ -109,6 +120,10 @@ elseif(UNIX AND NOT ANDROID)
         INSTALL_RPATH "\$ORIGIN"
     )
     set_target_properties(test_original_only PROPERTIES
+        BUILD_RPATH_USE_ORIGIN TRUE
+        INSTALL_RPATH "\$ORIGIN"
+    )
+    set_target_properties(test_suite_runner PROPERTIES
         BUILD_RPATH_USE_ORIGIN TRUE
         INSTALL_RPATH "\$ORIGIN"
     )
@@ -125,6 +140,7 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang
     target_compile_options(test_virtualized_interpreter PRIVATE ${COMMON_COMPILE_OPTIONS})
     target_compile_options(test_virtualized_only PRIVATE ${COMMON_COMPILE_OPTIONS})
     target_compile_options(test_original_only PRIVATE ${COMMON_COMPILE_OPTIONS})
+    target_compile_options(test_suite_runner PRIVATE ${COMMON_COMPILE_OPTIONS})
 endif()
 
 # Print build information
@@ -147,14 +163,14 @@ add_custom_target(instructions
     COMMAND ${CMAKE_COMMAND} -E echo ""
     COMMAND ${CMAKE_COMMAND} -E echo "3. Run the test (from project root):"
     COMMAND ${CMAKE_COMMAND} -E echo "   cd .."
-    COMMAND ${CMAKE_COMMAND} -E echo "   ./build/test_virtualized_interpreter"
+    COMMAND ${CMAKE_COMMAND} -E echo "   ./build/test_suite_runner --suite=all --model_set=paper11 --correctness_inputs=1000 --perf_iters=1000 --seed=42 --platform_label=x86 --output_dir=results-x86"
     COMMAND ${CMAKE_COMMAND} -E echo ""
 )
 
 # Create a test target for easier running
 enable_testing()
 add_test(NAME virtualized_comparison_test 
-        COMMAND test_virtualized_interpreter
+        COMMAND test_suite_runner --suite=rq2 --model_name=squeezenet --perf_iters=10 --seed=42 --output_dir=test-results --overwrite
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/../)
 
 # Print final message

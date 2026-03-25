@@ -11,8 +11,11 @@
 #include <sstream>
 
 // Random number generator
-static std::random_device rd;
-static std::mt19937 gen(rd());
+static std::mt19937 gen(42);
+
+void set_random_seed(uint32_t seed) {
+    gen.seed(seed);
+}
 
 bool has_int32_input(const std::vector<TensorInfo>& input_details) {
     for (const auto& detail : input_details) {
@@ -194,13 +197,16 @@ float avg(const std::vector<float>& lst) {
     return std::accumulate(lst.begin(), lst.end(), 0.0f) / lst.size();
 }
 
-void compute_metrics(const std::vector<std::vector<TensorData>>& outputs_vir,
-                    const std::vector<std::vector<TensorData>>& outputs_ori) {
+MetricsSummary compute_metrics_summary(
+        const std::vector<std::vector<TensorData>>& outputs_vir,
+        const std::vector<std::vector<TensorData>>& outputs_ori) {
+    MetricsSummary summary;
     int num_tests = outputs_ori.size();
     int num_outputs = std::min(
         outputs_ori.empty() ? 0 : (int)outputs_ori[0].size(),
         outputs_vir.empty() ? 0 : (int)outputs_vir[0].size()
     );
+    summary.num_tests = num_tests;
     
     std::vector<std::vector<float>> mse_per_output(num_outputs);
     std::vector<std::vector<float>> mae_per_output(num_outputs);
@@ -329,16 +335,38 @@ void compute_metrics(const std::vector<std::vector<TensorData>>& outputs_vir,
         }
     }
     
-    // Output statistics
-    std::cout << "\n=== Error statistics (10‑run average) ===" << std::endl;
     for (int j = 0; j < num_outputs; j++) {
+        OutputMetrics output_summary;
+        output_summary.output_index = j;
+        output_summary.mse = avg(mse_per_output[j]);
+        output_summary.mae = avg(mae_per_output[j]);
+        output_summary.maxae = avg(maxae_per_output[j]);
+        output_summary.relmae = avg(relmae_per_output[j]);
+        output_summary.has_top1 = !top1_match_per_output[j].empty();
+        output_summary.top1_agreement = avg(top1_match_per_output[j]);
+        summary.outputs.push_back(output_summary);
+    }
+
+    return summary;
+}
+
+void print_metrics_summary(const MetricsSummary& summary) {
+    std::cout << "\n=== Error statistics (" << summary.num_tests
+              << "‑run average) ===" << std::endl;
+    for (const auto& output : summary.outputs) {
         printf("Output%d: MSE=%.15f, MAE=%.8f, MaxAE=%.8f, RelMAE=%.8f\n",
-            j, avg(mse_per_output[j]), avg(mae_per_output[j]),
-            avg(maxae_per_output[j]), avg(relmae_per_output[j]));
-        if (!top1_match_per_output[j].empty()) {
-            printf("Output%d: Top‑1 agreement rate=%.8f\n", j, avg(top1_match_per_output[j]));
+               output.output_index, output.mse, output.mae,
+               output.maxae, output.relmae);
+        if (output.has_top1) {
+            printf("Output%d: Top‑1 agreement rate=%.8f\n",
+                   output.output_index, output.top1_agreement);
         }
     }
+}
+
+void compute_metrics(const std::vector<std::vector<TensorData>>& outputs_vir,
+                    const std::vector<std::vector<TensorData>>& outputs_ori) {
+    print_metrics_summary(compute_metrics_summary(outputs_vir, outputs_ori));
 }
 
 void print_outputs_meta(const std::vector<TensorInfo>& v_out_details,

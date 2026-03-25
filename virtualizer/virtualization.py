@@ -217,233 +217,293 @@ def generate_virtualization_file(v_op_types, v_params_info, v_graph, model_name,
     print(f"Virtualization information saved: {output_filename}")
 
 
-# Command line argument parsing
-parser = argparse.ArgumentParser()
-parser.add_argument('--model_name', type=str, default='fruit', help='name of the model')
-opt = parser.parse_args()
-
-# Load model
-model_path = 'tflite_model/'
-model_name = opt.model_name + '.tflite'
-print(f"Loading model underway: {model_name}")
-interpreter = tf.lite.Interpreter(
-    os.path.join(model_path, model_name)
-)
-interpreter.allocate_tensors()
-print("Model loading completed")
-
-# Parse the TFLite model into a JSON object
-print("Start converting the TFLite model to JSON...")
-os.system('flatc -t schema.fbs -- %s' % os.path.join(model_path, model_name))
-
-print("Start simplifying the JSON file...")
-reduce_size_json(os.path.splitext(model_name)[0] + '.json')
-
-print("Fix JSON formatting...")
-os.system('jsonrepair %s.json --overwrite' % os.path.splitext(model_name)[0])
-
-# Memory-optimized JSON loading
-print("Start loading the JSON file into memory...")
-json_file_path = '%s.json' % os.path.splitext(model_name)[0]
-
-# Check file size
-file_size = os.path.getsize(json_file_path)
-print(f"JSON file size: {file_size / (1024*1024):.2f} MB")
-
-try:
-    with open(json_file_path, 'r', encoding='utf-8') as f:
-        model_json_f = f.read()
-    print("Start parsing JSON...")
-    model_json = json.loads(model_json_f)
-    # Immediately release the original string memory
-    del model_json_f
-    gc.collect()
-    print("JSON loading completed")
-except Exception as e:
-    print(f"JSON loading failed: {e}")
-    raise
-
-# Preprocessing fix placeholder issues in operator_codes
-print("Start preprocessing operator_codes...")
-from utils.utils import op_type_mapping
-# Build a reverse mapping from operator names to codes
-op_name_to_code = {v: k for k, v in op_type_mapping.items()}
-fixed_count = 0
-if 'operator_codes' in model_json:
-    for opcode in model_json['operator_codes']:
-        # Check for cases where deprecated_builtin_code equals 127 placeholder
-        if opcode.get('deprecated_builtin_code') == 127:
-            builtin_code_name = opcode.get('builtin_code', '')
-            # Look up the correct code for the operator name in the mapping table
-            if builtin_code_name in op_name_to_code:
-                correct_code = op_name_to_code[builtin_code_name]
-                opcode['deprecated_builtin_code'] = correct_code
-                fixed_count += 1
-                print(f"Fix placeholders: {builtin_code_name} deprecated_builtin_code: 127 -> {correct_code}")
-            else:
-                print(f"Warning: no mapping found for operator {builtin_code_name}, keeping original value 127")
-print(f"Preprocessing completed, fixed {fixed_count} placeholder operators in total")
-
-# Load cryptographic parameters from keys_and_offsets.bin
-print("Loading cryptographic parameters...")
-crypto_params = load_crypto_params('keys_and_offsets.bin')
-print("Cryptographic parameters loaded successfully")
-
-# Extract all information before virtualization
-print("Extracting operator types...")
-all_op_types, input_ops_index, output_ops_index, options_stats = extract_all_op_types(interpreter, model_json)
-print(f"Extracted {len(all_op_types)} operators")
-
-print("Extracting parameters...")
-all_params, params_info = extract_all_parameters(interpreter, model_json)
-print(f"Extracted {len(params_info)} parameters")
-
-print("Extracting computation graph...")
-graph = extract_graph(model_json)
-print(f"Extracted {len(graph)} graph nodes")
-
-# Apply random index mapping to break sequential patterns
-print("Applying random index mapping...")
-all_op_types, input_ops_index, output_ops_index, params_info, graph = \
-    apply_random_index_mapping(all_op_types, input_ops_index, output_ops_index, params_info, graph)
-print(f"Index mapping applied: {len(all_op_types)} operators remapped")
-
-# Dynamic modulus detection
-num_ops = len(all_op_types)
-max_possible_index = num_ops * 10  # Random mapping range (apply_random_index_mapping uses 10x multiplier)
-conn_modulus = crypto_params['conn_modulus']
-
-if max_possible_index >= conn_modulus:
-    print("=" * 70)
-    print("ERROR: Connection modulus too small!")
-    print(f"  - Model has {num_ops} operators")
-    print(f"  - Max possible index after random mapping: {max_possible_index}")
-    print(f"  - Current conn_modulus: {conn_modulus}")
-    print("=" * 70)
-    print("SOLUTION: Increase conn_modulus in scripts/generate_keys.py")
-    sys.exit(1)
-
-modulus_utilization = (max_possible_index / conn_modulus) * 100
-if modulus_utilization > 80:
-    print("=" * 70)
-    print(f"WARNING: High modulus utilization ({modulus_utilization:.1f}%)")
-    print(f"  - Model has {num_ops} operators")
-    print(f"  - Max possible index: {max_possible_index}")
-    print(f"  - conn_modulus: {conn_modulus}")
-    print("  - Consider increasing conn_modulus for larger models")
-    print("=" * 70)
-
-gc.collect()  # Force garbage collection
-
-# Layer type virtualization
-print("Start layer type virtualization...")
-v_op_types = virtualize_op_types(all_op_types, input_ops_index, output_ops_index, options_stats, crypto_params)
-print(f"Layer type virtualization completed, processed {len(v_op_types)} operators in total")
-gc.collect()  # Force garbage collection
-
-# Parameter virtualization
-print("Start parameter virtualization...")
-total_size = generate_params_file(all_params, params_info, opt.model_name)
-# Cover all operators to ensure Phase 3 dummy completion for ops with zero real params
-all_op_indices = {op['index'] for op in v_op_types}
-v_params_info = virtualize_params(params_info, total_size, crypto_params, all_op_indices)
-print(f"Parameter virtualization completed, processed {len(v_params_info)} parameters in total")
-gc.collect()  # Force garbage collection
-
-# Computation graph virtualization
-print("Start computation graph virtualization...")
-v_graph = virtualize_graph(graph, crypto_params)
-print(f"Computation graph virtualization completed, processed {len(v_graph)} nodes in total")
-gc.collect()  # Force garbage collection
-
-# JSON file generation
-print("Start generating the virtualization information file...")
-
-# Prepare metadata for encryption
-# Apply modular arithmetic virtualization to input_ops and output_ops
-v_input_ops = []
-for real_input_op in input_ops_index:
-    r = random.randint(1, 10000)
-    v_input_op = r * crypto_params['conn_modulus'] + real_input_op
-    v_input_ops.append(v_input_op)
-
-v_output_ops = []
-for real_output_op in output_ops_index:
-    r = random.randint(1, 10000)
-    v_output_op = r * crypto_params['conn_modulus'] + real_output_op
-    v_output_ops.append(v_output_op)
-
-metadata = {
-    'input_shapes': [],
-    'input_dtypes': [],
-    'input_shape_signatures': [],
-    'input_ops': v_input_ops,  # Virtualized using modular arithmetic
-    'output_ops': v_output_ops  # Virtualized using modular arithmetic
+REGISTERED_MODEL_SETS = {
+    'paper11': [
+        'squeezenet',
+        'posenet',
+        'fruit',
+        'lenet',
+        'mobilenet',
+        'skin',
+        'mnasnet',
+        'efficientnet',
+        'ssd',
+        'depth_estimation',
+        'distilgpt2-official',
+    ],
+    'comparison10': [
+        'squeezenet',
+        'posenet',
+        'fruit',
+        'lenet',
+        'mobilenet',
+        'skin',
+        'mnasnet',
+        'efficientnet',
+        'ssd',
+        'depth_estimation',
+    ],
 }
 
-# Extract input shapes, dtypes, and shape_signatures from interpreter
-input_details = interpreter.get_input_details()
-for input_detail in input_details:
-    shape = input_detail['shape']
-    dtype = input_detail['dtype']
 
-    # Process shape (preserve dimensions including dynamic shapes)
-    processed_shape = [int(dim) for dim in shape]
-    metadata['input_shapes'].append(processed_shape)
+def resolve_model_names(opt):
+    selectors = 0
+    selectors += 1 if opt.model_name else 0
+    selectors += 1 if opt.models else 0
+    selectors += 1 if opt.model_set else 0
+    selectors += 1 if opt.all_models else 0
+    if selectors > 1:
+        raise ValueError(
+            'Use only one of --model_name, --models, --model_set, or --all_models')
 
-    # Process dtype
-    dtype_name = getattr(dtype, 'name', getattr(dtype, '__name__', str(dtype)))
-    metadata['input_dtypes'].append(dtype_name)
+    if opt.model_name:
+        return [opt.model_name]
 
-# Extract input_shape_signatures from model JSON
-try:
-    subgraph = model_json['subgraphs'][0]
-    tensors = subgraph.get('tensors', [])
-    for tid in subgraph.get('inputs', []):
-        tensor = tensors[tid]
-        sig = tensor.get('shape_signature', tensor.get('shape', []))
-        metadata['input_shape_signatures'].append(sig)
-except Exception:
-    # Fallback: use shape if shape_signature is missing
+    if opt.models:
+        model_names = [item.strip() for item in opt.models.split(',') if item.strip()]
+        return list(dict.fromkeys(model_names))
+
+    if opt.all_models:
+        model_names = []
+        for filename in sorted(os.listdir('tflite_model')):
+            if filename.endswith('.tflite'):
+                model_names.append(os.path.splitext(filename)[0])
+        return list(dict.fromkeys(model_names))
+
+    if opt.model_set:
+        if opt.model_set not in REGISTERED_MODEL_SETS:
+            raise ValueError(f'Unsupported model set: {opt.model_set}')
+        return list(dict.fromkeys(REGISTERED_MODEL_SETS[opt.model_set]))
+
+    return ['fruit']
+
+
+def virtualize_single_model(model_name):
+    # Load model
+    model_path = 'tflite_model/'
+    model_filename = model_name + '.tflite'
+    print(f"Loading model underway: {model_filename}")
+    interpreter = tf.lite.Interpreter(
+        os.path.join(model_path, model_filename)
+    )
+    interpreter.allocate_tensors()
+    print("Model loading completed")
+
+    # Parse the TFLite model into a JSON object
+    print("Start converting the TFLite model to JSON...")
+    os.system('flatc -t schema.fbs -- %s' % os.path.join(model_path, model_filename))
+
+    print("Start simplifying the JSON file...")
+    reduce_size_json(os.path.splitext(model_filename)[0] + '.json')
+
+    print("Fix JSON formatting...")
+    os.system('jsonrepair %s.json --overwrite' % os.path.splitext(model_filename)[0])
+
+    # Memory-optimized JSON loading
+    print("Start loading the JSON file into memory...")
+    json_file_path = '%s.json' % os.path.splitext(model_filename)[0]
+
+    # Check file size
+    file_size = os.path.getsize(json_file_path)
+    print(f"JSON file size: {file_size / (1024*1024):.2f} MB")
+
+    try:
+        with open(json_file_path, 'r', encoding='utf-8') as f:
+            model_json_f = f.read()
+        print("Start parsing JSON...")
+        model_json = json.loads(model_json_f)
+        # Immediately release the original string memory
+        del model_json_f
+        gc.collect()
+        print("JSON loading completed")
+    except Exception as e:
+        print(f"JSON loading failed: {e}")
+        raise
+
+    # Preprocessing fix placeholder issues in operator_codes
+    print("Start preprocessing operator_codes...")
+    from utils.utils import op_type_mapping
+    op_name_to_code = {v: k for k, v in op_type_mapping.items()}
+    fixed_count = 0
+    if 'operator_codes' in model_json:
+        for opcode in model_json['operator_codes']:
+            if opcode.get('deprecated_builtin_code') == 127:
+                builtin_code_name = opcode.get('builtin_code', '')
+                if builtin_code_name in op_name_to_code:
+                    correct_code = op_name_to_code[builtin_code_name]
+                    opcode['deprecated_builtin_code'] = correct_code
+                    fixed_count += 1
+                    print(
+                        f"Fix placeholders: {builtin_code_name} "
+                        f"deprecated_builtin_code: 127 -> {correct_code}")
+                else:
+                    print(
+                        f"Warning: no mapping found for operator {builtin_code_name}, "
+                        "keeping original value 127")
+    print(f"Preprocessing completed, fixed {fixed_count} placeholder operators in total")
+
+    # Load cryptographic parameters from keys_and_offsets.bin
+    print("Loading cryptographic parameters...")
+    crypto_params = load_crypto_params('keys_and_offsets.bin')
+    print("Cryptographic parameters loaded successfully")
+
+    # Extract all information before virtualization
+    print("Extracting operator types...")
+    all_op_types, input_ops_index, output_ops_index, options_stats = extract_all_op_types(
+        interpreter, model_json)
+    print(f"Extracted {len(all_op_types)} operators")
+
+    print("Extracting parameters...")
+    all_params, params_info = extract_all_parameters(interpreter, model_json)
+    print(f"Extracted {len(params_info)} parameters")
+
+    print("Extracting computation graph...")
+    graph = extract_graph(model_json)
+    print(f"Extracted {len(graph)} graph nodes")
+
+    print("Applying random index mapping...")
+    all_op_types, input_ops_index, output_ops_index, params_info, graph = \
+        apply_random_index_mapping(
+            all_op_types, input_ops_index, output_ops_index, params_info, graph)
+    print(f"Index mapping applied: {len(all_op_types)} operators remapped")
+
+    num_ops = len(all_op_types)
+    max_possible_index = num_ops * 10
+    conn_modulus = crypto_params['conn_modulus']
+
+    if max_possible_index >= conn_modulus:
+        print("=" * 70)
+        print("ERROR: Connection modulus too small!")
+        print(f"  - Model has {num_ops} operators")
+        print(f"  - Max possible index after random mapping: {max_possible_index}")
+        print(f"  - Current conn_modulus: {conn_modulus}")
+        print("=" * 70)
+        raise RuntimeError(
+            "Connection modulus too small. Increase conn_modulus in scripts/generate_keys.py")
+
+    modulus_utilization = (max_possible_index / conn_modulus) * 100
+    if modulus_utilization > 80:
+        print("=" * 70)
+        print(f"WARNING: High modulus utilization ({modulus_utilization:.1f}%)")
+        print(f"  - Model has {num_ops} operators")
+        print(f"  - Max possible index: {max_possible_index}")
+        print(f"  - conn_modulus: {conn_modulus}")
+        print("  - Consider increasing conn_modulus for larger models")
+        print("=" * 70)
+
+    gc.collect()
+
+    print("Start layer type virtualization...")
+    v_op_types = virtualize_op_types(
+        all_op_types, input_ops_index, output_ops_index, options_stats, crypto_params)
+    print(f"Layer type virtualization completed, processed {len(v_op_types)} operators in total")
+    gc.collect()
+
+    print("Start parameter virtualization...")
+    total_size = generate_params_file(all_params, params_info, model_name)
+    all_op_indices = {op['index'] for op in v_op_types}
+    v_params_info = virtualize_params(params_info, total_size, crypto_params, all_op_indices)
+    print(
+        f"Parameter virtualization completed, processed {len(v_params_info)} "
+        "parameters in total")
+    gc.collect()
+
+    print("Start computation graph virtualization...")
+    v_graph = virtualize_graph(graph, crypto_params)
+    print(f"Computation graph virtualization completed, processed {len(v_graph)} nodes in total")
+    gc.collect()
+
+    print("Start generating the virtualization information file...")
+    v_input_ops = []
+    for real_input_op in input_ops_index:
+        r = random.randint(1, 10000)
+        v_input_op = r * crypto_params['conn_modulus'] + real_input_op
+        v_input_ops.append(v_input_op)
+
+    v_output_ops = []
+    for real_output_op in output_ops_index:
+        r = random.randint(1, 10000)
+        v_output_op = r * crypto_params['conn_modulus'] + real_output_op
+        v_output_ops.append(v_output_op)
+
+    metadata = {
+        'input_shapes': [],
+        'input_dtypes': [],
+        'input_shape_signatures': [],
+        'input_ops': v_input_ops,
+        'output_ops': v_output_ops,
+    }
+
+    input_details = interpreter.get_input_details()
     for input_detail in input_details:
-        metadata['input_shape_signatures'].append(list(input_detail['shape']))
+        shape = input_detail['shape']
+        dtype = input_detail['dtype']
+        processed_shape = [int(dim) for dim in shape]
+        metadata['input_shapes'].append(processed_shape)
+        dtype_name = getattr(dtype, 'name', getattr(dtype, '__name__', str(dtype)))
+        metadata['input_dtypes'].append(dtype_name)
 
-generate_virtualization_file(v_op_types, v_params_info, v_graph, opt.model_name, metadata, crypto_params)
-print("Virtualization information file generation completed!")
+    try:
+        subgraph = model_json['subgraphs'][0]
+        tensors = subgraph.get('tensors', [])
+        for tid in subgraph.get('inputs', []):
+            tensor = tensors[tid]
+            sig = tensor.get('shape_signature', tensor.get('shape', []))
+            metadata['input_shape_signatures'].append(sig)
+    except Exception:
+        for input_detail in input_details:
+            metadata['input_shape_signatures'].append(list(input_detail['shape']))
 
-# Dynamically write test data, model filenames and input shapes
-input_details = interpreter.get_input_details()
+    generate_virtualization_file(
+        v_op_types, v_params_info, v_graph, model_name, metadata, crypto_params)
+    print("Virtualization information file generation completed!")
 
-# Generate one line of code for input_shapes and input_dtypes
-shapes_list = []
-dtypes_list = []
-for input_detail in input_details:
-    shape = input_detail['shape']
-    dtype = input_detail['dtype']
-    # Preserve dynamic shapes
-    processed_shape = []
-    for dim in shape:
-        processed_shape.append(int(dim))  # Directly preserve the original dimensions
-    shapes_list.append(str(processed_shape))
-    # Collect data types
-    dtype_name = getattr(dtype, 'name', getattr(dtype, '__name__', str(dtype)))
-    dtypes_list.append(f"'{dtype_name}'")
+    directory = './'
+    files = glob.glob(os.path.join(directory, '*'))
+    for file in files:
+        filename = os.path.basename(file)
+        if filename == os.path.splitext(model_filename)[0] + '.json':
+            os.remove(file)
+            print(f"Deleted file: {file}")
 
-shapes_code = '[' + ', '.join(shapes_list) + ']'
-dtypes_code = '[' + ', '.join(dtypes_list) + ']'
+    del interpreter
+    if 'model_json' in locals():
+        del model_json
+    gc.collect()
+    print("\n=== Virtualization completed ===")
 
-# Delete the JSON files generated by flatc
-directory = './'
-files = glob.glob(os.path.join(directory, '*'))
-for file in files:
-    filename = os.path.basename(file)
-    if filename == os.path.splitext(model_name)[0] + '.json':
-        os.remove(file)
-        print(f"Deleted file: {file}")
 
-# Clean up memory
-del interpreter
-if 'model_json' in locals():
-    del model_json
-gc.collect()
-print("\n=== Virtualization completed ===")
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--model_name', type=str, default=None, help='name of a single model')
+    parser.add_argument('--models', type=str, default='', help='comma-separated model names')
+    parser.add_argument(
+        '--model_set',
+        type=str,
+        default='',
+        help='registered model set: paper11 or comparison10')
+    parser.add_argument(
+        '--all_models',
+        action='store_true',
+        help='virtualize all .tflite models under tflite_model/')
+    opt = parser.parse_args()
+    try:
+        model_names = resolve_model_names(opt)
+        for model_name in model_names:
+            model_file = os.path.join('tflite_model', f'{model_name}.tflite')
+            if not os.path.exists(model_file):
+                raise FileNotFoundError(f'Model file not found: {model_file}')
+        print(f"Selected models for virtualization: {', '.join(model_names)}")
+
+        for idx, model_name in enumerate(model_names, start=1):
+            print("\n" + "=" * 80)
+            print(f"[{idx}/{len(model_names)}] Start virtualizing model: {model_name}")
+            print("=" * 80)
+            virtualize_single_model(model_name)
+    except Exception as e:
+        print(f"Virtualization failed: {e}")
+        raise SystemExit(1)
+
+
+if __name__ == '__main__':
+    main()

@@ -87,7 +87,27 @@ struct TestData {
     int input_index;
 };
 
+// Per-output metric summary for correctness evaluation
+struct OutputMetrics {
+    int output_index = 0;
+    double mse = 0.0;
+    double mae = 0.0;
+    double maxae = 0.0;
+    double relmae = 0.0;
+    bool has_top1 = false;
+    double top1_agreement = 0.0;
+};
+
+// Aggregated metric summary across all test inputs
+struct MetricsSummary {
+    int num_tests = 0;
+    std::vector<OutputMetrics> outputs;
+};
+
 // Utility Functions
+// Set deterministic random seed for test input generation
+void set_random_seed(uint32_t seed);
+
 // Check if any input has int32 dtype (for dynamic length selection)
 bool has_int32_input(const std::vector<TensorInfo>& input_details);
 
@@ -103,6 +123,14 @@ std::vector<float> safe_to_float32(const TensorData& x);
 
 // Calculate average of float vector
 float avg(const std::vector<float>& lst);
+
+// Compute error metrics between virtualized and original outputs and return summary
+MetricsSummary compute_metrics_summary(
+    const std::vector<std::vector<TensorData>>& outputs_vir,
+    const std::vector<std::vector<TensorData>>& outputs_ori);
+
+// Print an existing metric summary
+void print_metrics_summary(const MetricsSummary& summary);
 
 // Compute error metrics between virtualized and original outputs
 void compute_metrics(const std::vector<std::vector<TensorData>>& outputs_vir,

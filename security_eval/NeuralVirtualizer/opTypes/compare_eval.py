@@ -336,6 +336,7 @@ def main() -> None:
     ap = argparse.ArgumentParser(description='Compare predict.json with real.json and output metrics JSON')
     ap.add_argument('--model_name', required=True, help='Model name, e.g., lenet')
     ap.add_argument('--LLM', required=True, help='LLM name, e.g., gpt5')
+    ap.add_argument('--real_subdir', default='real', help='Ground-truth subdirectory under opTypes/, e.g., real or real_original')
     args = ap.parse_args()
 
     model = args.model_name
@@ -346,7 +347,7 @@ def main() -> None:
     elif llm == 'claude':
         llm = 'claude-sonnet-4_5'
     pred_path = os.path.join(base_dir, f'predict/{llm}/{model}_predict.json')
-    real_path = os.path.join(base_dir, f'real/{model}_real.json')
+    real_path = os.path.join(base_dir, args.real_subdir, f'{model}_real.json')
     model_map = {
         0: 'security_test',
         1: 'squeezenet',
