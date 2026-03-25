@@ -96,6 +96,21 @@ void validate_model_file_exists(const std::string& model_name) {
     }
 }
 
+std::vector<TestData> generate_test_input_batch(
+        const std::vector<std::vector<int>>& input_shapes,
+        const std::vector<std::string>& input_dtypes) {
+    std::vector<TestData> test_batch;
+    test_batch.reserve(input_shapes.size());
+    for (size_t j = 0; j < input_shapes.size(); j++) {
+        if (input_dtypes[j] == "int32") {
+            test_batch.push_back(generate_random_int32(input_shapes[j], 0, 100, static_cast<int>(j)));
+        } else {
+            test_batch.push_back(generate_random_float32(input_shapes[j], static_cast<int>(j)));
+        }
+    }
+    return test_batch;
+}
+
 std::vector<std::vector<TestData>> generate_test_inputs(
         const std::vector<std::vector<int>>& input_shapes,
         const std::vector<std::string>& input_dtypes,
@@ -103,31 +118,21 @@ std::vector<std::vector<TestData>> generate_test_inputs(
     std::vector<std::vector<TestData>> test_inputs;
     test_inputs.reserve(std::max(num_inputs, 0));
     for (int i = 0; i < num_inputs; i++) {
-        std::vector<TestData> test_batch;
-        test_batch.reserve(input_shapes.size());
-        for (size_t j = 0; j < input_shapes.size(); j++) {
-            if (input_dtypes[j] == "int32") {
-                test_batch.push_back(generate_random_int32(input_shapes[j], 0, 100, static_cast<int>(j)));
-            } else {
-                test_batch.push_back(generate_random_float32(input_shapes[j], static_cast<int>(j)));
-            }
-        }
-        test_inputs.push_back(test_batch);
+        test_inputs.push_back(generate_test_input_batch(input_shapes, input_dtypes));
     }
     return test_inputs;
 }
 
-std::vector<std::vector<TestData>> generate_dynamic_test_inputs(
+std::vector<TestData> generate_dynamic_test_input_batch(
         const std::vector<TensorInfo>& input_details,
         const std::vector<std::string>& input_dtypes,
-        int length_value,
-        int num_inputs) {
+        int length_value) {
     std::vector<std::vector<int>> reshaped_inputs;
     reshaped_inputs.reserve(input_details.size());
     for (const auto& detail : input_details) {
         reshaped_inputs.push_back(new_shape_for_length(detail, length_value));
     }
-    return generate_test_inputs(reshaped_inputs, input_dtypes, num_inputs);
+    return generate_test_input_batch(reshaped_inputs, input_dtypes);
 }
 
 void print_metadata(const ModelMetadata& metadata) {
@@ -195,13 +200,35 @@ std::vector<int> distribute_evenly(int total, size_t buckets) {
     return distribution;
 }
 
-void print_last_output_shapes(const std::vector<std::vector<TensorData>>& outputs,
+void merge_metrics_accumulator(MetricsAccumulator& target,
+                               const MetricsAccumulator& source) {
+    target.num_tests += source.num_tests;
+    if (target.outputs.size() < source.outputs.size()) {
+        size_t original_size = target.outputs.size();
+        target.outputs.resize(source.outputs.size());
+        for (size_t i = original_size; i < source.outputs.size(); i++) {
+            target.outputs[i].output_index = source.outputs[i].output_index;
+        }
+    }
+
+    for (size_t i = 0; i < source.outputs.size(); i++) {
+        target.outputs[i].mse_sum += source.outputs[i].mse_sum;
+        target.outputs[i].mae_sum += source.outputs[i].mae_sum;
+        target.outputs[i].maxae_sum += source.outputs[i].maxae_sum;
+        target.outputs[i].relmae_sum += source.outputs[i].relmae_sum;
+        target.outputs[i].metric_count += source.outputs[i].metric_count;
+        target.outputs[i].top1_sum += source.outputs[i].top1_sum;
+        target.outputs[i].top1_count += source.outputs[i].top1_count;
+    }
+}
+
+void print_last_output_shapes(const std::vector<TensorData>& outputs,
                               const std::string& label) {
     std::cout << label;
     if (!outputs.empty()) {
         std::cout << "[";
-        for (size_t i = 0; i < outputs.back().size(); i++) {
-            const auto& shape = outputs.back()[i].shape;
+        for (size_t i = 0; i < outputs.size(); i++) {
+            const auto& shape = outputs[i].shape;
             std::cout << "(";
             for (size_t j = 0; j < shape.size(); j++) {
                 std::cout << shape[j];
@@ -210,7 +237,7 @@ void print_last_output_shapes(const std::vector<std::vector<TensorData>>& output
                 }
             }
             std::cout << ")";
-            if (i + 1 < outputs.back().size()) {
+            if (i + 1 < outputs.size()) {
                 std::cout << ", ";
             }
         }
@@ -570,8 +597,7 @@ CorrectnessResult run_correctness_test(const std::string& model_name,
         }
         std::cout << "]" << std::endl;
 
-        std::vector<std::vector<TensorData>> outputs_vir_all;
-        std::vector<std::vector<TensorData>> outputs_ori_all;
+        MetricsAccumulator overall_accumulator;
 
         for (size_t idx = 0; idx < result.dynamic_lengths.size(); idx++) {
             int length = result.dynamic_lengths[idx];
@@ -586,62 +612,62 @@ CorrectnessResult run_correctness_test(const std::string& model_name,
             resize_interpreter_tensors(v_interpreter.get(), v_input_details, length);
             resize_interpreter_tensors(o_interpreter.get(), o_input_details, length);
 
-            auto test_inputs = generate_dynamic_test_inputs(
-                v_input_details, metadata.input_dtypes, length, current_inputs);
+            MetricsAccumulator bucket_accumulator;
+            std::vector<TensorData> last_outputs_vir;
+            std::vector<TensorData> last_outputs_ori;
 
-            std::vector<std::vector<TensorData>> outputs_vir;
-            std::vector<std::vector<TensorData>> outputs_ori;
-            outputs_vir.reserve(test_inputs.size());
-            outputs_ori.reserve(test_inputs.size());
+            for (int input_idx = 0; input_idx < current_inputs; input_idx++) {
+                auto test_batch = generate_dynamic_test_input_batch(
+                    v_input_details, metadata.input_dtypes, length);
 
-            for (auto& test_batch : test_inputs) {
                 set_interpreter_inputs(v_interpreter.get(), test_batch);
                 v_interpreter->Invoke();
-                outputs_vir.push_back(collect_outputs(v_interpreter.get(), v_output_details));
+                last_outputs_vir = collect_outputs(v_interpreter.get(), v_output_details);
 
                 set_interpreter_inputs(o_interpreter.get(), test_batch);
                 o_interpreter->Invoke();
-                outputs_ori.push_back(collect_outputs(o_interpreter.get(), o_output_details));
+                last_outputs_ori = collect_outputs(o_interpreter.get(), o_output_details);
+
+                update_metrics_accumulator(bucket_accumulator, last_outputs_vir, last_outputs_ori);
             }
 
             print_last_output_shapes(
-                outputs_vir,
+                last_outputs_vir,
                 "Virtualized model inference completed, output shape of the last run: ");
             print_last_output_shapes(
-                outputs_ori,
+                last_outputs_ori,
                 "Original model inference completed, output shape of the last run: ");
-            print_metrics_summary(compute_metrics_summary(outputs_vir, outputs_ori));
-
-            outputs_vir_all.insert(outputs_vir_all.end(), outputs_vir.begin(), outputs_vir.end());
-            outputs_ori_all.insert(outputs_ori_all.end(), outputs_ori.begin(), outputs_ori.end());
+            print_metrics_summary(finalize_metrics_accumulator(bucket_accumulator));
+            merge_metrics_accumulator(overall_accumulator, bucket_accumulator);
         }
 
         std::cout << "\n=== Overall results for all dynamic lengths ===" << std::endl;
-        result.metrics = compute_metrics_summary(outputs_vir_all, outputs_ori_all);
+        result.metrics = finalize_metrics_accumulator(overall_accumulator);
     } else {
         std::cout << "\n=== Detected static-shape input; starting static testing ===" << std::endl;
-        auto test_inputs = generate_test_inputs(metadata.input_shapes, metadata.input_dtypes, num_inputs);
+        MetricsAccumulator accumulator;
+        std::vector<TensorData> last_outputs_vir;
+        std::vector<TensorData> last_outputs_ori;
 
-        std::vector<std::vector<TensorData>> outputs_vir;
-        std::vector<std::vector<TensorData>> outputs_ori;
-        outputs_vir.reserve(test_inputs.size());
-        outputs_ori.reserve(test_inputs.size());
+        for (int input_idx = 0; input_idx < num_inputs; input_idx++) {
+            auto test_batch = generate_test_input_batch(metadata.input_shapes, metadata.input_dtypes);
 
-        for (auto& test_batch : test_inputs) {
             set_interpreter_inputs(v_interpreter.get(), test_batch);
             v_interpreter->Invoke();
-            outputs_vir.push_back(collect_outputs(v_interpreter.get(), v_output_details));
+            last_outputs_vir = collect_outputs(v_interpreter.get(), v_output_details);
 
             set_interpreter_inputs(o_interpreter.get(), test_batch);
             o_interpreter->Invoke();
-            outputs_ori.push_back(collect_outputs(o_interpreter.get(), o_output_details));
+            last_outputs_ori = collect_outputs(o_interpreter.get(), o_output_details);
+
+            update_metrics_accumulator(accumulator, last_outputs_vir, last_outputs_ori);
         }
 
-        print_last_output_shapes(outputs_vir,
+        print_last_output_shapes(last_outputs_vir,
                                  "Virtualized model inference completed, output shape: ");
-        print_last_output_shapes(outputs_ori,
+        print_last_output_shapes(last_outputs_ori,
                                  "Original model inference completed, output shape: ");
-        result.metrics = compute_metrics_summary(outputs_vir, outputs_ori);
+        result.metrics = finalize_metrics_accumulator(accumulator);
     }
 
     print_metrics_summary(result.metrics);

@@ -104,6 +104,22 @@ struct MetricsSummary {
     std::vector<OutputMetrics> outputs;
 };
 
+struct OutputMetricsAccumulator {
+    int output_index = 0;
+    double mse_sum = 0.0;
+    double mae_sum = 0.0;
+    double maxae_sum = 0.0;
+    double relmae_sum = 0.0;
+    int metric_count = 0;
+    double top1_sum = 0.0;
+    int top1_count = 0;
+};
+
+struct MetricsAccumulator {
+    int num_tests = 0;
+    std::vector<OutputMetricsAccumulator> outputs;
+};
+
 // Utility Functions
 // Set deterministic random seed for test input generation
 void set_random_seed(uint32_t seed);
@@ -121,8 +137,11 @@ std::vector<TensorData> collect_outputs(tflite::Interpreter* interp,
 // Convert tensor data to float32 safely
 std::vector<float> safe_to_float32(const TensorData& x);
 
-// Calculate average of float vector
-float avg(const std::vector<float>& lst);
+// Update and finalize streaming metric accumulation
+void update_metrics_accumulator(MetricsAccumulator& accumulator,
+                                const std::vector<TensorData>& outputs_vir,
+                                const std::vector<TensorData>& outputs_ori);
+MetricsSummary finalize_metrics_accumulator(const MetricsAccumulator& accumulator);
 
 // Compute error metrics between virtualized and original outputs and return summary
 MetricsSummary compute_metrics_summary(

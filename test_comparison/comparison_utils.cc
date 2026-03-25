@@ -192,162 +192,179 @@ std::vector<float> safe_to_float32(const TensorData& x) {
     return {};
 }
 
-float avg(const std::vector<float>& lst) {
-    if (lst.empty()) return 0.0f;
-    return std::accumulate(lst.begin(), lst.end(), 0.0f) / lst.size();
+void update_metrics_accumulator(MetricsAccumulator& accumulator,
+                                const std::vector<TensorData>& outputs_vir,
+                                const std::vector<TensorData>& outputs_ori) {
+    const int num_outputs = static_cast<int>(std::min(outputs_ori.size(), outputs_vir.size()));
+    if (accumulator.outputs.empty()) {
+        accumulator.outputs.resize(num_outputs);
+        for (int j = 0; j < num_outputs; j++) {
+            accumulator.outputs[j].output_index = j;
+        }
+    }
+
+    const int tracked_outputs = std::min(num_outputs, static_cast<int>(accumulator.outputs.size()));
+    const int test_index = accumulator.num_tests;
+    accumulator.num_tests++;
+
+    for (int j = 0; j < tracked_outputs; j++) {
+        auto vir = outputs_vir[j];
+        auto ori = outputs_ori[j];
+
+        std::vector<float> vir_c;
+        std::vector<float> ori_c;
+        if (vir.shape != ori.shape) {
+            if (vir.size() == ori.size()) {
+                vir_c = safe_to_float32(vir.reshape(-1));
+                ori_c = safe_to_float32(ori.reshape(-1));
+            } else {
+                std::cout << "Warning: In inference" << test_index << ", the " << j
+                          << "‑th output has an inconsistent number of elements; skipping error computation"
+                          << std::endl;
+                continue;
+            }
+        } else {
+            vir_c = safe_to_float32(vir);
+            ori_c = safe_to_float32(ori);
+        }
+
+        if (vir_c.empty() || ori_c.empty() || vir_c.size() != ori_c.size()) {
+            continue;
+        }
+
+        double mse = 0.0;
+        double mae = 0.0;
+        double maxae = 0.0;
+        double relmae = 0.0;
+
+        for (size_t k = 0; k < vir_c.size(); k++) {
+            double diff = static_cast<double>(vir_c[k]) - static_cast<double>(ori_c[k]);
+            double abs_diff = std::abs(diff);
+            double abs_ori = std::abs(static_cast<double>(ori_c[k]));
+
+            mse += diff * diff;
+            mae += abs_diff;
+            maxae = std::max(maxae, abs_diff);
+            relmae += abs_diff / (abs_ori + 1e-8);
+        }
+
+        mse /= static_cast<double>(vir_c.size());
+        mae /= static_cast<double>(vir_c.size());
+        relmae /= static_cast<double>(vir_c.size());
+
+        auto& output_accumulator = accumulator.outputs[j];
+        output_accumulator.mse_sum += mse;
+        output_accumulator.mae_sum += mae;
+        output_accumulator.maxae_sum += maxae;
+        output_accumulator.relmae_sum += relmae;
+        output_accumulator.metric_count++;
+
+        try {
+            if (vir.shape.size() == 2 && ori.shape.size() == 2) {
+                int last_dim_vir = vir.shape.back();
+                int last_dim_ori = ori.shape.back();
+
+                if (last_dim_vir == last_dim_ori && last_dim_vir >= 1) {
+                    size_t total_elements = vir_c.size();
+                    double top1_acc = 0.0;
+
+                    if (last_dim_vir == 1) {
+                        size_t num_samples = total_elements;
+                        int matches = 0;
+
+                        for (size_t sample = 0; sample < num_samples; sample++) {
+                            bool vir_pred = vir_c[sample] > 0.5f;
+                            bool ori_pred = ori_c[sample] > 0.5f;
+                            if (vir_pred == ori_pred) {
+                                matches++;
+                            }
+                        }
+
+                        top1_acc = num_samples == 0
+                            ? 0.0
+                            : static_cast<double>(matches) / static_cast<double>(num_samples);
+                    } else {
+                        size_t num_samples = total_elements / static_cast<size_t>(last_dim_vir);
+                        int matches = 0;
+
+                        for (size_t sample = 0; sample < num_samples; sample++) {
+                            int vir_max_idx = 0;
+                            float vir_max_val = vir_c[sample * last_dim_vir];
+                            for (int dim = 1; dim < last_dim_vir; dim++) {
+                                if (vir_c[sample * last_dim_vir + dim] > vir_max_val) {
+                                    vir_max_val = vir_c[sample * last_dim_vir + dim];
+                                    vir_max_idx = dim;
+                                }
+                            }
+
+                            int ori_max_idx = 0;
+                            float ori_max_val = ori_c[sample * last_dim_vir];
+                            for (int dim = 1; dim < last_dim_vir; dim++) {
+                                if (ori_c[sample * last_dim_vir + dim] > ori_max_val) {
+                                    ori_max_val = ori_c[sample * last_dim_vir + dim];
+                                    ori_max_idx = dim;
+                                }
+                            }
+
+                            if (vir_max_idx == ori_max_idx) {
+                                matches++;
+                            }
+                        }
+
+                        top1_acc = num_samples == 0
+                            ? 0.0
+                            : static_cast<double>(matches) / static_cast<double>(num_samples);
+                    }
+
+                    output_accumulator.top1_sum += top1_acc;
+                    output_accumulator.top1_count++;
+                }
+            }
+        } catch (...) {
+            // Handle exceptions silently
+        }
+    }
+}
+
+MetricsSummary finalize_metrics_accumulator(const MetricsAccumulator& accumulator) {
+    MetricsSummary summary;
+    summary.num_tests = accumulator.num_tests;
+    summary.outputs.reserve(accumulator.outputs.size());
+
+    for (const auto& output_accumulator : accumulator.outputs) {
+        OutputMetrics output_summary;
+        output_summary.output_index = output_accumulator.output_index;
+        output_summary.mse = output_accumulator.metric_count == 0
+            ? 0.0
+            : output_accumulator.mse_sum / static_cast<double>(output_accumulator.metric_count);
+        output_summary.mae = output_accumulator.metric_count == 0
+            ? 0.0
+            : output_accumulator.mae_sum / static_cast<double>(output_accumulator.metric_count);
+        output_summary.maxae = output_accumulator.metric_count == 0
+            ? 0.0
+            : output_accumulator.maxae_sum / static_cast<double>(output_accumulator.metric_count);
+        output_summary.relmae = output_accumulator.metric_count == 0
+            ? 0.0
+            : output_accumulator.relmae_sum / static_cast<double>(output_accumulator.metric_count);
+        output_summary.has_top1 = output_accumulator.top1_count > 0;
+        output_summary.top1_agreement = output_accumulator.top1_count == 0
+            ? 0.0
+            : output_accumulator.top1_sum / static_cast<double>(output_accumulator.top1_count);
+        summary.outputs.push_back(output_summary);
+    }
+
+    return summary;
 }
 
 MetricsSummary compute_metrics_summary(
         const std::vector<std::vector<TensorData>>& outputs_vir,
         const std::vector<std::vector<TensorData>>& outputs_ori) {
-    MetricsSummary summary;
-    int num_tests = outputs_ori.size();
-    int num_outputs = std::min(
-        outputs_ori.empty() ? 0 : (int)outputs_ori[0].size(),
-        outputs_vir.empty() ? 0 : (int)outputs_vir[0].size()
-    );
-    summary.num_tests = num_tests;
-    
-    std::vector<std::vector<float>> mse_per_output(num_outputs);
-    std::vector<std::vector<float>> mae_per_output(num_outputs);
-    std::vector<std::vector<float>> maxae_per_output(num_outputs);
-    std::vector<std::vector<float>> relmae_per_output(num_outputs);
-    std::vector<std::vector<float>> top1_match_per_output(num_outputs);
-    
+    MetricsAccumulator accumulator;
+    const int num_tests = static_cast<int>(std::min(outputs_vir.size(), outputs_ori.size()));
     for (int i = 0; i < num_tests; i++) {
-        for (int j = 0; j < num_outputs; j++) {
-            auto vir = outputs_vir[i][j];
-            auto ori = outputs_ori[i][j];
-            
-            // Shape handling and error calculation
-            std::vector<float> vir_c, ori_c;
-            if (vir.shape != ori.shape) {
-                if (vir.size() == ori.size()) {
-                    vir_c = safe_to_float32(vir.reshape(-1));
-                    ori_c = safe_to_float32(ori.reshape(-1));
-                } else {
-                    std::cout << "Warning: In inference" << i << ", the " << j 
-                            << "‑th output has an inconsistent number of elements; skipping error computation" << std::endl;
-                    continue;
-                }
-            } else {
-                vir_c = safe_to_float32(vir);
-                ori_c = safe_to_float32(ori);
-            }
-            
-            if (vir_c.empty() || ori_c.empty() || vir_c.size() != ori_c.size()) {
-                continue;
-            }
-            
-            // Calculate error metrics
-            float mse = 0.0f, mae = 0.0f, maxae = 0.0f;
-            float relmae = 0.0f;
-            
-            for (size_t k = 0; k < vir_c.size(); k++) {
-                float diff = vir_c[k] - ori_c[k];
-                float abs_diff = std::abs(diff);
-                float abs_ori = std::abs(ori_c[k]);
-                
-                mse += diff * diff;
-                mae += abs_diff;
-                maxae = std::max(maxae, abs_diff);
-                // Per-element relative error
-                relmae += abs_diff / (abs_ori + 1e-8f);
-            }
-            
-            mse /= vir_c.size();
-            mae /= vir_c.size();
-            relmae /= vir_c.size(); // Mean of per-element relative errors
-            
-            mse_per_output[j].push_back(mse);
-            mae_per_output[j].push_back(mae);
-            maxae_per_output[j].push_back(maxae);
-            relmae_per_output[j].push_back(relmae);
-            
-            // Top-1 accuracy calculation for classification outputs
-            // Only apply to 2D outputs (typical classification: [batch, classes])
-            // Exclude 3D/4D outputs (regression tasks like depth estimation: [batch, H, W, C])
-            try {
-                if (vir.shape.size() == 2 && ori.shape.size() == 2) {
-                    int last_dim_vir = vir.shape.back();
-                    int last_dim_ori = ori.shape.back();
-
-                    if (last_dim_vir == last_dim_ori && last_dim_vir >= 1) {
-                        size_t total_elements = vir_c.size();
-
-                        if (last_dim_vir == 1) {
-                            // Binary classification with single output (sigmoid)
-                            // Use 0.5 as threshold
-                            size_t num_samples = total_elements;
-                            int matches = 0;
-
-                            for (size_t sample = 0; sample < num_samples; sample++) {
-                                bool vir_pred = vir_c[sample] > 0.5f;
-                                bool ori_pred = ori_c[sample] > 0.5f;
-                                if (vir_pred == ori_pred) {
-                                    matches++;
-                                }
-                            }
-
-                            float top1_acc = static_cast<float>(matches) / static_cast<float>(num_samples);
-                            top1_match_per_output[j].push_back(top1_acc);
-
-                        } else {
-                            // Multi-class classification (original logic)
-                            // Reshape to (-1, last_dim) equivalent
-                            size_t num_samples = total_elements / last_dim_vir;
-
-                            int matches = 0;
-                            for (size_t sample = 0; sample < num_samples; sample++) {
-                                // Find argmax for current sample in vir_c
-                                int vir_max_idx = 0;
-                                float vir_max_val = vir_c[sample * last_dim_vir];
-                                for (int dim = 1; dim < last_dim_vir; dim++) {
-                                    if (vir_c[sample * last_dim_vir + dim] > vir_max_val) {
-                                        vir_max_val = vir_c[sample * last_dim_vir + dim];
-                                        vir_max_idx = dim;
-                                    }
-                                }
-
-                                // Find argmax for current sample in ori_c
-                                int ori_max_idx = 0;
-                                float ori_max_val = ori_c[sample * last_dim_vir];
-                                for (int dim = 1; dim < last_dim_vir; dim++) {
-                                    if (ori_c[sample * last_dim_vir + dim] > ori_max_val) {
-                                        ori_max_val = ori_c[sample * last_dim_vir + dim];
-                                        ori_max_idx = dim;
-                                    }
-                                }
-
-                                if (vir_max_idx == ori_max_idx) {
-                                    matches++;
-                                }
-                            }
-
-                            float top1_acc = static_cast<float>(matches) / static_cast<float>(num_samples);
-                            top1_match_per_output[j].push_back(top1_acc);
-                        }
-                    }
-                }
-            } catch (...) {
-                // Handle exceptions silently
-            }
-        }
+        update_metrics_accumulator(accumulator, outputs_vir[i], outputs_ori[i]);
     }
-    
-    for (int j = 0; j < num_outputs; j++) {
-        OutputMetrics output_summary;
-        output_summary.output_index = j;
-        output_summary.mse = avg(mse_per_output[j]);
-        output_summary.mae = avg(mae_per_output[j]);
-        output_summary.maxae = avg(maxae_per_output[j]);
-        output_summary.relmae = avg(relmae_per_output[j]);
-        output_summary.has_top1 = !top1_match_per_output[j].empty();
-        output_summary.top1_agreement = avg(top1_match_per_output[j]);
-        summary.outputs.push_back(output_summary);
-    }
-
-    return summary;
+    return finalize_metrics_accumulator(accumulator);
 }
 
 void print_metrics_summary(const MetricsSummary& summary) {
