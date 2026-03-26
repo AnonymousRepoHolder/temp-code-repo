@@ -48,6 +48,7 @@ def load_json_array(path: str) -> List[Dict[str, Any]]:
 
 
 def save_json(path: str, obj: Any) -> None:
+    os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
 
