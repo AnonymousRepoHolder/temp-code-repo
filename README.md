@@ -1,4 +1,4 @@
-# NeuralVirtualizer: A Light-weight Neural Virtualization Framework for Hardening On-Device Deep Learning Models
+# NeuralVirtualizer: A Lightweight Virtualization Framework for Hardening On-Device DL Software
 
 Privacy-preserving virtualized models for TensorFlow Lite with **AES-256-CTR encryption across 4 independent domains** and **XOR-based key obfuscation**, rebuilt natively inside the TFLite runtime and verified against the original models.
 
